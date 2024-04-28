@@ -49,7 +49,7 @@
             // 
             this.lbStt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbStt.AutoSize = true;
-            this.lbStt.Location = new System.Drawing.Point(713, 92);
+            this.lbStt.Location = new System.Drawing.Point(485, 113);
             this.lbStt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbStt.Name = "lbStt";
             this.lbStt.Size = new System.Drawing.Size(125, 16);
@@ -66,7 +66,7 @@
             this.flowLayoutNhomChat.Location = new System.Drawing.Point(-7, 133);
             this.flowLayoutNhomChat.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutNhomChat.Name = "flowLayoutNhomChat";
-            this.flowLayoutNhomChat.Size = new System.Drawing.Size(1199, 448);
+            this.flowLayoutNhomChat.Size = new System.Drawing.Size(860, 310);
             this.flowLayoutNhomChat.TabIndex = 36;
             // 
             // label4
@@ -74,7 +74,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(505, 81);
+            this.label4.Location = new System.Drawing.Point(272, 100);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(205, 29);
@@ -84,7 +84,7 @@
             // tbMatKhau
             // 
             this.tbMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMatKhau.Location = new System.Drawing.Point(1045, 74);
+            this.tbMatKhau.Location = new System.Drawing.Point(685, 70);
             this.tbMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.tbMatKhau.MaxLength = 30;
             this.tbMatKhau.Name = "tbMatKhau";
@@ -97,7 +97,7 @@
             // 
             this.lbMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbMatKhau.AutoSize = true;
-            this.lbMatKhau.Location = new System.Drawing.Point(968, 81);
+            this.lbMatKhau.Location = new System.Drawing.Point(608, 77);
             this.lbMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMatKhau.Name = "lbMatKhau";
             this.lbMatKhau.Size = new System.Drawing.Size(61, 16);
@@ -107,7 +107,7 @@
             // tbTenNhom
             // 
             this.tbTenNhom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbTenNhom.Location = new System.Drawing.Point(1045, 42);
+            this.tbTenNhom.Location = new System.Drawing.Point(685, 38);
             this.tbTenNhom.Margin = new System.Windows.Forms.Padding(4);
             this.tbTenNhom.MaxLength = 40;
             this.tbTenNhom.Name = "tbTenNhom";
@@ -118,7 +118,7 @@
             // 
             this.lbTennhom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTennhom.AutoSize = true;
-            this.lbTennhom.Location = new System.Drawing.Point(964, 46);
+            this.lbTennhom.Location = new System.Drawing.Point(604, 42);
             this.lbTennhom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTennhom.Name = "lbTennhom";
             this.lbTennhom.Size = new System.Drawing.Size(67, 16);
@@ -132,7 +132,7 @@
             this.btTaoNhom.Location = new System.Drawing.Point(13, 42);
             this.btTaoNhom.Margin = new System.Windows.Forms.Padding(4);
             this.btTaoNhom.Name = "btTaoNhom";
-            this.btTaoNhom.Size = new System.Drawing.Size(121, 49);
+            this.btTaoNhom.Size = new System.Drawing.Size(110, 50);
             this.btTaoNhom.TabIndex = 32;
             this.btTaoNhom.Text = "Tạo nhóm";
             this.btTaoNhom.UseVisualStyleBackColor = true;
@@ -141,19 +141,19 @@
             // 
             this.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearch.Location = new System.Drawing.Point(168, 42);
+            this.btSearch.Location = new System.Drawing.Point(131, 42);
             this.btSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(121, 49);
+            this.btSearch.Size = new System.Drawing.Size(110, 50);
             this.btSearch.TabIndex = 31;
             this.btSearch.Text = "Tìm nhóm";
             this.btSearch.UseVisualStyleBackColor = true;
             // 
             // FormChat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1185, 623);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.lbStt);
             this.Controls.Add(this.flowLayoutNhomChat);
             this.Controls.Add(this.label4);

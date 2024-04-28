@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnBgBot = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbTime = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.btEditDisplayname = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,6 +38,8 @@
             this.btSua = new System.Windows.Forms.Button();
             this.btBaoVe = new System.Windows.Forms.Button();
             this.btDoiPass = new System.Windows.Forms.Button();
+            this.pnBgTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelDoiPass = new System.Windows.Forms.Panel();
             this.btConfirmChangePass = new System.Windows.Forms.Button();
             this.tbNewPass2 = new System.Windows.Forms.TextBox();
@@ -47,49 +48,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelXacNhan = new System.Windows.Forms.Panel();
-            this.btConfirmSecuritySecond = new System.Windows.Forms.Button();
-            this.txbPassWord = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnBgTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnBgBot.SuspendLayout();
+            this.pnBgTop.SuspendLayout();
             this.panelDoiPass.SuspendLayout();
-            this.panelXacNhan.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnBgBot
-            // 
-            this.pnBgBot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnBgBot.BackColor = System.Drawing.Color.White;
-            this.pnBgBot.BorderRadius = 15;
-            this.pnBgBot.Controls.Add(this.lbTime);
-            this.pnBgBot.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
-            this.pnBgBot.ForeColor = System.Drawing.Color.White;
-            this.pnBgBot.Location = new System.Drawing.Point(205, 460);
-            this.pnBgBot.Margin = new System.Windows.Forms.Padding(4);
-            this.pnBgBot.Name = "pnBgBot";
-            this.pnBgBot.Size = new System.Drawing.Size(811, 139);
-            this.pnBgBot.TabIndex = 43;
-            // 
-            // lbTime
-            // 
-            this.lbTime.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbTime.AutoSize = true;
-            this.lbTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
-            this.lbTime.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.Location = new System.Drawing.Point(16, 0);
-            this.lbTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(263, 61);
-            this.lbTime.TabIndex = 23;
-            this.lbTime.Text = "Time Now";
             // 
             // btEditDisplayname
             // 
             this.btEditDisplayname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditDisplayname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEditDisplayname.Location = new System.Drawing.Point(159, 152);
+            this.btEditDisplayname.Location = new System.Drawing.Point(41, 125);
             this.btEditDisplayname.Margin = new System.Windows.Forms.Padding(4);
             this.btEditDisplayname.Name = "btEditDisplayname";
             this.btEditDisplayname.Size = new System.Drawing.Size(121, 49);
@@ -102,7 +69,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(152, 78);
+            this.label6.Location = new System.Drawing.Point(36, 47);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 29);
@@ -114,7 +81,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(152, 225);
+            this.label5.Location = new System.Drawing.Point(36, 219);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(207, 29);
@@ -124,7 +91,7 @@
             // tbDisplayname
             // 
             this.tbDisplayname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDisplayname.Location = new System.Drawing.Point(159, 116);
+            this.tbDisplayname.Location = new System.Drawing.Point(41, 82);
             this.tbDisplayname.Margin = new System.Windows.Forms.Padding(4);
             this.tbDisplayname.MaxLength = 20;
             this.tbDisplayname.Name = "tbDisplayname";
@@ -137,7 +104,7 @@
             this.labelStatus.AutoSize = true;
             this.labelStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.Location = new System.Drawing.Point(652, 78);
+            this.labelStatus.Location = new System.Drawing.Point(395, 47);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(85, 29);
@@ -147,7 +114,7 @@
             // tbKey
             // 
             this.tbKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKey.Location = new System.Drawing.Point(159, 263);
+            this.tbKey.Location = new System.Drawing.Point(41, 252);
             this.tbKey.Margin = new System.Windows.Forms.Padding(4);
             this.tbKey.MaxLength = 100;
             this.tbKey.Name = "tbKey";
@@ -158,7 +125,7 @@
             // 
             this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSua.Location = new System.Drawing.Point(159, 299);
+            this.btSua.Location = new System.Drawing.Point(41, 289);
             this.btSua.Margin = new System.Windows.Forms.Padding(4);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(121, 49);
@@ -171,7 +138,7 @@
             this.btBaoVe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btBaoVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBaoVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBaoVe.Location = new System.Drawing.Point(659, 147);
+            this.btBaoVe.Location = new System.Drawing.Point(372, 125);
             this.btBaoVe.Margin = new System.Windows.Forms.Padding(4);
             this.btBaoVe.Name = "btBaoVe";
             this.btBaoVe.Size = new System.Drawing.Size(136, 49);
@@ -184,13 +151,41 @@
             this.btDoiPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btDoiPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDoiPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDoiPass.Location = new System.Drawing.Point(852, 148);
+            this.btDoiPass.Location = new System.Drawing.Point(545, 125);
             this.btDoiPass.Margin = new System.Windows.Forms.Padding(4);
             this.btDoiPass.Name = "btDoiPass";
             this.btDoiPass.Size = new System.Drawing.Size(136, 49);
             this.btDoiPass.TabIndex = 36;
             this.btDoiPass.Text = "Đổi mật khẩu";
             this.btDoiPass.UseVisualStyleBackColor = true;
+            // 
+            // pnBgTop
+            // 
+            this.pnBgTop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnBgTop.BackColor = System.Drawing.Color.White;
+            this.pnBgTop.BorderRadius = 30;
+            this.pnBgTop.Controls.Add(this.panelDoiPass);
+            this.pnBgTop.Controls.Add(this.btDoiPass);
+            this.pnBgTop.Controls.Add(this.btBaoVe);
+            this.pnBgTop.Controls.Add(this.labelStatus);
+            this.pnBgTop.Controls.Add(this.label5);
+            this.pnBgTop.Controls.Add(this.btSua);
+            this.pnBgTop.Controls.Add(this.tbKey);
+            this.pnBgTop.Controls.Add(this.btEditDisplayname);
+            this.pnBgTop.Controls.Add(this.label6);
+            this.pnBgTop.Controls.Add(this.tbDisplayname);
+            this.pnBgTop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.pnBgTop.Location = new System.Drawing.Point(13, 1);
+            this.pnBgTop.Margin = new System.Windows.Forms.Padding(4);
+            this.pnBgTop.Name = "pnBgTop";
+            this.pnBgTop.Size = new System.Drawing.Size(808, 423);
+            this.pnBgTop.TabIndex = 42;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
             // 
             // panelDoiPass
             // 
@@ -204,11 +199,11 @@
             this.panelDoiPass.Controls.Add(this.label3);
             this.panelDoiPass.Controls.Add(this.label2);
             this.panelDoiPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDoiPass.Location = new System.Drawing.Point(639, 200);
+            this.panelDoiPass.Location = new System.Drawing.Point(353, 182);
             this.panelDoiPass.Margin = new System.Windows.Forms.Padding(4);
             this.panelDoiPass.Name = "panelDoiPass";
             this.panelDoiPass.Size = new System.Drawing.Size(349, 165);
-            this.panelDoiPass.TabIndex = 41;
+            this.panelDoiPass.TabIndex = 40;
             // 
             // btConfirmChangePass
             // 
@@ -292,105 +287,24 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu cũ";
             // 
-            // panelXacNhan
-            // 
-            this.panelXacNhan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelXacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.panelXacNhan.Controls.Add(this.btConfirmSecuritySecond);
-            this.panelXacNhan.Controls.Add(this.txbPassWord);
-            this.panelXacNhan.Controls.Add(this.label1);
-            this.panelXacNhan.Location = new System.Drawing.Point(639, 184);
-            this.panelXacNhan.Margin = new System.Windows.Forms.Padding(4);
-            this.panelXacNhan.Name = "panelXacNhan";
-            this.panelXacNhan.Size = new System.Drawing.Size(327, 154);
-            this.panelXacNhan.TabIndex = 40;
-            // 
-            // btConfirmSecuritySecond
-            // 
-            this.btConfirmSecuritySecond.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btConfirmSecuritySecond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btConfirmSecuritySecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirmSecuritySecond.Location = new System.Drawing.Point(21, 76);
-            this.btConfirmSecuritySecond.Margin = new System.Windows.Forms.Padding(4);
-            this.btConfirmSecuritySecond.Name = "btConfirmSecuritySecond";
-            this.btConfirmSecuritySecond.Size = new System.Drawing.Size(136, 49);
-            this.btConfirmSecuritySecond.TabIndex = 26;
-            this.btConfirmSecuritySecond.Text = "Xác nhận";
-            this.btConfirmSecuritySecond.UseVisualStyleBackColor = true;
-            // 
-            // txbPassWord
-            // 
-            this.txbPassWord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txbPassWord.Location = new System.Drawing.Point(21, 41);
-            this.txbPassWord.Margin = new System.Windows.Forms.Padding(4);
-            this.txbPassWord.Name = "txbPassWord";
-            this.txbPassWord.PasswordChar = '•';
-            this.txbPassWord.Size = new System.Drawing.Size(163, 26);
-            this.txbPassWord.TabIndex = 1;
-            this.txbPassWord.UseSystemPasswordChar = true;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nhập lại mật khẩu:";
-            // 
-            // pnBgTop
-            // 
-            this.pnBgTop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnBgTop.BackColor = System.Drawing.Color.White;
-            this.pnBgTop.BorderRadius = 30;
-            this.pnBgTop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.pnBgTop.Location = new System.Drawing.Point(100, 49);
-            this.pnBgTop.Margin = new System.Windows.Forms.Padding(4);
-            this.pnBgTop.Name = "pnBgTop";
-            this.pnBgTop.Size = new System.Drawing.Size(976, 396);
-            this.pnBgTop.TabIndex = 42;
-            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1176, 648);
-            this.Controls.Add(this.pnBgBot);
-            this.Controls.Add(this.btEditDisplayname);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbDisplayname);
-            this.Controls.Add(this.labelStatus);
-            this.Controls.Add(this.tbKey);
-            this.Controls.Add(this.btSua);
-            this.Controls.Add(this.btBaoVe);
-            this.Controls.Add(this.btDoiPass);
-            this.Controls.Add(this.panelDoiPass);
-            this.Controls.Add(this.panelXacNhan);
+            this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.pnBgTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TrangChu";
             this.Text = "TrangChu";
-            this.pnBgBot.ResumeLayout(false);
-            this.pnBgBot.PerformLayout();
+            this.pnBgTop.ResumeLayout(false);
+            this.pnBgTop.PerformLayout();
             this.panelDoiPass.ResumeLayout(false);
             this.panelDoiPass.PerformLayout();
-            this.panelXacNhan.ResumeLayout(false);
-            this.panelXacNhan.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel pnBgBot;
-        private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Button btEditDisplayname;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -400,6 +314,8 @@
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btBaoVe;
         private System.Windows.Forms.Button btDoiPass;
+        private Guna.UI2.WinForms.Guna2Panel pnBgTop;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panelDoiPass;
         private System.Windows.Forms.Button btConfirmChangePass;
         private System.Windows.Forms.TextBox tbNewPass2;
@@ -408,10 +324,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelXacNhan;
-        private System.Windows.Forms.Button btConfirmSecuritySecond;
-        private System.Windows.Forms.TextBox txbPassWord;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Panel pnBgTop;
     }
 }

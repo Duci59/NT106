@@ -32,3 +32,4 @@ C:\Users\Admin\source\repos\LTMCB\LTMCB\obj\Debug\LTMCB.Forms.FormDangKy.resourc
 C:\Users\Admin\source\repos\LTMCB\LTMCB\obj\Debug\LTMCB.Forms.FormQuenMatKhau.resources
 C:\Users\Admin\source\repos\LTMCB\LTMCB\obj\Debug\LTMCB.Forms.Chat.resources
 C:\Users\Admin\source\repos\LTMCB\LTMCB\obj\Debug\LTMCB.Forms.FormChat.resources
+C:\Users\Admin\source\repos\LTMCB\LTMCB\obj\Debug\LTMCB.Forms.FormAdGroup.resources

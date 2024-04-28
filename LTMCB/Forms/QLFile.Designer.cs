@@ -51,10 +51,10 @@
             this.flowLayoutFileList.AutoScroll = true;
             this.flowLayoutFileList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
             this.flowLayoutFileList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
-            this.flowLayoutFileList.Location = new System.Drawing.Point(13, 99);
+            this.flowLayoutFileList.Location = new System.Drawing.Point(13, 85);
             this.flowLayoutFileList.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutFileList.Name = "flowLayoutFileList";
-            this.flowLayoutFileList.Size = new System.Drawing.Size(944, 322);
+            this.flowLayoutFileList.Size = new System.Drawing.Size(820, 271);
             this.flowLayoutFileList.TabIndex = 54;
             // 
             // btChonFile
@@ -69,7 +69,7 @@
             this.btChonFile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btChonFile.ForeColor = System.Drawing.Color.White;
             this.btChonFile.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btChonFile.Location = new System.Drawing.Point(13, 443);
+            this.btChonFile.Location = new System.Drawing.Point(13, 378);
             this.btChonFile.Margin = new System.Windows.Forms.Padding(4);
             this.btChonFile.Name = "btChonFile";
             this.btChonFile.Size = new System.Drawing.Size(128, 48);
@@ -83,7 +83,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(465, 452);
+            this.label1.Location = new System.Drawing.Point(341, 387);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
@@ -104,7 +104,7 @@
             this.tbMaKhoa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbMaKhoa.ForeColor = System.Drawing.Color.Black;
             this.tbMaKhoa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbMaKhoa.Location = new System.Drawing.Point(561, 443);
+            this.tbMaKhoa.Location = new System.Drawing.Point(437, 378);
             this.tbMaKhoa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbMaKhoa.MaxLength = 20;
             this.tbMaKhoa.Name = "tbMaKhoa";
@@ -126,7 +126,7 @@
             this.btTaiLen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btTaiLen.ForeColor = System.Drawing.Color.White;
             this.btTaiLen.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btTaiLen.Location = new System.Drawing.Point(816, 443);
+            this.btTaiLen.Location = new System.Drawing.Point(692, 378);
             this.btTaiLen.Margin = new System.Windows.Forms.Padding(4);
             this.btTaiLen.Name = "btTaiLen";
             this.btTaiLen.Size = new System.Drawing.Size(131, 48);
@@ -144,7 +144,7 @@
             this.btGiaiMa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btGiaiMa.ForeColor = System.Drawing.Color.White;
             this.btGiaiMa.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btGiaiMa.Location = new System.Drawing.Point(816, 28);
+            this.btGiaiMa.Location = new System.Drawing.Point(692, 14);
             this.btGiaiMa.Margin = new System.Windows.Forms.Padding(4);
             this.btGiaiMa.Name = "btGiaiMa";
             this.btGiaiMa.Size = new System.Drawing.Size(131, 49);
@@ -158,7 +158,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(28, 52);
+            this.label2.Location = new System.Drawing.Point(13, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(210, 25);
@@ -170,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(970, 550);
+            this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btGiaiMa);
             this.Controls.Add(this.btTaiLen);

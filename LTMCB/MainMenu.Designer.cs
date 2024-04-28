@@ -304,6 +304,8 @@
             // panelDesktop
             // 
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.FillColor = System.Drawing.Color.Transparent;
+            this.panelDesktop.ForeColor = System.Drawing.Color.Black;
             this.panelDesktop.Location = new System.Drawing.Point(286, 104);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(846, 485);
