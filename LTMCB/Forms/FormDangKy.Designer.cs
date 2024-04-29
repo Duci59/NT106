@@ -41,11 +41,9 @@
             this.tbMK = new System.Windows.Forms.TextBox();
             this.tbNLMK = new System.Windows.Forms.TextBox();
             this.tbDK = new System.Windows.Forms.TextBox();
-            this.btnMinisize = new System.Windows.Forms.Button();
-            this.btnMaxsize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.backbutton = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.Dangkybtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.errorlb = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -58,7 +56,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(53, 198);
+            this.label2.Location = new System.Drawing.Point(53, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 1;
@@ -69,7 +67,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(53, 270);
+            this.label3.Location = new System.Drawing.Point(53, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 25);
             this.label3.TabIndex = 2;
@@ -80,7 +78,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(53, 340);
+            this.label4.Location = new System.Drawing.Point(53, 311);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 25);
             this.label4.TabIndex = 3;
@@ -91,7 +89,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(53, 402);
+            this.label5.Location = new System.Drawing.Point(53, 373);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 25);
             this.label5.TabIndex = 4;
@@ -102,7 +100,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(53, 129);
+            this.label1.Location = new System.Drawing.Point(53, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 35);
             this.label1.TabIndex = 4;
@@ -110,68 +108,40 @@
             // 
             // tbTDN
             // 
-            this.tbTDN.Location = new System.Drawing.Point(261, 133);
+            this.tbTDN.Location = new System.Drawing.Point(261, 104);
             this.tbTDN.Name = "tbTDN";
             this.tbTDN.Size = new System.Drawing.Size(169, 22);
             this.tbTDN.TabIndex = 5;
             // 
             // tbTHT
             // 
-            this.tbTHT.Location = new System.Drawing.Point(261, 202);
+            this.tbTHT.Location = new System.Drawing.Point(261, 173);
             this.tbTHT.Name = "tbTHT";
             this.tbTHT.Size = new System.Drawing.Size(169, 22);
             this.tbTHT.TabIndex = 6;
             // 
             // tbMK
             // 
-            this.tbMK.Location = new System.Drawing.Point(261, 270);
+            this.tbMK.Location = new System.Drawing.Point(261, 241);
             this.tbMK.Name = "tbMK";
+            this.tbMK.PasswordChar = '●';
             this.tbMK.Size = new System.Drawing.Size(169, 22);
             this.tbMK.TabIndex = 7;
             // 
             // tbNLMK
             // 
-            this.tbNLMK.Location = new System.Drawing.Point(261, 340);
+            this.tbNLMK.Location = new System.Drawing.Point(261, 311);
             this.tbNLMK.Name = "tbNLMK";
+            this.tbNLMK.PasswordChar = '●';
             this.tbNLMK.Size = new System.Drawing.Size(169, 22);
             this.tbNLMK.TabIndex = 8;
             // 
             // tbDK
             // 
-            this.tbDK.Location = new System.Drawing.Point(261, 406);
+            this.tbDK.Location = new System.Drawing.Point(261, 377);
             this.tbDK.Name = "tbDK";
             this.tbDK.Size = new System.Drawing.Size(169, 22);
             this.tbDK.TabIndex = 9;
-            // 
-            // btnMinisize
-            // 
-            this.btnMinisize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinisize.FlatAppearance.BorderSize = 0;
-            this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinisize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinisize.ForeColor = System.Drawing.Color.White;
-            this.btnMinisize.Location = new System.Drawing.Point(339, 13);
-            this.btnMinisize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinisize.Name = "btnMinisize";
-            this.btnMinisize.Size = new System.Drawing.Size(40, 37);
-            this.btnMinisize.TabIndex = 31;
-            this.btnMinisize.Text = "O";
-            this.btnMinisize.UseVisualStyleBackColor = true;
-            // 
-            // btnMaxsize
-            // 
-            this.btnMaxsize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaxsize.FlatAppearance.BorderSize = 0;
-            this.btnMaxsize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaxsize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaxsize.ForeColor = System.Drawing.Color.White;
-            this.btnMaxsize.Location = new System.Drawing.Point(380, 13);
-            this.btnMaxsize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMaxsize.Name = "btnMaxsize";
-            this.btnMaxsize.Size = new System.Drawing.Size(40, 37);
-            this.btnMaxsize.TabIndex = 30;
-            this.btnMaxsize.Text = "O";
-            this.btnMaxsize.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
@@ -189,36 +159,32 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // backbutton
+            // Dangkybtn
             // 
-            this.backbutton.BackColor = System.Drawing.Color.Transparent;
-            this.backbutton.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.backbutton.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.backbutton.Image = ((System.Drawing.Image)(resources.GetObject("backbutton.Image")));
-            this.backbutton.ImageOffset = new System.Drawing.Point(0, 0);
-            this.backbutton.ImageRotate = 0F;
-            this.backbutton.Location = new System.Drawing.Point(12, 13);
-            this.backbutton.Name = "backbutton";
-            this.backbutton.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.backbutton.Size = new System.Drawing.Size(54, 37);
-            this.backbutton.TabIndex = 36;
-            this.backbutton.UseTransparentBackground = true;
-            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
+            this.Dangkybtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Dangkybtn.HoverState.ImageSize = new System.Drawing.Size(150, 70);
+            this.Dangkybtn.Image = ((System.Drawing.Image)(resources.GetObject("Dangkybtn.Image")));
+            this.Dangkybtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Dangkybtn.ImageRotate = 0F;
+            this.Dangkybtn.ImageSize = new System.Drawing.Size(150, 70);
+            this.Dangkybtn.Location = new System.Drawing.Point(141, 462);
+            this.Dangkybtn.Name = "Dangkybtn";
+            this.Dangkybtn.PressedState.ImageSize = new System.Drawing.Size(150, 70);
+            this.Dangkybtn.Size = new System.Drawing.Size(156, 69);
+            this.Dangkybtn.TabIndex = 38;
+            this.Dangkybtn.Click += new System.EventHandler(this.Dangkybtn_Click);
             // 
-            // guna2ImageButton1
+            // errorlb
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(150, 70);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(148, 460);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(186, 69);
-            this.guna2ImageButton1.TabIndex = 37;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            this.errorlb.BackColor = System.Drawing.Color.Transparent;
+            this.errorlb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.errorlb.ForeColor = System.Drawing.Color.Red;
+            this.errorlb.Location = new System.Drawing.Point(58, 423);
+            this.errorlb.Name = "errorlb";
+            this.errorlb.Size = new System.Drawing.Size(84, 20);
+            this.errorlb.TabIndex = 40;
+            this.errorlb.Text = "display error";
+            this.errorlb.Visible = false;
             // 
             // FormDangKy
             // 
@@ -226,10 +192,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(475, 563);
-            this.Controls.Add(this.guna2ImageButton1);
-            this.Controls.Add(this.backbutton);
-            this.Controls.Add(this.btnMinisize);
-            this.Controls.Add(this.btnMaxsize);
+            this.Controls.Add(this.errorlb);
+            this.Controls.Add(this.Dangkybtn);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tbDK);
             this.Controls.Add(this.tbNLMK);
@@ -265,11 +229,9 @@
         private System.Windows.Forms.TextBox tbMK;
         private System.Windows.Forms.TextBox tbTHT;
         private System.Windows.Forms.TextBox tbTDN;
-        private System.Windows.Forms.Button btnMinisize;
-        private System.Windows.Forms.Button btnMaxsize;
         private System.Windows.Forms.Button btnClose;
-        private Guna.UI2.WinForms.Guna2ImageButton backbutton;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton Dangkybtn;
+        private Guna.UI2.WinForms.Guna2HtmlLabel errorlb;
     }
 }
 

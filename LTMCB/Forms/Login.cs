@@ -84,7 +84,15 @@ namespace LTMCB.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn đóng ứng dụng?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
         }
 
         private void btnMaxsize_Click(object sender, EventArgs e)
@@ -104,14 +112,16 @@ namespace LTMCB.Forms
         {
             this.Hide();
             Forms.FormDangKy dki = new FormDangKy();
-            dki.Show();
+            dki.ShowDialog();
+            this.Show();
         }
 
         private void l_forgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             Forms.FormQuenMatKhau qmk = new FormQuenMatKhau();
-            qmk.Show();
+            qmk.ShowDialog();
+            this.Show();
         }
 
         private void showpassbtn_Click(object sender, EventArgs e)

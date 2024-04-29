@@ -21,23 +21,5 @@ namespace LTMCB.Forms
         {
             this.Close();
         }
-
-        private void btnMaxsize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-        }
-
-        private void btnMinisize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void backbutton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

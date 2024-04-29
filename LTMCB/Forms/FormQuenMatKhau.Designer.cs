@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuenMatKhau));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -37,10 +36,7 @@
             this.rtbFind = new System.Windows.Forms.RichTextBox();
             this.ntTimkiem = new Guna.UI2.WinForms.Guna2Button();
             this.btHuy = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMinisize = new System.Windows.Forms.Button();
-            this.btnMaxsize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.backbutton = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -111,38 +107,6 @@
             this.btHuy.TabIndex = 31;
             this.btHuy.Text = "Hủy";
             // 
-            // btnMinisize
-            // 
-            this.btnMinisize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinisize.FlatAppearance.BorderSize = 0;
-            this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinisize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinisize.ForeColor = System.Drawing.Color.White;
-            this.btnMinisize.Location = new System.Drawing.Point(339, 13);
-            this.btnMinisize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinisize.Name = "btnMinisize";
-            this.btnMinisize.Size = new System.Drawing.Size(40, 37);
-            this.btnMinisize.TabIndex = 34;
-            this.btnMinisize.Text = "O";
-            this.btnMinisize.UseVisualStyleBackColor = true;
-            this.btnMinisize.Click += new System.EventHandler(this.btnMinisize_Click);
-            // 
-            // btnMaxsize
-            // 
-            this.btnMaxsize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaxsize.FlatAppearance.BorderSize = 0;
-            this.btnMaxsize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaxsize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaxsize.ForeColor = System.Drawing.Color.White;
-            this.btnMaxsize.Location = new System.Drawing.Point(380, 13);
-            this.btnMaxsize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMaxsize.Name = "btnMaxsize";
-            this.btnMaxsize.Size = new System.Drawing.Size(40, 37);
-            this.btnMaxsize.TabIndex = 33;
-            this.btnMaxsize.Text = "O";
-            this.btnMaxsize.UseVisualStyleBackColor = true;
-            this.btnMaxsize.Click += new System.EventHandler(this.btnMaxsize_Click);
-            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -159,31 +123,12 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // backbutton
-            // 
-            this.backbutton.BackColor = System.Drawing.Color.Transparent;
-            this.backbutton.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.backbutton.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.backbutton.Image = ((System.Drawing.Image)(resources.GetObject("backbutton.Image")));
-            this.backbutton.ImageOffset = new System.Drawing.Point(0, 0);
-            this.backbutton.ImageRotate = 0F;
-            this.backbutton.Location = new System.Drawing.Point(12, 13);
-            this.backbutton.Name = "backbutton";
-            this.backbutton.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.backbutton.Size = new System.Drawing.Size(54, 37);
-            this.backbutton.TabIndex = 35;
-            this.backbutton.UseTransparentBackground = true;
-            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
-            // 
             // FormQuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(475, 563);
-            this.Controls.Add(this.backbutton);
-            this.Controls.Add(this.btnMinisize);
-            this.Controls.Add(this.btnMaxsize);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btHuy);
             this.Controls.Add(this.ntTimkiem);
@@ -209,9 +154,6 @@
         private System.Windows.Forms.RichTextBox rtbFind;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private System.Windows.Forms.Button btnMinisize;
-        private System.Windows.Forms.Button btnMaxsize;
         private System.Windows.Forms.Button btnClose;
-        private Guna.UI2.WinForms.Guna2ImageButton backbutton;
     }
 }
