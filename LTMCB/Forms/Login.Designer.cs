@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lb_forgotps = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lb_register = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.l_forgot = new System.Windows.Forms.LinkLabel();
@@ -43,6 +44,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.tb_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_pass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.hidepassbtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.showpassbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // lb_forgotps
@@ -54,7 +57,7 @@
             this.lb_forgotps.Location = new System.Drawing.Point(45, 459);
             this.lb_forgotps.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_forgotps.Name = "lb_forgotps";
-            this.lb_forgotps.Size = new System.Drawing.Size(116, 20);
+            this.lb_forgotps.Size = new System.Drawing.Size(152, 24);
             this.lb_forgotps.TabIndex = 25;
             this.lb_forgotps.Text = "Forgot password?";
             // 
@@ -67,7 +70,7 @@
             this.lb_register.Location = new System.Drawing.Point(45, 410);
             this.lb_register.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_register.Name = "lb_register";
-            this.lb_register.Size = new System.Drawing.Size(152, 21);
+            this.lb_register.Size = new System.Drawing.Size(185, 20);
             this.lb_register.TabIndex = 24;
             this.lb_register.Text = "Don\'t have an account?";
             // 
@@ -75,7 +78,7 @@
             // 
             this.l_forgot.AutoSize = true;
             this.l_forgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.l_forgot.Location = new System.Drawing.Point(210, 463);
+            this.l_forgot.Location = new System.Drawing.Point(236, 463);
             this.l_forgot.Name = "l_forgot";
             this.l_forgot.Size = new System.Drawing.Size(130, 20);
             this.l_forgot.TabIndex = 23;
@@ -87,7 +90,7 @@
             // 
             this.l_register.AutoSize = true;
             this.l_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.l_register.Location = new System.Drawing.Point(210, 410);
+            this.l_register.Location = new System.Drawing.Point(236, 410);
             this.l_register.Name = "l_register";
             this.l_register.Size = new System.Drawing.Size(84, 20);
             this.l_register.TabIndex = 22;
@@ -229,6 +232,7 @@
             // 
             // tb_pass
             // 
+            this.tb_pass.BackColor = System.Drawing.Color.Transparent;
             this.tb_pass.BorderRadius = 12;
             this.tb_pass.BorderThickness = 0;
             this.tb_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -243,11 +247,43 @@
             this.tb_pass.Location = new System.Drawing.Point(213, 248);
             this.tb_pass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_pass.Name = "tb_pass";
-            this.tb_pass.PasswordChar = '\0';
+            this.tb_pass.PasswordChar = '●';
             this.tb_pass.PlaceholderText = "Enter Password";
             this.tb_pass.SelectedText = "";
             this.tb_pass.Size = new System.Drawing.Size(207, 42);
             this.tb_pass.TabIndex = 30;
+            // 
+            // hidepassbtn
+            // 
+            this.hidepassbtn.BackColor = System.Drawing.Color.White;
+            this.hidepassbtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.hidepassbtn.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.hidepassbtn.Image = ((System.Drawing.Image)(resources.GetObject("hidepassbtn.Image")));
+            this.hidepassbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.hidepassbtn.ImageRotate = 0F;
+            this.hidepassbtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.hidepassbtn.Location = new System.Drawing.Point(377, 256);
+            this.hidepassbtn.Name = "hidepassbtn";
+            this.hidepassbtn.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.hidepassbtn.Size = new System.Drawing.Size(32, 27);
+            this.hidepassbtn.TabIndex = 34;
+            this.hidepassbtn.Click += new System.EventHandler(this.hidepassbtn_Click_1);
+            // 
+            // showpassbtn
+            // 
+            this.showpassbtn.BackColor = System.Drawing.Color.White;
+            this.showpassbtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.showpassbtn.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.showpassbtn.Image = ((System.Drawing.Image)(resources.GetObject("showpassbtn.Image")));
+            this.showpassbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.showpassbtn.ImageRotate = 0F;
+            this.showpassbtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.showpassbtn.Location = new System.Drawing.Point(377, 256);
+            this.showpassbtn.Name = "showpassbtn";
+            this.showpassbtn.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.showpassbtn.Size = new System.Drawing.Size(32, 27);
+            this.showpassbtn.TabIndex = 35;
+            this.showpassbtn.Click += new System.EventHandler(this.showpassbtn_Click);
             // 
             // Login
             // 
@@ -255,6 +291,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(475, 563);
+            this.Controls.Add(this.showpassbtn);
+            this.Controls.Add(this.hidepassbtn);
             this.Controls.Add(this.tb_pass);
             this.Controls.Add(this.tb_name);
             this.Controls.Add(this.btnMinisize);
@@ -294,5 +332,7 @@
         private System.Windows.Forms.Button btnClose;
         private Guna.UI2.WinForms.Guna2TextBox tb_pass;
         private Guna.UI2.WinForms.Guna2TextBox tb_name;
+        private Guna.UI2.WinForms.Guna2ImageButton showpassbtn;
+        private Guna.UI2.WinForms.Guna2ImageButton hidepassbtn;
     }
 }

@@ -16,5 +16,10 @@ namespace LTMCB.Forms
         {
             InitializeComponent();
         }
+
+        private void btTaoNhom_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

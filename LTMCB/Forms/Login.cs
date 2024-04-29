@@ -113,5 +113,23 @@ namespace LTMCB.Forms
             Forms.FormQuenMatKhau qmk = new FormQuenMatKhau();
             qmk.Show();
         }
+
+        private void showpassbtn_Click(object sender, EventArgs e)
+        {
+            if (tb_pass.PasswordChar == '●')
+            {
+                hidepassbtn.BringToFront();
+                tb_pass.PasswordChar = '\0';
+            }
+        }
+
+        private void hidepassbtn_Click_1(object sender, EventArgs e)
+        {
+            if (tb_pass.PasswordChar == '\0')
+            {
+                showpassbtn.BringToFront();
+                tb_pass.PasswordChar = '●';
+            }
+        }
     }
 }

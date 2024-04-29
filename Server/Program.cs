@@ -24,8 +24,15 @@ namespace Server
 
             while (true)
             {
-                Socket socket = sk.Accept();
+                Socket skXL = sk.Accept();
                 Byte[] dulieu = new byte[102400000];
+                int demNhan = skXL.Receive(dulieu);
+                String noidung = Encoding.UTF8.GetString(dulieu, 0, demNhan);
+                if (noidung.StartsWith("DangNhap"))
+                {
+                    //Đăng nhập
+
+                }
 
             }
         }

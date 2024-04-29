@@ -137,7 +137,6 @@
     <Compile Include="Forms\QLFile.Designer.cs">
       <DependentUpon>QLFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Forms\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>

@@ -136,6 +136,7 @@
             this.btTaoNhom.TabIndex = 32;
             this.btTaoNhom.Text = "Tạo nhóm";
             this.btTaoNhom.UseVisualStyleBackColor = true;
+            this.btTaoNhom.Click += new System.EventHandler(this.btTaoNhom_Click);
             // 
             // btSearch
             // 
