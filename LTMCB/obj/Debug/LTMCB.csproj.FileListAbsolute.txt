@@ -68,3 +68,4 @@ D:\LTMCB\NT106\LTMCB\obj\Debug\LTMCB.csproj.CoreCompileInputs.cache
 D:\LTMCB\NT106\LTMCB\obj\Debug\LTMCB.csproj.Up2Date
 D:\LTMCB\NT106\LTMCB\obj\Debug\LTMCB.exe
 D:\LTMCB\NT106\LTMCB\obj\Debug\LTMCB.pdb
+D:\LTMCB\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormXacNhanDK.resources

@@ -141,5 +141,10 @@ namespace LTMCB.Forms
                 tb_pass.PasswordChar = '●';
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

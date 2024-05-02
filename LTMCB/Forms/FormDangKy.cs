@@ -69,12 +69,15 @@ namespace LTMCB.Forms
                 HienLoi("Tên đăng nhập không chứa các kí tự ^, ~, .", tbTDN);
                 tbTDN.Text = "";
             }
+            else if (tbMK.Text.Length < 6)
+            {
+                HienLoi("Mật khẩu phải nhiều hơn 6 kí tự.", tbMK);
+            }
             else if (tbMK.Text != tbNLMK.Text)
             {
                 HienLoi("Mật khẩu không giống nhau", tbNLMK);
                 tbNLMK.Text = "";
             }
-
             else if (!IsValidEmail(tbDK.Text.Trim()))
             {
                 HienLoi("Địa chỉ Email không hợp lệ", tbDK);
@@ -82,6 +85,10 @@ namespace LTMCB.Forms
             else
             {
                 errorlb.Visible = false;
+                this.Hide();
+                Forms.FormXacNhanDK formxn = new Forms.FormXacNhanDK();
+                formxn.ShowDialog();
+                this.Show();
             }
         }
     }

@@ -73,9 +73,10 @@
             // 
             // rtbFind
             // 
-            this.rtbFind.Location = new System.Drawing.Point(55, 226);
+            this.rtbFind.Location = new System.Drawing.Point(55, 253);
+            this.rtbFind.Multiline = false;
             this.rtbFind.Name = "rtbFind";
-            this.rtbFind.Size = new System.Drawing.Size(348, 59);
+            this.rtbFind.Size = new System.Drawing.Size(348, 32);
             this.rtbFind.TabIndex = 29;
             this.rtbFind.Text = "";
             // 
@@ -87,9 +88,9 @@
             this.ntTimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ntTimkiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ntTimkiem.ForeColor = System.Drawing.Color.White;
-            this.ntTimkiem.Location = new System.Drawing.Point(300, 322);
+            this.ntTimkiem.Location = new System.Drawing.Point(319, 312);
             this.ntTimkiem.Name = "ntTimkiem";
-            this.ntTimkiem.Size = new System.Drawing.Size(103, 53);
+            this.ntTimkiem.Size = new System.Drawing.Size(84, 43);
             this.ntTimkiem.TabIndex = 30;
             this.ntTimkiem.Text = "Tìm kiếm";
             // 
@@ -101,9 +102,9 @@
             this.btHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btHuy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btHuy.ForeColor = System.Drawing.Color.White;
-            this.btHuy.Location = new System.Drawing.Point(55, 322);
+            this.btHuy.Location = new System.Drawing.Point(55, 312);
             this.btHuy.Name = "btHuy";
-            this.btHuy.Size = new System.Drawing.Size(103, 53);
+            this.btHuy.Size = new System.Drawing.Size(87, 43);
             this.btHuy.TabIndex = 31;
             this.btHuy.Text = "Hủy";
             // 
