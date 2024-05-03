@@ -1,0 +1,93 @@
+﻿
+using Google.Cloud.Firestore;
+using Server.env;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Server.DAO
+{
+    public class UserInter
+    {
+        private static UserInter instance;
+        public static UserInter Instance
+        {
+            get { if (instance == null) instance = new UserInter(); return instance; }
+            private set { instance = value; }
+        }
+        private UserInter() { }
+        public async Task RegisterUserAsync(string username, string displayName, string email, string password)
+        {
+
+            var db = FireStoreHelper.db;
+            // Reference to the "users" collection
+            CollectionReference usersRef = db.Collection("users");
+
+            // Get all documents in the "users" collection synchronously
+            QuerySnapshot usersSnapshot = await usersRef.GetSnapshotAsync();
+
+            // Count the number of documents
+            int documentCount = usersSnapshot.Documents.Count;
+
+            // Create a new document with a unique ID based on the count
+            DocumentReference docRef = db.Collection("users").Document(documentCount.ToString());
+            Dictionary<string, object> data = new Dictionary<string, object>
+        {
+            { "username", username },
+            { "displayName", displayName },
+            { "email", email },
+            { "password", password } // Note: Password should be hashed before storing in Firestore
+        };
+            // Set the data to Firestore
+            await docRef.SetAsync(data);
+            Console.WriteLine("User registered successfully!");
+
+        }
+        public async Task<bool> userexist(string username, string email)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+            QuerySnapshot querySnapshot = await usersRef
+            // Query to check if a document exists with the provided username or email
+            .WhereEqualTo("username", username)
+            .GetSnapshotAsync();
+
+            // Check if any document matches the query for username
+            if (querySnapshot.Count > 0)
+                return true;
+
+            // If no match is found for username, check for email
+            querySnapshot = await usersRef
+                .WhereEqualTo("email", email)
+                .GetSnapshotAsync();
+
+            // Check if any document matches the query for email
+            return querySnapshot.Count > 0;
+        }
+
+        public async Task<int> login(string username, string password)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+            QuerySnapshot snapshot = await usersRef.WhereEqualTo("username", username).GetSnapshotAsync();
+            if (snapshot.Count == 0)
+                return 0;
+            foreach (DocumentSnapshot userDoc in snapshot.Documents)
+            {
+                // Get user data
+                Dictionary<string, object> userData = userDoc.ToDictionary();
+
+                // Check if the password matches
+                if (userData.ContainsKey("password") && (string)userData["password"] == password)
+                {
+                    // Password matches, user is authenticated
+                    return 1;
+                }
+            }
+            return -1;
+        }
+    }
+}

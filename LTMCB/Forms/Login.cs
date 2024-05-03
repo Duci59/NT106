@@ -10,38 +10,16 @@ using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using LTMCB.env;
 
 namespace LTMCB.Forms
 {
     public partial class Login : Form
     {
-        IFirebaseClient client;
+        
         public Login()
         {
             InitializeComponent();
-            btnMaxsize.Enabled = false;
-            try
-            {
-                IFirebaseConfig config = new FirebaseConfig
-                {
-                    AuthSecret = "2tMZTGQor4g76nxOQQt93sWgDMmaGgcGddStX13k", // Replace with your Firebase Auth Secret
-                    BasePath = "https://chatandload-default-rtdb.firebaseio.com/" // Replace with your Firebase Database URL
-                };
-
-                client = new FireSharp.FirebaseClient(config);
-
-                if (client != null)
-                {
-                    this.CenterToScreen();
-                    
-                    this.WindowState = FormWindowState.Normal;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Connection Fail.");
-            }
-
         }
 
         private void bt_login_Click(object sender, EventArgs e)
@@ -52,34 +30,34 @@ namespace LTMCB.Forms
             }
             else
             {
-                //Looping to get the match data using foreach
-                FirebaseResponse response = client.Get("Users/");
-                Dictionary<string, register> result = response.ResultAs<Dictionary<string, register>>();
-
-                foreach (var get in result)
+                string username = tb_name.Text.Trim();
+                string password = tb_pass.Text.Trim();
+                string yeuCau = "DangNhap~" + username + "~" + password;
+                string ketQua = Result.Instance.Request(yeuCau);
+                if (String.IsNullOrEmpty(ketQua))
                 {
-                    string userresult = get.Value.username;
-                    string passresult = get.Value.password;
-
-                    if (tb_name.Text == userresult)
-                    {
-
-                        if (tb_pass.Text == passresult)
-                        {
-                            MessageBox.Show("Đăng nhập thành công", "Thông Báo");
-                            this.Hide();
-                            MainMenu menu = new MainMenu(); 
-                            menu.Show();
-                        }
-
-                    }
+                    MessageBox.Show("Máy chủ không phản hồi");
+                }
+                else if (ketQua == "Login successfully")
+                {
+                    MessageBox.Show("Đăng nhập thành công");
+                    this.Hide();
+                    MainMenu menu = new MainMenu();
+                    menu.Show();
+                }
+                else if (ketQua == "Password didn't match")
+                {
+                    MessageBox.Show("Mật khẩu không khớp");
+                }
+                else if (ketQua == "User doesn't exist")
+                {
+                    MessageBox.Show("Người dùng không tốn tại");
+                }
+                else
+                {
+                    MessageBox.Show("Error");
                 }
             }
-        }
-        public class register
-        {
-            public string username { get; set; }
-            public string password { get; set; }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
