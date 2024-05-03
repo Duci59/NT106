@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTMCB.env;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,11 +85,44 @@ namespace LTMCB.Forms
             }
             else
             {
-                errorlb.Visible = false;
-                this.Hide();
-                Forms.FormXacNhanDK formxn = new Forms.FormXacNhanDK();
-                formxn.ShowDialog();
-                this.Show();
+                string username = tbTDN.Text;
+                string displayName = tbTHT.Text;
+                string email = tbDK.Text;
+                string password = tbMK.Text;
+                string passwordnl = tbNLMK.Text;
+
+                // Validate user input (optional)
+                if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(displayName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+                {
+                    MessageBox.Show("Please fill in all fields.");
+                    return;
+                }
+
+                if (password != passwordnl)
+                {
+                    MessageBox.Show("Password rewrite didn't match.");
+                    return;
+                }
+
+                string yeuCau = "DangKy~" + username + "~" + displayName + "~" + password + "~" + email;
+                string ketQua = Result.Instance.Request(yeuCau);
+
+                if (String.IsNullOrEmpty(ketQua))
+                {
+                    MessageBox.Show("Máy chủ không phản hồi");
+                }
+                else if (ketQua == "OK")
+                {
+                    MessageBox.Show("Đăng ký thành công. Đăng nhập ngay?", "Thông báo", MessageBoxButtons.YesNo);
+                }
+                else if (ketQua == "User or email already exit")
+                {
+                    MessageBox.Show("Tên người dùng hoặc email đã tồn tại. Vui lòng thay đổi tên người dùng hoặc email");
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
             }
         }
     }
