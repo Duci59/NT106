@@ -44,8 +44,8 @@ namespace LTMCB.Forms
             {
 
             }
-            errorlb.Visible = true;
-            errorlb.Text = "";
+            Forms.OTPResetPass oTPResetPass = new Forms.OTPResetPass();
+            oTPResetPass.Show();
         }
     }
 }

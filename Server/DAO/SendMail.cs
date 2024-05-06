@@ -34,7 +34,7 @@ namespace Server.DAO
             {
                 mail.From = new MailAddress(EmailFromAddress);
                 mail.To.Add(emailToAddress);
-                mail.Subject = "OTP";
+                mail.Subject = "OTP BOXBOX APP";
                 mail.Body = "Hello, Thank you for using my app <br /> This is your code: <b>" + code + "<b>.";
                 mail.IsBodyHtml = true;
 

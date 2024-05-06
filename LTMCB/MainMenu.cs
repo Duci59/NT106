@@ -19,11 +19,6 @@ namespace LTMCB
         readonly string username;
         private readonly int type;
 
-        public MainMenu()
-        {
-            InitializeComponent();
-        }
-
         public MainMenu(string username, string displayname)
         {
             InitializeComponent();

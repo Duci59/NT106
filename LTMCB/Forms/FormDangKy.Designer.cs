@@ -112,7 +112,6 @@
             this.tbTDN.Name = "tbTDN";
             this.tbTDN.Size = new System.Drawing.Size(169, 22);
             this.tbTDN.TabIndex = 5;
-            this.tbTDN.Text = "parad123";
             // 
             // tbTHT
             // 
@@ -120,7 +119,6 @@
             this.tbTHT.Name = "tbTHT";
             this.tbTHT.Size = new System.Drawing.Size(169, 22);
             this.tbTHT.TabIndex = 6;
-            this.tbTHT.Text = "parad";
             // 
             // tbMK
             // 
@@ -129,7 +127,6 @@
             this.tbMK.PasswordChar = '●';
             this.tbMK.Size = new System.Drawing.Size(169, 22);
             this.tbMK.TabIndex = 7;
-            this.tbMK.Text = "123456";
             // 
             // tbNLMK
             // 
@@ -138,7 +135,6 @@
             this.tbNLMK.PasswordChar = '●';
             this.tbNLMK.Size = new System.Drawing.Size(169, 22);
             this.tbNLMK.TabIndex = 8;
-            this.tbNLMK.Text = "123456";
             // 
             // tbDK
             // 
@@ -146,7 +142,6 @@
             this.tbDK.Name = "tbDK";
             this.tbDK.Size = new System.Drawing.Size(169, 22);
             this.tbDK.TabIndex = 9;
-            this.tbDK.Text = "ducivo5904@gmail.com";
             // 
             // btnClose
             // 

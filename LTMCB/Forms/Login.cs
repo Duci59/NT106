@@ -42,7 +42,7 @@ namespace LTMCB.Forms
                 {
                     MessageBox.Show("Đăng nhập thành công");
                     this.Hide();
-                    MainMenu menu = new MainMenu();
+                    MainMenu menu = new MainMenu(username, password);
                     menu.Show();
                 }
                 else if (ketQua == "Password didn't match")
