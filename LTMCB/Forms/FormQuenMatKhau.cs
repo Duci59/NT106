@@ -14,8 +14,9 @@ namespace LTMCB.Forms
     public partial class FormQuenMatKhau : Form
     {
         public FormQuenMatKhau()
-        {
+        {   
             InitializeComponent();
+            this.MakeDraggable();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

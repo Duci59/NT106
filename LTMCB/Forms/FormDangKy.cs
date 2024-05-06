@@ -18,6 +18,7 @@ namespace LTMCB.Forms
         public FormDangKy()
         {
             InitializeComponent();
+            this.MakeDraggable();
         }
 
         private void FormDangKy_Load(object sender, EventArgs e)

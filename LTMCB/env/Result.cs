@@ -20,7 +20,7 @@ namespace LTMCB.env
         public String Request(string yeuCau)
         {
             // Gui du lieu
-            String serverIP = "10.0.141.48";
+            String serverIP = "127.0.0.1";
             int port = 8080;
 
             using (Socket sk = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -56,7 +56,7 @@ namespace LTMCB.env
         public String Request(byte[] duLieu)
         {
             // Gui du lieu
-            String serverIP = "10.0.141.48";
+            String serverIP = "127.0.0.1";
             int port = 8080;
 
             using (Socket sk = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -89,7 +89,7 @@ namespace LTMCB.env
         public byte[] bRequest(string yeuCau, ref int demNhan)
         {
             // Gui du lieu
-            String serverIP = "10.0.141.48";
+            String serverIP = "127.0.0.1";
             int port = 8080;
 
             using (Socket sk = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))

@@ -15,6 +15,7 @@ namespace LTMCB.Forms
         public TrangChu()
         {
             InitializeComponent();
+            this.MakeDraggable();
         }
     }
 }

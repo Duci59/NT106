@@ -15,6 +15,7 @@ namespace LTMCB.Forms
         public FormChat()
         {
             InitializeComponent();
+            this.MakeDraggable();
         }
 
         private void btTaoNhom_Click(object sender, EventArgs e)

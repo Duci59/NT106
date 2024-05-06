@@ -32,6 +32,7 @@ namespace LTMCB.Forms
         public FormXacNhanDK(string username, string displayName, string email, string password, string passwordnl)
         {
             InitializeComponent();
+            this.MakeDraggable();
             tbCode.Focus();
             timeCountdownCode.Start();
             aTimerDelayButton = new Timer();

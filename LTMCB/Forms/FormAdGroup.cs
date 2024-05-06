@@ -15,6 +15,7 @@ namespace LTMCB.Forms
         public FormAdGroup()
         {
             InitializeComponent();
+            this.MakeDraggable();
         }
     }
 }

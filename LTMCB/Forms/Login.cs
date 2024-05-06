@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using LTMCB.env;
+
 
 namespace LTMCB.Forms
 {
@@ -20,6 +22,7 @@ namespace LTMCB.Forms
         public Login()
         {
             InitializeComponent();
+            this.MakeDraggable();
         }
 
         private void bt_login_Click(object sender, EventArgs e)

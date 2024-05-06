@@ -104,5 +104,12 @@ namespace Server.DAO
             }
             return -1;
         }
+
+        public async Task DMK(string email, string mkc, string mkm)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+
+        }
     }
 }

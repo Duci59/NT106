@@ -22,6 +22,7 @@ namespace LTMCB
         public MainMenu(string username, string displayname)
         {
             InitializeComponent();
+            this.MakeDraggable();
 
         }
 

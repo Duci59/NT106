@@ -14,7 +14,9 @@ namespace LTMCB.Forms
     {
         public Chat()
         {
+            
             InitializeComponent();
+            this.MakeDraggable();
         }
     }
 }

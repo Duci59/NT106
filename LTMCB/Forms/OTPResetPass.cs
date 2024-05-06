@@ -15,6 +15,7 @@ namespace LTMCB.Forms
         public OTPResetPass()
         {
             InitializeComponent();
+            this.MakeDraggable();
         }
 
         private void btGoBack_Click(object sender, EventArgs e)
@@ -24,6 +25,7 @@ namespace LTMCB.Forms
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
+            
             Forms.ResetPass resetPass = new Forms.ResetPass();
             resetPass.Show();
         }

@@ -15,6 +15,7 @@ namespace LTMCB.Forms
         public ResetPass()
         {
             InitializeComponent();
+            this.MakeDraggable();
         }
 
         private void ResetPass_Load(object sender, EventArgs e)

@@ -17,7 +17,7 @@ namespace Server
 
 
             Console.WriteLine("May chu bat dau hoat dong ...");
-            String serverIP = "10.0.141.48";
+            String serverIP = "127.0.0.1";
             int port = 8080;
             //Khởi tạo firestorehelper
             FireStoreHelper.SetEnviromentVariable();
@@ -125,7 +125,12 @@ namespace Server
                         skXL.Send(traLoi);
                     }
                 }
-                
+                else if (noidung.StartsWith("DMK"))
+                {
+                    string mkc = noidung.Split('~')[1];
+                    string mkm = noidung.Split('~')[2];
+
+                }
 
                 skXL.Close();
                 skXL.Dispose();

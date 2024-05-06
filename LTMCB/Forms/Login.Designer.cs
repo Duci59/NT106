@@ -54,10 +54,10 @@
             this.lb_forgotps.BackColor = System.Drawing.Color.Transparent;
             this.lb_forgotps.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lb_forgotps.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lb_forgotps.Location = new System.Drawing.Point(45, 459);
-            this.lb_forgotps.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lb_forgotps.Location = new System.Drawing.Point(54, 551);
+            this.lb_forgotps.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.lb_forgotps.Name = "lb_forgotps";
-            this.lb_forgotps.Size = new System.Drawing.Size(152, 24);
+            this.lb_forgotps.Size = new System.Drawing.Size(182, 29);
             this.lb_forgotps.TabIndex = 25;
             this.lb_forgotps.Text = "Forgot password?";
             // 
@@ -67,10 +67,10 @@
             this.lb_register.BackColor = System.Drawing.Color.Transparent;
             this.lb_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lb_register.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lb_register.Location = new System.Drawing.Point(45, 410);
-            this.lb_register.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lb_register.Location = new System.Drawing.Point(54, 492);
+            this.lb_register.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.lb_register.Name = "lb_register";
-            this.lb_register.Size = new System.Drawing.Size(185, 20);
+            this.lb_register.Size = new System.Drawing.Size(222, 24);
             this.lb_register.TabIndex = 24;
             this.lb_register.Text = "Don\'t have an account?";
             // 
@@ -78,9 +78,10 @@
             // 
             this.l_forgot.AutoSize = true;
             this.l_forgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.l_forgot.Location = new System.Drawing.Point(236, 463);
+            this.l_forgot.Location = new System.Drawing.Point(283, 556);
+            this.l_forgot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l_forgot.Name = "l_forgot";
-            this.l_forgot.Size = new System.Drawing.Size(130, 20);
+            this.l_forgot.Size = new System.Drawing.Size(151, 25);
             this.l_forgot.TabIndex = 23;
             this.l_forgot.TabStop = true;
             this.l_forgot.Text = "Reset password";
@@ -90,9 +91,10 @@
             // 
             this.l_register.AutoSize = true;
             this.l_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.l_register.Location = new System.Drawing.Point(236, 410);
+            this.l_register.Location = new System.Drawing.Point(283, 492);
+            this.l_register.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l_register.Name = "l_register";
-            this.l_register.Size = new System.Drawing.Size(84, 20);
+            this.l_register.Size = new System.Drawing.Size(99, 25);
             this.l_register.TabIndex = 22;
             this.l_register.TabStop = true;
             this.l_register.Text = "Click here";
@@ -108,10 +110,10 @@
             this.bt_login.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
             this.bt_login.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bt_login.ForeColor = System.Drawing.Color.White;
-            this.bt_login.Location = new System.Drawing.Point(45, 329);
-            this.bt_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_login.Location = new System.Drawing.Point(54, 395);
+            this.bt_login.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.bt_login.Name = "bt_login";
-            this.bt_login.Size = new System.Drawing.Size(384, 46);
+            this.bt_login.Size = new System.Drawing.Size(461, 55);
             this.bt_login.TabIndex = 21;
             this.bt_login.Text = "LOGIN";
             this.bt_login.Click += new System.EventHandler(this.bt_login_Click);
@@ -122,10 +124,10 @@
             this.lb_welcome.BackColor = System.Drawing.Color.Transparent;
             this.lb_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_welcome.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lb_welcome.Location = new System.Drawing.Point(125, 58);
-            this.lb_welcome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.lb_welcome.Location = new System.Drawing.Point(150, 70);
+            this.lb_welcome.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.lb_welcome.Name = "lb_welcome";
-            this.lb_welcome.Size = new System.Drawing.Size(255, 70);
+            this.lb_welcome.Size = new System.Drawing.Size(306, 84);
             this.lb_welcome.TabIndex = 20;
             this.lb_welcome.Text = "Chào mừng ";
             // 
@@ -135,10 +137,10 @@
             this.lb_pass.BackColor = System.Drawing.Color.Transparent;
             this.lb_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lb_pass.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lb_pass.Location = new System.Drawing.Point(45, 248);
-            this.lb_pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lb_pass.Location = new System.Drawing.Point(54, 298);
+            this.lb_pass.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.lb_pass.Name = "lb_pass";
-            this.lb_pass.Size = new System.Drawing.Size(152, 42);
+            this.lb_pass.Size = new System.Drawing.Size(182, 50);
             this.lb_pass.TabIndex = 19;
             this.lb_pass.Text = "Password";
             // 
@@ -148,10 +150,10 @@
             this.lb_name.BackColor = System.Drawing.Color.Transparent;
             this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lb_name.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lb_name.Location = new System.Drawing.Point(45, 167);
-            this.lb_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lb_name.Location = new System.Drawing.Point(54, 200);
+            this.lb_name.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(152, 30);
+            this.lb_name.Size = new System.Drawing.Size(182, 36);
             this.lb_name.TabIndex = 18;
             this.lb_name.Text = "Username";
             // 
@@ -167,10 +169,10 @@
             this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinisize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinisize.ForeColor = System.Drawing.Color.White;
-            this.btnMinisize.Location = new System.Drawing.Point(339, 13);
-            this.btnMinisize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinisize.Location = new System.Drawing.Point(407, 16);
+            this.btnMinisize.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinisize.Name = "btnMinisize";
-            this.btnMinisize.Size = new System.Drawing.Size(40, 37);
+            this.btnMinisize.Size = new System.Drawing.Size(48, 44);
             this.btnMinisize.TabIndex = 28;
             this.btnMinisize.Text = "O";
             this.btnMinisize.UseVisualStyleBackColor = true;
@@ -183,10 +185,10 @@
             this.btnMaxsize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaxsize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaxsize.ForeColor = System.Drawing.Color.White;
-            this.btnMaxsize.Location = new System.Drawing.Point(380, 13);
-            this.btnMaxsize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaxsize.Location = new System.Drawing.Point(456, 16);
+            this.btnMaxsize.Margin = new System.Windows.Forms.Padding(5);
             this.btnMaxsize.Name = "btnMaxsize";
-            this.btnMaxsize.Size = new System.Drawing.Size(40, 37);
+            this.btnMaxsize.Size = new System.Drawing.Size(48, 44);
             this.btnMaxsize.TabIndex = 27;
             this.btnMaxsize.Text = "O";
             this.btnMaxsize.UseVisualStyleBackColor = true;
@@ -199,10 +201,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(422, 13);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(506, 16);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 37);
+            this.btnClose.Size = new System.Drawing.Size(48, 44);
             this.btnClose.TabIndex = 26;
             this.btnClose.Text = "O";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -221,13 +223,13 @@
             this.tb_name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_name.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_name.Location = new System.Drawing.Point(213, 164);
-            this.tb_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_name.Location = new System.Drawing.Point(256, 197);
+            this.tb_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_name.Name = "tb_name";
             this.tb_name.PasswordChar = '\0';
             this.tb_name.PlaceholderText = "Enter Username";
             this.tb_name.SelectedText = "";
-            this.tb_name.Size = new System.Drawing.Size(207, 42);
+            this.tb_name.Size = new System.Drawing.Size(248, 50);
             this.tb_name.TabIndex = 29;
             // 
             // tb_pass
@@ -244,13 +246,13 @@
             this.tb_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_pass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_pass.Location = new System.Drawing.Point(213, 248);
-            this.tb_pass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_pass.Location = new System.Drawing.Point(256, 298);
+            this.tb_pass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_pass.Name = "tb_pass";
             this.tb_pass.PasswordChar = '●';
             this.tb_pass.PlaceholderText = "Enter Password";
             this.tb_pass.SelectedText = "";
-            this.tb_pass.Size = new System.Drawing.Size(207, 42);
+            this.tb_pass.Size = new System.Drawing.Size(248, 50);
             this.tb_pass.TabIndex = 30;
             // 
             // hidepassbtn
@@ -262,10 +264,11 @@
             this.hidepassbtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.hidepassbtn.ImageRotate = 0F;
             this.hidepassbtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.hidepassbtn.Location = new System.Drawing.Point(377, 256);
+            this.hidepassbtn.Location = new System.Drawing.Point(452, 307);
+            this.hidepassbtn.Margin = new System.Windows.Forms.Padding(4);
             this.hidepassbtn.Name = "hidepassbtn";
             this.hidepassbtn.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.hidepassbtn.Size = new System.Drawing.Size(32, 27);
+            this.hidepassbtn.Size = new System.Drawing.Size(38, 32);
             this.hidepassbtn.TabIndex = 34;
             this.hidepassbtn.Click += new System.EventHandler(this.hidepassbtn_Click_1);
             // 
@@ -278,19 +281,20 @@
             this.showpassbtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.showpassbtn.ImageRotate = 0F;
             this.showpassbtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.showpassbtn.Location = new System.Drawing.Point(377, 256);
+            this.showpassbtn.Location = new System.Drawing.Point(452, 307);
+            this.showpassbtn.Margin = new System.Windows.Forms.Padding(4);
             this.showpassbtn.Name = "showpassbtn";
             this.showpassbtn.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.showpassbtn.Size = new System.Drawing.Size(32, 27);
+            this.showpassbtn.Size = new System.Drawing.Size(38, 32);
             this.showpassbtn.TabIndex = 35;
             this.showpassbtn.Click += new System.EventHandler(this.showpassbtn_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(475, 563);
+            this.ClientSize = new System.Drawing.Size(570, 676);
             this.Controls.Add(this.showpassbtn);
             this.Controls.Add(this.hidepassbtn);
             this.Controls.Add(this.tb_pass);
@@ -307,7 +311,7 @@
             this.Controls.Add(this.lb_pass);
             this.Controls.Add(this.lb_name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

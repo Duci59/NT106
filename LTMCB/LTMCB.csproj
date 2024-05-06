@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="env\Result.cs" />
+    <Compile Include="FormExtensions.cs" />
     <Compile Include="Forms\Chat.cs">
       <SubType>Form</SubType>
     </Compile>

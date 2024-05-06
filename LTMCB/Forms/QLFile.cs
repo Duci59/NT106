@@ -15,6 +15,7 @@ namespace LTMCB.Forms
         public QLFile()
         {
             InitializeComponent();
+            this.MakeDraggable();
         }
     }
 }
