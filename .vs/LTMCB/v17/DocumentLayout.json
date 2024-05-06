@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\LTMCB\\NT106\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\LTMCB\\NT106\\ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D1BE638-6F7A-40AE-B5C4-87DA77C70218}|Server\\Server.csproj|d:\\ltmcb\\nt106\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D1BE638-6F7A-40AE-B5C4-87DA77C70218}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\LTMCB\\NT106\\ltmcb\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\LTMCB\\NT106\\ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\LTMCB\\NT106\\ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -118,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -131,8 +131,7 @@
               "ViewState": "AQIAAFIAAAAAAAAAAIAwwGQAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T03:29:50.875Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -148,20 +147,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FormDangKy.cs",
               "DocumentMoniker": "D:\\LTMCB\\NT106\\LTMCB\\Forms\\FormDangKy.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormDangKy.cs",
               "ToolTip": "D:\\LTMCB\\NT106\\LTMCB\\Forms\\FormDangKy.cs",
               "RelativeToolTip": "LTMCB\\Forms\\FormDangKy.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAD4vz8AAAAwAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAFAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T07:24:36.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserInter.cs",
               "DocumentMoniker": "D:\\LTMCB\\NT106\\Server\\DAO\\UserInter.cs",
               "RelativeDocumentMoniker": "Server\\DAO\\UserInter.cs",
@@ -169,33 +168,31 @@
               "RelativeToolTip": "Server\\DAO\\UserInter.cs",
               "ViewState": "AQIAAGIAAAAAAAAAAAAmwGoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T11:07:01.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T11:07:01.212Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\LTMCB\\NT106\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
               "ToolTip": "D:\\LTMCB\\NT106\\Server\\Program.cs",
               "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAQwHgAAAAVAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAQwHgAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T01:32:41.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "D:\\LTMCB\\NT106\\LTMCB\\Forms\\Login.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\Login.cs",
               "ToolTip": "D:\\LTMCB\\NT106\\LTMCB\\Forms\\Login.cs [Design]",
               "RelativeToolTip": "LTMCB\\Forms\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T11:46:50.327Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-29T11:46:50.327Z"
             },
             {
               "$type": "Document",
@@ -206,8 +203,7 @@
               "ToolTip": "D:\\LTMCB\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs [Design]",
               "RelativeToolTip": "LTMCB\\Forms\\FormQuenMatKhau.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T07:32:15.363Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-29T07:32:15.363Z"
             },
             {
               "$type": "Document",
@@ -218,8 +214,7 @@
               "ToolTip": "D:\\LTMCB\\NT106\\LTMCB\\Forms\\FormChat.cs [Design]",
               "RelativeToolTip": "LTMCB\\Forms\\FormChat.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T07:21:40.176Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-29T07:21:40.176Z"
             },
             {
               "$type": "Document",
@@ -230,8 +225,7 @@
               "ToolTip": "D:\\LTMCB\\NT106\\LTMCB\\Forms\\FormXacNhanDK.cs [Design]",
               "RelativeToolTip": "LTMCB\\Forms\\FormXacNhanDK.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:49:09.765Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-03T10:49:09.765Z"
             },
             {
               "$type": "Document",
@@ -242,8 +236,7 @@
               "ToolTip": "D:\\LTMCB\\NT106\\LTMCB\\Forms\\GopY.cs [Design]",
               "RelativeToolTip": "LTMCB\\Forms\\GopY.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:49:08.581Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-03T10:49:08.581Z"
             },
             {
               "$type": "Document",
@@ -255,8 +248,7 @@
               "RelativeToolTip": "LTMCB\\Forms\\FormXacNhanDK.cs",
               "ViewState": "AQIAAHkAAAAAAAAAAAAMwIMAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T15:51:22.671Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-05T15:51:22.671Z"
             },
             {
               "$type": "Document",
@@ -268,8 +260,7 @@
               "RelativeToolTip": "LTMCB\\Forms\\FormQuenMatKhau.cs",
               "ViewState": "AQIAABcAAAAAAAAAAIAwwCIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T07:45:34.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T07:45:34.653Z"
             },
             {
               "$type": "Document",
@@ -281,8 +272,7 @@
               "RelativeToolTip": "LTMCB\\MainMenu.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAQwCIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T03:24:52.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T03:24:52.513Z"
             },
             {
               "$type": "Document",
@@ -294,8 +284,7 @@
               "RelativeToolTip": "Server\\packages.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-03T10:48:56.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T10:48:56.196Z"
             },
             {
               "$type": "Document",
@@ -320,8 +309,7 @@
               "RelativeToolTip": "LTMCB\\env\\Result.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAYwDoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:51:07.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T10:51:07.224Z"
             },
             {
               "$type": "Document",
@@ -333,8 +321,7 @@
               "RelativeToolTip": "Server\\DAO\\SendMail.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAAwCcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T12:42:44.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T12:42:44.272Z"
             },
             {
               "$type": "Document",
@@ -346,8 +333,7 @@
               "RelativeToolTip": "Server\\DTO\\Data_File.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T03:24:47.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T03:24:47.504Z"
             },
             {
               "$type": "Document",
@@ -359,8 +345,7 @@
               "RelativeToolTip": "Server\\DTO\\User.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAxwCMAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T03:33:10.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T03:33:10.548Z"
             },
             {
               "$type": "Document",
@@ -372,8 +357,7 @@
               "RelativeToolTip": "Server\\env\\FireStoreHelper.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T11:06:52.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T11:06:52.989Z"
             },
             {
               "$type": "Document",
@@ -385,8 +369,7 @@
               "RelativeToolTip": "Server\\env\\Security.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T12:54:42.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T12:54:42.226Z"
             },
             {
               "$type": "Document",

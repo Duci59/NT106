@@ -75,13 +75,9 @@ namespace LTMCB.Forms
             {
                 HienLoi("Mật khẩu phải nhiều hơn 6 kí tự.", tbMK);
             }
-            else if (!tbMK.Text.Any(char.IsUpper))
+            else if (!tbMK.Text.Any(char.IsUpper) || !tbMK.Text.Any(c => !char.IsLetterOrDigit(c)))
             {
-                HienLoi("Mật khẩu phải chứa ít nhất một ký tự in hoa.", tbMK);
-            }
-            else if (!tbMK.Text.Any(c => !char.IsLetterOrDigit(c)))
-            {
-                HienLoi("Mật khẩu phải chứa ít nhất một ký tự đặc biệt.", tbMK);
+                HienLoi("Mật khẩu phải chứa ít nhất một ký tự in hoa và ký tự đặc biệt.", tbMK);
             }
             else if (tbMK.Text != tbNLMK.Text)
             {
