@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTMCB.env;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace LTMCB.Forms
 {
     public partial class FormXacNhanDK : Form
     {
+        System.Threading.Thread loadingcode;
         string sCode;//Mã xác thực email (random 4 chữ số)
         int nCountDown = 61; // Set thời gian chờ là 61 => khi bắt đầu đếm ngược sẽ đếm từ 60
         int nTimeLate = 61;//Thời gian hiệu lực của code
         private readonly Timer aTimerDelayButton;
         private Timer aTimerCountDown;
-        public FormXacNhanDK()
+
+
+
+        private string Username;
+        private string DisplayName;
+        private string Email;
+        private string Password;
+        private string Passwordnl;
+        public FormXacNhanDK(string username, string displayName, string email, string password, string passwordnl)
         {
             InitializeComponent();
             tbCode.Focus();
@@ -26,6 +37,12 @@ namespace LTMCB.Forms
             aTimerCountDown = new Timer();
             aTimerDelayButton.Tick += aTimerDelayButton_Tick;
             aTimerCountDown.Tick += aTimerCountDown_Tick;
+            Username = username;
+            DisplayName = displayName;
+            Email = email;
+            Password = password;
+            Passwordnl = passwordnl;
+            SendCode();
         }
 
         private void aTimerDelayButton_Tick(object sender, EventArgs e)
@@ -61,12 +78,27 @@ namespace LTMCB.Forms
         {
             nTimeLate = 61;
             btSendAgain.Enabled = false;
-            //SendCode();
+            SendCode();
             tbCode.Text = "";
             tbCode.Focus();
             DelayButton(62000);// Set thời gian là 62s để chạy cùng với thời gian đếm ngược (61-0)
             WaitButton();
             timeCountdownCode.Start();
+        }
+
+        private void LoadingCode()
+        {
+            sCode = Result.Instance.Request("SendMail~" + Email);
+            if (string.IsNullOrEmpty(sCode))
+                MessageBox.Show("Máy chủ không phản hồi");
+            loadingcode.Abort();
+        }
+
+        private void SendCode()
+        {
+            loadingcode = new System.Threading.Thread(LoadingCode);
+            loadingcode.IsBackground = true;
+            loadingcode.Start();
         }
 
         void DelayButton(int nInterval)
@@ -80,7 +112,28 @@ namespace LTMCB.Forms
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
+            if (sCode == tbCode.Text)
+            {
+                string yeuCau = "DangKy~" + Username + "~" + DisplayName + "~" + Password + "~" + Email;
+                string ketQua = Result.Instance.Request(yeuCau);
 
+                if (String.IsNullOrEmpty(ketQua))
+                {
+                    MessageBox.Show("Máy chủ không phản hồi");
+                }
+                else if (ketQua == "OK")
+                {
+                    MessageBox.Show("Đăng ký thành công. Đăng nhập ngay?", "Thông báo", MessageBoxButtons.YesNo);
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+            }
+            else
+            {
+
+            }
         }
 
         private void FormXacNhanDK_Load(object sender, EventArgs e)

@@ -43,7 +43,7 @@ namespace Server.DAO
         };
             // Set the data to Firestore
             await docRef.SetAsync(data);
-            Console.WriteLine("User registered successfully!");
+            Console.WriteLine("User '" + username + "' registered successfully!");
 
         }
         public async Task<bool> userexist(string username, string email)
@@ -84,10 +84,70 @@ namespace Server.DAO
                 if (userData.ContainsKey("password") && (string)userData["password"] == password)
                 {
                     // Password matches, user is authenticated
+                    Console.WriteLine("User '" + username + "' login successfully!");
                     return 1;
                 }
             }
             return -1;
         }
+        public async Task<bool> ForgotPasswordAsync(string email)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+
+            // Query to find the user with the specified email
+            QuerySnapshot querySnapshot = await usersRef
+                .WhereEqualTo("email", email)
+                .GetSnapshotAsync();
+
+            // Check if any document matches the query for email
+            if (querySnapshot.Count > 0)
+            {
+                // Assuming there's exactly one user per unique email
+                DocumentSnapshot userDoc = querySnapshot.Documents.First();
+
+                // Generate a password reset token (this can be a secure random token)
+                string resetToken = GenerateResetToken();
+
+                // Store the reset token in the user document (you may want to encrypt or hash it)
+                Dictionary<string, object> data = new Dictionary<string, object>
+        {
+            { "resetToken", resetToken }
+        };
+                await userDoc.Reference.SetAsync(data, SetOptions.MergeAll);
+
+                // Send an email to the user with a link to reset password
+                bool emailSent = await SendResetPasswordEmail(email, resetToken);
+                return emailSent;
+            }
+
+            // If no match is found for the email, return false
+            return false;
+        }
+
+        private string GenerateResetToken()
+        {
+            // This method should generate a secure random token for password reset
+            // For example, you can use Guid.NewGuid() to create a unique token
+            return Guid.NewGuid().ToString();
+        }
+
+        private async Task<bool> SendResetPasswordEmail(string email, string resetToken)
+        {
+            // Implement your email sending logic here (using SMTP, third-party service, etc.)
+            // This is a simplified example assuming you have a service to send emails
+            try
+            {
+                // Placeholder for email sending logic (replace with your implementation)
+                Console.WriteLine($"Password reset email sent to {email} with token: {resetToken}");
+                return true; // Email sent successfully
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to send password reset email: {ex.Message}");
+                return false; // Failed to send email
+            }
+        }
+
     }
 }

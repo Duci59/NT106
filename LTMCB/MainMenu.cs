@@ -13,9 +13,21 @@ namespace LTMCB
 {
     public partial class MainMenu : Form
     {
+        string sHello;
+
+        readonly string key;
+        readonly string username;
+        private readonly int type;
+
         public MainMenu()
         {
             InitializeComponent();
+        }
+
+        public MainMenu(string username, string displayname)
+        {
+            InitializeComponent();
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

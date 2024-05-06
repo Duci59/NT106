@@ -112,7 +112,7 @@
             this.tbTDN.Name = "tbTDN";
             this.tbTDN.Size = new System.Drawing.Size(169, 22);
             this.tbTDN.TabIndex = 5;
-            this.tbTDN.Text = "zxc";
+            this.tbTDN.Text = "parad123";
             // 
             // tbTHT
             // 
@@ -120,7 +120,7 @@
             this.tbTHT.Name = "tbTHT";
             this.tbTHT.Size = new System.Drawing.Size(169, 22);
             this.tbTHT.TabIndex = 6;
-            this.tbTHT.Text = "zxczx";
+            this.tbTHT.Text = "parad";
             // 
             // tbMK
             // 
@@ -146,7 +146,7 @@
             this.tbDK.Name = "tbDK";
             this.tbDK.Size = new System.Drawing.Size(169, 22);
             this.tbDK.TabIndex = 9;
-            this.tbDK.Text = "vochinh231@gmail.com";
+            this.tbDK.Text = "ducivo5904@gmail.com";
             // 
             // btnClose
             // 
