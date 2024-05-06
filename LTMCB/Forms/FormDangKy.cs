@@ -75,6 +75,14 @@ namespace LTMCB.Forms
             {
                 HienLoi("Mật khẩu phải nhiều hơn 6 kí tự.", tbMK);
             }
+            else if (!tbMK.Text.Any(char.IsUpper))
+            {
+                HienLoi("Mật khẩu phải chứa ít nhất một ký tự in hoa.", tbMK);
+            }
+            else if (!tbMK.Text.Any(c => !char.IsLetterOrDigit(c)))
+            {
+                HienLoi("Mật khẩu phải chứa ít nhất một ký tự đặc biệt.", tbMK);
+            }
             else if (tbMK.Text != tbNLMK.Text)
             {
                 HienLoi("Mật khẩu không giống nhau", tbNLMK);
@@ -94,7 +102,11 @@ namespace LTMCB.Forms
                 this.Hide();
                 Forms.FormXacNhanDK dki = new FormXacNhanDK(tbTDN.Text, tbTHT.Text, tbDK.Text, tbMK.Text, tbNLMK.Text);
                 dki.ShowDialog();
-                this.Show();
+                CheckDK = dki.nCheckdk;
+                if (CheckDK == 0)
+                {
+                    this.Show();
+                }
             }
         }
     }

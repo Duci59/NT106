@@ -100,13 +100,30 @@ namespace Server
                 }
                 else if (noidung.StartsWith("SendMail"))
                 {
-                    //gui mail: SendMail ~ Gmail
+                    //gui mail: SendMail ~ Email
                     string email = noidung.Split('~')[1];
                     Random rd = new Random();
                     int code = rd.Next(0, 9999);
                     fnSendMail(email, code.ToString("D4"));
                     byte[] traLoi = Encoding.UTF8.GetBytes(code.ToString("D4"));
                     skXL.Send(traLoi);
+                }
+                else if (noidung.StartsWith("CheckEmail"))
+                {
+                    //CheckEmail ~ Email
+                    bool check;
+                    string email = noidung.Split('~')[1];
+                    check = await UserInter.Instance.EmailExistsAsync(email);
+                    if (check)
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("User or email already exit");
+                        skXL.Send(traLoi);
+                    }
+                    else
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("OK");
+                        skXL.Send(traLoi);
+                    }
                 }
                 
 

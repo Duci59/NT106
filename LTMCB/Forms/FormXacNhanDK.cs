@@ -20,6 +20,7 @@ namespace LTMCB.Forms
         int nTimeLate = 61;//Thời gian hiệu lực của code
         private readonly Timer aTimerDelayButton;
         private Timer aTimerCountDown;
+        public int nCheckdk = 0;
 
 
 
@@ -123,7 +124,18 @@ namespace LTMCB.Forms
                 }
                 else if (ketQua == "OK")
                 {
-                    MessageBox.Show("Đăng ký thành công. Đăng nhập ngay?", "Thông báo", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Đăng ký thành công. Đăng nhập ngay?", "Thông báo", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        this.Close();
+                        nCheckdk = 1;
+                        MainMenu menu = new MainMenu(Username, DisplayName);
+                        menu.Show();
+                    }               
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        return;
+                    }
                 }
                 else
                 {

@@ -16,7 +16,7 @@ namespace LTMCB.Forms
 {
     public partial class Login : Form
     {
-        
+        private int CheckDK = 0;
         public Login()
         {
             InitializeComponent();
@@ -91,7 +91,11 @@ namespace LTMCB.Forms
             this.Hide();
             Forms.FormDangKy dki = new FormDangKy();
             dki.ShowDialog();
-            this.Show();
+            CheckDK = dki.CheckDK;
+            if (CheckDK == 0)
+            {
+                this.Show();
+            }
         }
 
         private void l_forgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

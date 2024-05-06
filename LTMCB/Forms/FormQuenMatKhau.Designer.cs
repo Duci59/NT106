@@ -33,10 +33,11 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.rtbFind = new System.Windows.Forms.RichTextBox();
+            this.tbFind = new System.Windows.Forms.RichTextBox();
             this.ntTimkiem = new Guna.UI2.WinForms.Guna2Button();
             this.btHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.errorlb = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -71,14 +72,14 @@
             this.guna2HtmlLabel2.TabIndex = 27;
             this.guna2HtmlLabel2.Text = "Nhập email để tìm kiếm tài khoản của bạn.";
             // 
-            // rtbFind
+            // tbFind
             // 
-            this.rtbFind.Location = new System.Drawing.Point(55, 253);
-            this.rtbFind.Multiline = false;
-            this.rtbFind.Name = "rtbFind";
-            this.rtbFind.Size = new System.Drawing.Size(348, 32);
-            this.rtbFind.TabIndex = 29;
-            this.rtbFind.Text = "";
+            this.tbFind.Location = new System.Drawing.Point(55, 253);
+            this.tbFind.Multiline = false;
+            this.tbFind.Name = "tbFind";
+            this.tbFind.Size = new System.Drawing.Size(348, 32);
+            this.tbFind.TabIndex = 29;
+            this.tbFind.Text = "";
             // 
             // ntTimkiem
             // 
@@ -88,11 +89,12 @@
             this.ntTimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ntTimkiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ntTimkiem.ForeColor = System.Drawing.Color.White;
-            this.ntTimkiem.Location = new System.Drawing.Point(319, 312);
+            this.ntTimkiem.Location = new System.Drawing.Point(319, 346);
             this.ntTimkiem.Name = "ntTimkiem";
             this.ntTimkiem.Size = new System.Drawing.Size(84, 43);
             this.ntTimkiem.TabIndex = 30;
-            this.ntTimkiem.Text = "Tìm kiếm";
+            this.ntTimkiem.Text = "Tiếp";
+            this.ntTimkiem.Click += new System.EventHandler(this.ntTimkiem_Click);
             // 
             // btHuy
             // 
@@ -102,11 +104,12 @@
             this.btHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btHuy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btHuy.ForeColor = System.Drawing.Color.White;
-            this.btHuy.Location = new System.Drawing.Point(55, 312);
+            this.btHuy.Location = new System.Drawing.Point(55, 346);
             this.btHuy.Name = "btHuy";
             this.btHuy.Size = new System.Drawing.Size(87, 43);
             this.btHuy.TabIndex = 31;
             this.btHuy.Text = "Hủy";
+            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
             // 
             // btnClose
             // 
@@ -124,16 +127,29 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // errorlb
+            // 
+            this.errorlb.BackColor = System.Drawing.Color.Transparent;
+            this.errorlb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.errorlb.ForeColor = System.Drawing.Color.Red;
+            this.errorlb.Location = new System.Drawing.Point(55, 307);
+            this.errorlb.Name = "errorlb";
+            this.errorlb.Size = new System.Drawing.Size(84, 20);
+            this.errorlb.TabIndex = 41;
+            this.errorlb.Text = "display error";
+            this.errorlb.Visible = false;
+            // 
             // FormQuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(475, 563);
+            this.Controls.Add(this.errorlb);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btHuy);
             this.Controls.Add(this.ntTimkiem);
-            this.Controls.Add(this.rtbFind);
+            this.Controls.Add(this.tbFind);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
@@ -152,9 +168,10 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Button btHuy;
         private Guna.UI2.WinForms.Guna2Button ntTimkiem;
-        private System.Windows.Forms.RichTextBox rtbFind;
+        private System.Windows.Forms.RichTextBox tbFind;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.Button btnClose;
+        private Guna.UI2.WinForms.Guna2HtmlLabel errorlb;
     }
 }
