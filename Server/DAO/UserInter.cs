@@ -43,7 +43,7 @@ namespace Server.DAO
         };
             // Set the data to Firestore
             await docRef.SetAsync(data);
-            Console.WriteLine("User registered successfully!");
+            Console.WriteLine("User '" + username + "' registered successfully!");
 
         }
         public async Task<bool> userexist(string username, string email)
@@ -68,6 +68,20 @@ namespace Server.DAO
             return querySnapshot.Count > 0;
         }
 
+        public async Task<bool> EmailExistsAsync(string email)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+
+            // Query to find any document that has the specified email
+            QuerySnapshot querySnapshot = await usersRef
+                .WhereEqualTo("email", email)
+                .GetSnapshotAsync();
+
+            // Check if any document matches the query for email
+            return querySnapshot.Count > 0;
+        }
+
         public async Task<int> login(string username, string password)
         {
             var db = FireStoreHelper.db;
@@ -84,6 +98,7 @@ namespace Server.DAO
                 if (userData.ContainsKey("password") && (string)userData["password"] == password)
                 {
                     // Password matches, user is authenticated
+                    Console.WriteLine("User '" + username + "' login successfully!");
                     return 1;
                 }
             }

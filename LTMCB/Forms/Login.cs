@@ -16,7 +16,7 @@ namespace LTMCB.Forms
 {
     public partial class Login : Form
     {
-        
+        private int CheckDK = 0;
         public Login()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace LTMCB.Forms
                 {
                     MessageBox.Show("Đăng nhập thành công");
                     this.Hide();
-                    MainMenu menu = new MainMenu();
+                    MainMenu menu = new MainMenu(username, password);
                     menu.Show();
                 }
                 else if (ketQua == "Password didn't match")
@@ -91,7 +91,11 @@ namespace LTMCB.Forms
             this.Hide();
             Forms.FormDangKy dki = new FormDangKy();
             dki.ShowDialog();
-            this.Show();
+            CheckDK = dki.CheckDK;
+            if (CheckDK == 0)
+            {
+                this.Show();
+            }
         }
 
         private void l_forgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

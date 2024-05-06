@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTMCB.env;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,31 @@ namespace LTMCB.Forms
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Forms.Login lg = new Forms.Login();
+            lg.Show();
+        }
+
+        private void ntTimkiem_Click(object sender, EventArgs e)
+        {
+            //CheckTK ~ email
+            string yeuCau = "CheckEmail~" + tbFind.Text;
+            string ketQua = Result.Instance.Request(yeuCau);
+
+            if (string.IsNullOrEmpty(ketQua))
+            {
+                MessageBox.Show("Máy chủ không phản hồi");
+            }
+            else if (ketQua == "OK")
+            {
+
+            }
+            Forms.OTPResetPass oTPResetPass = new Forms.OTPResetPass();
+            oTPResetPass.Show();
         }
     }
 }

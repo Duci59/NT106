@@ -17,7 +17,7 @@ namespace Server
 
 
             Console.WriteLine("May chu bat dau hoat dong ...");
-            String serverIP = "127.0.0.1";
+            String serverIP = "10.0.141.48";
             int port = 8080;
             //Khởi tạo firestorehelper
             FireStoreHelper.SetEnviromentVariable();
@@ -64,7 +64,20 @@ namespace Server
                         skXL.Send(traLoi);
                     }
                 }
-                if (noidung.StartsWith("DangKy"))
+                else if (noidung.StartsWith("CheckTK"))
+                {
+                    bool check;
+                    //Đăng ký: [DangKy] ~ username ~ Email 
+                    string username = noidung.Split('~')[1];
+                    string email = noidung.Split('~')[2];
+                    check = await UserInter.Instance.userexist(username, email);
+                    if (check)
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("User or email already exit");
+                        skXL.Send(traLoi);
+                    }
+                }
+                else if (noidung.StartsWith("DangKy"))
                 {
                     bool check;
                     //Đăng ký: [DangKy] ~ username ~ displayname ~ Pass ~ Email 
@@ -85,9 +98,43 @@ namespace Server
                         skXL.Send(traLoi);
                     }
                 }
+                else if (noidung.StartsWith("SendMail"))
+                {
+                    //gui mail: SendMail ~ Email
+                    string email = noidung.Split('~')[1];
+                    Random rd = new Random();
+                    int code = rd.Next(0, 9999);
+                    fnSendMail(email, code.ToString("D4"));
+                    byte[] traLoi = Encoding.UTF8.GetBytes(code.ToString("D4"));
+                    skXL.Send(traLoi);
+                }
+                else if (noidung.StartsWith("CheckEmail"))
+                {
+                    //CheckEmail ~ Email
+                    bool check;
+                    string email = noidung.Split('~')[1];
+                    check = await UserInter.Instance.EmailExistsAsync(email);
+                    if (check)
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("User or email already exit");
+                        skXL.Send(traLoi);
+                    }
+                    else
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("OK");
+                        skXL.Send(traLoi);
+                    }
+                }
+                
 
                 skXL.Close();
                 skXL.Dispose();
+            }
+
+            void fnSendMail(string sMail, string Code)
+            {
+                SendMail sm = new SendMail(sMail, Code);
+                sm.SendEmail();
             }
 
         }

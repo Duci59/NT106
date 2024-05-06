@@ -169,6 +169,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormXacNhanDK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormXacNhanDK";
             this.Load += new System.EventHandler(this.FormXacNhanDK_Load);
             this.ResumeLayout(false);

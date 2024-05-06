@@ -53,7 +53,8 @@ namespace LTMCB.Forms
 
         private void Dangkybtn_Click(object sender, EventArgs e)
         {
-
+            string yeuCau = "CheckTK~" +  tbTDN.Text + "~" + tbDK.Text;
+            string ketQua = Result.Instance.Request(yeuCau);
             if (tbTDN.Text.Trim()== "" || tbTHT.Text.Trim() == "" || tbMK.Text.Trim() == "")
             {
                 if (tbTDN.Text.Trim() == "")
@@ -74,6 +75,10 @@ namespace LTMCB.Forms
             {
                 HienLoi("Mật khẩu phải nhiều hơn 6 kí tự.", tbMK);
             }
+            else if (!tbMK.Text.Any(char.IsUpper) || !tbMK.Text.Any(c => !char.IsLetterOrDigit(c)))
+            {
+                HienLoi("Mật khẩu phải chứa ít nhất một ký tự in hoa và ký tự đặc biệt.", tbMK);
+            }
             else if (tbMK.Text != tbNLMK.Text)
             {
                 HienLoi("Mật khẩu không giống nhau", tbNLMK);
@@ -83,45 +88,20 @@ namespace LTMCB.Forms
             {
                 HienLoi("Địa chỉ Email không hợp lệ", tbDK);
             }
+            else if (ketQua == "User or email already exit")
+            {
+                HienLoi("Địa chỉ email hoặc tên đăng nhập đã tồn tại", tbTDN);
+            }
             else
             {
-                string username = tbTDN.Text;
-                string displayName = tbTHT.Text;
-                string email = tbDK.Text;
-                string password = tbMK.Text;
-                string passwordnl = tbNLMK.Text;
-
-                // Validate user input (optional)
-                if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(displayName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+                errorlb.Text = "";
+                this.Hide();
+                Forms.FormXacNhanDK dki = new FormXacNhanDK(tbTDN.Text, tbTHT.Text, tbDK.Text, tbMK.Text, tbNLMK.Text);
+                dki.ShowDialog();
+                CheckDK = dki.nCheckdk;
+                if (CheckDK == 0)
                 {
-                    MessageBox.Show("Please fill in all fields.");
-                    return;
-                }
-
-                if (password != passwordnl)
-                {
-                    MessageBox.Show("Password rewrite didn't match.");
-                    return;
-                }
-
-                string yeuCau = "DangKy~" + username + "~" + displayName + "~" + password + "~" + email;
-                string ketQua = Result.Instance.Request(yeuCau);
-
-                if (String.IsNullOrEmpty(ketQua))
-                {
-                    MessageBox.Show("Máy chủ không phản hồi");
-                }
-                else if (ketQua == "OK")
-                {
-                    MessageBox.Show("Đăng ký thành công. Đăng nhập ngay?", "Thông báo", MessageBoxButtons.YesNo);
-                }
-                else if (ketQua == "User or email already exit")
-                {
-                    MessageBox.Show("Tên người dùng hoặc email đã tồn tại. Vui lòng thay đổi tên người dùng hoặc email");
-                }
-                else
-                {
-                    MessageBox.Show("Error");
+                    this.Show();
                 }
             }
         }

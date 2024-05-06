@@ -106,3 +106,5 @@ D:\LTMCB\Do_an\gitchange\NT106\LTMCB\obj\Debug\LTMCB.csproj.CoreCompileInputs.ca
 D:\LTMCB\Do_an\gitchange\NT106\LTMCB\obj\Debug\LTMCB.csproj.CopyComplete
 D:\LTMCB\Do_an\gitchange\NT106\LTMCB\obj\Debug\LTMCB.exe
 D:\LTMCB\Do_an\gitchange\NT106\LTMCB\obj\Debug\LTMCB.pdb
+D:\LTMCB\NT106\LTMCB\obj\Debug\LTMCB.Forms.OTPResetPass.resources
+D:\LTMCB\NT106\LTMCB\obj\Debug\LTMCB.Forms.ResetPass.resources
