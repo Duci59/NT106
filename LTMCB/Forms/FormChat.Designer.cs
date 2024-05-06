@@ -166,7 +166,7 @@
             this.Controls.Add(this.btSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormChat";
-            this.Text = "FormChat";
+            this.Text = "Chat nhóm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

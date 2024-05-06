@@ -39,7 +39,6 @@
             this.btBaoVe = new System.Windows.Forms.Button();
             this.btDoiPass = new System.Windows.Forms.Button();
             this.pnBgTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelDoiPass = new System.Windows.Forms.Panel();
             this.btConfirmChangePass = new System.Windows.Forms.Button();
             this.tbNewPass2 = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnBgTop.SuspendLayout();
             this.panelDoiPass.SuspendLayout();
             this.SuspendLayout();
@@ -183,10 +183,6 @@
             this.pnBgTop.Size = new System.Drawing.Size(808, 423);
             this.pnBgTop.TabIndex = 42;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
             // panelDoiPass
             // 
             this.panelDoiPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -287,6 +283,10 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu cũ";
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -295,7 +295,7 @@
             this.Controls.Add(this.pnBgTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TrangChu";
-            this.Text = "TrangChu";
+            this.Text = "Trang Chủ";
             this.pnBgTop.ResumeLayout(false);
             this.pnBgTop.PerformLayout();
             this.panelDoiPass.ResumeLayout(false);

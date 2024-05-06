@@ -180,7 +180,7 @@
             this.Controls.Add(this.flowLayoutFileList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLFile";
-            this.Text = "QLFile";
+            this.Text = "Quản lý file";
             this.ResumeLayout(false);
             this.PerformLayout();
 

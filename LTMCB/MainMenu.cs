@@ -19,52 +19,51 @@ namespace LTMCB
         readonly string username;
         private readonly int type;
 
+        private Form activeForm;
+
         public MainMenu(string username, string displayname)
         {
             InitializeComponent();
-            this.MakeDraggable();
+        }
 
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(childForm);
+            this.panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitle.Text = childForm.Text;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Forms.TrangChu trangChu = new Forms.TrangChu();
-            trangChu.TopLevel = false;
-            panelDesktop.Controls.Add(trangChu);    
-            trangChu.BringToFront();
-            trangChu.Show();
+            OpenChildForm(new Forms.TrangChu(), sender);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Forms.FormChat chu = new Forms.FormChat();
-            chu.TopLevel = false;
-            panelDesktop.Controls.Add(chu);
-            chu.BringToFront();
-            chu.Show();
+            OpenChildForm(new Forms.FormChat(), sender);
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            Forms.QLFile qLFile = new Forms.QLFile();
-            qLFile.TopLevel = false;
-            panelDesktop.Controls.Add((qLFile));
-            qLFile.BringToFront();
-            qLFile.Show();
+            OpenChildForm(new Forms.QLFile(), sender);
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            Forms.GopY gopY = new Forms.GopY();
-            gopY.TopLevel = false;
-            panelDesktop.Controls.Add((gopY));
-            gopY.BringToFront();
-            gopY.Show();
+            OpenChildForm(new Forms.GopY(), sender);
         }
 
         private void btnMinisize_Click(object sender, EventArgs e)
@@ -85,15 +84,47 @@ namespace LTMCB
             this.Close();
         }
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-            Forms.QLFile qLFile = new Forms.QLFile();
-            qLFile.Show();
-        }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
-
+            panelDesktop.Controls.Clear();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Forms.Login login = new Forms.Login();
+            login.Show();
+        }
+        #region dragation
+        Point offset = Point.Empty;
+        bool isDragging = false;
+        private void guna2Panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point newLocation = this.PointToScreen(new Point(e.X, e.Y));
+                newLocation.Offset(-offset.X, -offset.Y);
+                this.Location = newLocation;
+            }
+        }
+
+        private void guna2Panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
+        }
+
+        private void guna2Panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                offset = new Point(e.X, e.Y);
+                isDragging = true;
+            }
+        }
+        #endregion
     }
 }

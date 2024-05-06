@@ -27,8 +27,6 @@ namespace LTMCB.Forms
         private void btHuy_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.Login lg = new Forms.Login();
-            lg.Show();
         }
 
         private void ntTimkiem_Click(object sender, EventArgs e)
