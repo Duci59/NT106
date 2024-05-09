@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,15 +22,21 @@ namespace LTMCB.Forms
         private readonly Timer aTimerDelayButton;
         private Timer aTimerCountDown;
         public int nCheckdk = 0;
+        public int which = 0;
 
+        private string Username = "";
+        private string DisplayName = "";
+        private string Email = "" ;
+        private string Password = "" ;
+        private string Usertype = "";
 
+        public FormXacNhanDK()
+        {
+            InitializeComponent();
+            this.MakeDraggable();
+        }
 
-        private string Username;
-        private string DisplayName;
-        private string Email;
-        private string Password;
-        private string Passwordnl;
-        public FormXacNhanDK(string username, string displayName, string email, string password, string passwordnl)
+        public FormXacNhanDK(string username, string displayName, string email, string password, string usertype)
         {
             InitializeComponent();
             this.MakeDraggable();
@@ -43,9 +50,25 @@ namespace LTMCB.Forms
             DisplayName = displayName;
             Email = email;
             Password = password;
-            Passwordnl = passwordnl;
+            Usertype = usertype;
             SendCode();
         }
+
+        public FormXacNhanDK(string email)
+        {
+            InitializeComponent();
+            this.MakeDraggable();
+            tbCode.Focus();
+            timeCountdownCode.Start();
+            aTimerDelayButton = new Timer();
+            aTimerCountDown = new Timer();
+            aTimerDelayButton.Tick += aTimerDelayButton_Tick;
+            aTimerCountDown.Tick += aTimerCountDown_Tick;
+            Email = email;
+            which = 1;
+            SendCode();
+        }
+
 
         private void aTimerDelayButton_Tick(object sender, EventArgs e)
         {
@@ -114,38 +137,57 @@ namespace LTMCB.Forms
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
-            if (sCode == tbCode.Text)
+            string yeuCau="", ketQua="";
+            
+            if (sCode != tbCode.Text)
             {
-                string yeuCau = "DangKy~" + Username + "~" + DisplayName + "~" + Password + "~" + Email;
-                string ketQua = Result.Instance.Request(yeuCau);
-
-                if (String.IsNullOrEmpty(ketQua))
-                {
-                    MessageBox.Show("Máy chủ không phản hồi");
-                }
-                else if (ketQua == "OK")
-                {
-                    DialogResult dialogResult = MessageBox.Show("Đăng ký thành công. Đăng nhập ngay?", "Thông báo", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        this.Close();
-                        nCheckdk = 1;
-                        MainMenu menu = new MainMenu(Username, DisplayName);
-                        menu.Show();
-                    }               
-                    else if (dialogResult == DialogResult.No)
-                    {
-                        return;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Error");
-                }
+                lb_error.Text = "Mã xác thực không đúng.";
+                return;
             }
-            else
+                
+           
+            switch (which)
             {
+                case 0:
+                    yeuCau = "DangKy~" + Username + "~" + DisplayName + "~" + Password + "~" + Email + "~" + Usertype;
+                    ketQua = Result.Instance.Request(yeuCau);
 
+                    if (String.IsNullOrEmpty(ketQua))
+                    {
+                        MessageBox.Show("Máy chủ không phản hồi");
+                    }
+                    else if (ketQua == "OK")
+                    {
+                        DialogResult dialogResult = MessageBox.Show("Đăng ký thành công. Đăng nhập ngay?", "Thông báo", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            this.Close();
+                            nCheckdk = 1;
+                            Login login = new Login();
+                            login.Show();
+                        }
+                        else if (dialogResult == DialogResult.No)
+                        {
+                            return;
+                        }
+                    }
+                    else if (ketQua == "User or email already exit")
+                    {
+                        MessageBox.Show("Người dùng hoặc email đã tồn tại");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error");
+                    }
+                break;
+                case 1:
+                    this.Hide();
+                    Forms.ResetPass reset = new ResetPass(Email);
+                    reset.ShowDialog();
+                    break;
+                default: 
+                    MessageBox.Show("Error");
+                    break;
             }
         }
 

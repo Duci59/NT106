@@ -43,57 +43,63 @@ namespace Server
                     string username = noidung.Split('~')[1];
                     string password = noidung.Split('~')[2];
                     check = await UserInter.Instance.login(username, password);
-                    if (check == 0)
-                    {
-                        byte[] traLoi = Encoding.UTF8.GetBytes("User doesn't exist");
-                        skXL.Send(traLoi);
+                    byte[] traLoi;
+                    switch (check)
+                    {   
+                        case 0:
+                            traLoi = Encoding.UTF8.GetBytes("User doesn't exist");
+                            break;
+                        case 1:
+
+                            traLoi = Encoding.UTF8.GetBytes("Login successfully");
+                            break;
+                        case -1:
+                            traLoi = Encoding.UTF8.GetBytes("Password didn't match");
+                            break;
+                        default:
+                            traLoi = Encoding.UTF8.GetBytes("An error have occurred");
+                            break;
                     }
-                    else if (check == 1)
-                    {
-                        byte[] traLoi = Encoding.UTF8.GetBytes("Login successfully");
-                        skXL.Send(traLoi);
-                    }
-                    else if (check == -1)
-                    {
-                        byte[] traLoi = Encoding.UTF8.GetBytes("Password didn't match");
-                        skXL.Send(traLoi);
-                    }
-                    else
-                    {
-                        byte[] traLoi = Encoding.UTF8.GetBytes("An error have occurred");
-                        skXL.Send(traLoi);
-                    }
+                    skXL.Send(traLoi);
                 }
                 else if (noidung.StartsWith("CheckTK"))
                 {
-                    bool check;
+                    bool checkuser, checkemail;
                     //Đăng ký: [DangKy] ~ username ~ Email 
                     string username = noidung.Split('~')[1];
                     string email = noidung.Split('~')[2];
-                    check = await UserInter.Instance.userexist(username, email);
-                    if (check)
+                    checkuser = await UserInter.Instance.field_exist("users", "username", username);
+                    checkemail = await UserInter.Instance.field_exist("users", "email", email);
+                    if (checkuser)
                     {
-                        byte[] traLoi = Encoding.UTF8.GetBytes("User or email already exit");
+                        byte[] traLoi = Encoding.UTF8.GetBytes("User exit");
+                        skXL.Send(traLoi);
+                    }
+                    else if (checkemail)
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("Email exit");
                         skXL.Send(traLoi);
                     }
                 }
                 else if (noidung.StartsWith("DangKy"))
                 {
-                    bool check;
+                    bool checkuser, checkemail;
                     //Đăng ký: [DangKy] ~ username ~ displayname ~ Pass ~ Email 
                     string username = noidung.Split('~')[1];
                     string displayname = noidung.Split('~')[2];
                     string password = noidung.Split('~')[3];
                     string email = noidung.Split('~')[4];
-                    check = await UserInter.Instance.userexist(username, email);
-                    if (check)
+                    string usertype = noidung.Split('~')[5];
+                    checkuser = await UserInter.Instance.field_exist("users", "username", username);
+                    checkemail = await UserInter.Instance.field_exist("users", "email", email);
+                    if (checkuser || checkemail)
                     {
                         byte[] traLoi = Encoding.UTF8.GetBytes("User or email already exit");
                         skXL.Send(traLoi);
                     }
                     else
                     {
-                        await UserInter.Instance.RegisterUserAsync(username, displayname, email, password);
+                        await UserInter.Instance.RegisterUserAsync(username, displayname, email, password, usertype);
                         byte[] traLoi = Encoding.UTF8.GetBytes("OK");
                         skXL.Send(traLoi);
                     }
@@ -113,24 +119,35 @@ namespace Server
                     //CheckEmail ~ Email
                     bool check;
                     string email = noidung.Split('~')[1];
-                    check = await UserInter.Instance.EmailExistsAsync(email);
+                    check =  await UserInter.Instance.field_exist("users", "email", email);
                     if (check)
                     {
-                        byte[] traLoi = Encoding.UTF8.GetBytes("User or email already exit");
+                        byte[] traLoi = Encoding.UTF8.GetBytes("Email exist");
                         skXL.Send(traLoi);
                     }
                     else
                     {
-                        byte[] traLoi = Encoding.UTF8.GetBytes("OK");
+                        byte[] traLoi = Encoding.UTF8.GetBytes("Email doesn't");
                         skXL.Send(traLoi);
                     }
                 }
-                else if (noidung.StartsWith("DMK"))
-                {
-                    string mkc = noidung.Split('~')[1];
-                    string mkm = noidung.Split('~')[2];
-
-                }
+               else if (noidung.StartsWith("RestPass"))
+               {
+                    string email = noidung.Split('~')[1];
+                    string passnew = noidung.Split('~')[2];
+                    bool check;
+                    check = await UserInter.Instance.ResetPass(email, passnew);
+                    if (check)
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("OK");
+                        skXL.Send(traLoi);
+                    }
+                    else
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("Error");
+                        skXL.Send(traLoi);
+                    }
+               }
 
                 skXL.Close();
                 skXL.Dispose();

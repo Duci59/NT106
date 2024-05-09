@@ -18,6 +18,12 @@ namespace LTMCB.Forms
             this.MakeDraggable();
         }
 
+        public OTPResetPass(string email)
+        {
+            InitializeComponent();
+            this.MakeDraggable();
+        }
+
         private void btGoBack_Click(object sender, EventArgs e)
         {
             this.Close();

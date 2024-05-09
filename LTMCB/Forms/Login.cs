@@ -50,11 +50,13 @@ namespace LTMCB.Forms
                 }
                 else if (ketQua == "Password didn't match")
                 {
-                    MessageBox.Show("Mật khẩu không khớp");
+                    lb_error.Text = "Mật khẩu không khớp";
+                    lb_error.Visible = true;
                 }
                 else if (ketQua == "User doesn't exist")
                 {
-                    MessageBox.Show("Người dùng không tốn tại");
+                    lb_error.Text = "Người dùng không tốn tại";
+                    lb_error.Visible = true;
                 }
                 else
                 {

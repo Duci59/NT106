@@ -46,6 +46,7 @@
             this.tb_pass = new Guna.UI2.WinForms.Guna2TextBox();
             this.hidepassbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.showpassbtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.lb_error = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // lb_forgotps
@@ -289,12 +290,24 @@
             this.showpassbtn.TabIndex = 35;
             this.showpassbtn.Click += new System.EventHandler(this.showpassbtn_Click);
             // 
+            // lb_error
+            // 
+            this.lb_error.BackColor = System.Drawing.Color.Transparent;
+            this.lb_error.ForeColor = System.Drawing.Color.Red;
+            this.lb_error.Location = new System.Drawing.Point(54, 353);
+            this.lb_error.Name = "lb_error";
+            this.lb_error.Size = new System.Drawing.Size(75, 22);
+            this.lb_error.TabIndex = 36;
+            this.lb_error.Text = "mes_error";
+            this.lb_error.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(570, 676);
+            this.Controls.Add(this.lb_error);
             this.Controls.Add(this.showpassbtn);
             this.Controls.Add(this.hidepassbtn);
             this.Controls.Add(this.tb_pass);
@@ -339,5 +352,6 @@
         private Guna.UI2.WinForms.Guna2TextBox tb_name;
         private Guna.UI2.WinForms.Guna2ImageButton showpassbtn;
         private Guna.UI2.WinForms.Guna2ImageButton hidepassbtn;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lb_error;
     }
 }

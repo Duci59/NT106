@@ -19,7 +19,7 @@ namespace Server.DAO
             private set { instance = value; }
         }
         private UserInter() { }
-        public async Task RegisterUserAsync(string username, string displayName, string email, string password)
+        public async Task RegisterUserAsync(string username, string displayName, string email, string password, string usertype)
         {
 
             var db = FireStoreHelper.db;
@@ -39,46 +39,21 @@ namespace Server.DAO
             { "username", username },
             { "displayName", displayName },
             { "email", email },
-            { "password", password } // Note: Password should be hashed before storing in Firestore
+            { "password", password }, // Note: Password should be hashed before storing in Firestore
+            { "usertype", usertype}
         };
             // Set the data to Firestore
             await docRef.SetAsync(data);
             Console.WriteLine("User '" + username + "' registered successfully!");
 
         }
-        public async Task<bool> userexist(string username, string email)
+        public async Task<bool> field_exist(string collection, string field, string value)
         {
             var db = FireStoreHelper.db;
-            CollectionReference usersRef = db.Collection("users");
-            QuerySnapshot querySnapshot = await usersRef
-            // Query to check if a document exists with the provided username or email
-            .WhereEqualTo("username", username)
-            .GetSnapshotAsync();
-
-            // Check if any document matches the query for username
-            if (querySnapshot.Count > 0)
-                return true;
-
-            // If no match is found for username, check for email
-            querySnapshot = await usersRef
-                .WhereEqualTo("email", email)
+            CollectionReference usersRef = db.Collection(collection);
+            QuerySnapshot querySnapshot = await usersRef.
+                WhereEqualTo(field, value)
                 .GetSnapshotAsync();
-
-            // Check if any document matches the query for email
-            return querySnapshot.Count > 0;
-        }
-
-        public async Task<bool> EmailExistsAsync(string email)
-        {
-            var db = FireStoreHelper.db;
-            CollectionReference usersRef = db.Collection("users");
-
-            // Query to find any document that has the specified email
-            QuerySnapshot querySnapshot = await usersRef
-                .WhereEqualTo("email", email)
-                .GetSnapshotAsync();
-
-            // Check if any document matches the query for email
             return querySnapshot.Count > 0;
         }
 
@@ -88,7 +63,10 @@ namespace Server.DAO
             CollectionReference usersRef = db.Collection("users");
             QuerySnapshot snapshot = await usersRef.WhereEqualTo("username", username).GetSnapshotAsync();
             if (snapshot.Count == 0)
+            {
+                Console.WriteLine("User '" + username + "' Don't exist");
                 return 0;
+            }
             foreach (DocumentSnapshot userDoc in snapshot.Documents)
             {
                 // Get user data
@@ -102,14 +80,29 @@ namespace Server.DAO
                     return 1;
                 }
             }
+            Console.WriteLine("User '" + username + "' Password didn't match");
             return -1;
         }
 
-        public async Task DMK(string email, string mkc, string mkm)
+        public async Task<bool> ResetPass(string email, string passnew)
         {
             var db = FireStoreHelper.db;
             CollectionReference usersRef = db.Collection("users");
-
+            QuerySnapshot snapshot = await usersRef.WhereEqualTo("email", email).GetSnapshotAsync();
+            try
+            {
+                DocumentSnapshot userSnapshot = snapshot.Documents.First();
+                DocumentReference userRef = userSnapshot.Reference;
+                await userRef.UpdateAsync("password", passnew);
+                Console.WriteLine("Password reset successfully for user with email: " + email);
+                return true;
+            }
+            catch
+            {
+                Console.WriteLine("Falied to reset password for user with email: " + email);
+                return false;
+            }
         }
+        
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace LTMCB.Forms
 {
@@ -39,12 +40,23 @@ namespace LTMCB.Forms
             {
                 MessageBox.Show("Máy chủ không phản hồi");
             }
-            else if (ketQua == "OK")
+            else if (ketQua == "Email exist")
             {
+                this.Hide();
+                Forms.FormXacNhanDK otpreset = new FormXacNhanDK(tbFind.Text);
+                otpreset.ShowDialog();
 
             }
-            Forms.OTPResetPass oTPResetPass = new Forms.OTPResetPass();
-            oTPResetPass.Show();
+            else if (ketQua == "Email doesn't")
+            {
+                errorlb.Text = "Email không tồn tại";
+                errorlb.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+            
         }
     }
 }

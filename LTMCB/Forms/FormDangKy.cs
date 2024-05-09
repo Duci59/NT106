@@ -97,7 +97,7 @@ namespace LTMCB.Forms
             {
                 errorlb.Text = "";
                 this.Hide();
-                Forms.FormXacNhanDK dki = new FormXacNhanDK(tbTDN.Text, tbTHT.Text, tbDK.Text, tbMK.Text, tbNLMK.Text);
+                Forms.FormXacNhanDK dki = new FormXacNhanDK(tbTDN.Text, tbTHT.Text, tbDK.Text, tbMK.Text, "casual");
                 dki.ShowDialog();
                 CheckDK = dki.nCheckdk;
                 if (CheckDK == 0)
