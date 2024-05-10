@@ -103,6 +103,37 @@ namespace Server.DAO
                 return false;
             }
         }
-        
+        public async Task<Dictionary<string, object>> LoadInfo(string username)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+
+            // Query for the user by username
+            QuerySnapshot snapshot = await usersRef.WhereEqualTo("username", username).GetSnapshotAsync();
+
+            if (snapshot.Count == 0)
+            {
+                // User not found
+                Console.WriteLine("User '" + username + "' not found.");
+                return null;
+            }
+
+            // Assuming username is unique, there should be only one document in the snapshot
+            foreach (DocumentSnapshot userDoc in snapshot.Documents)
+            {
+                // Convert user document to a dictionary
+                Dictionary<string, object> userData = userDoc.ToDictionary();
+
+                // Optionally remove sensitive data like password before returning
+                if (userData.ContainsKey("password"))
+                {
+                    userData.Remove("password");
+                }
+
+                return userData;
+            }
+
+            return null; // If something unexpected happens
+        }
     }
 }

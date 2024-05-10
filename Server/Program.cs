@@ -50,8 +50,8 @@ namespace Server
                             traLoi = Encoding.UTF8.GetBytes("User doesn't exist");
                             break;
                         case 1:
-
-                            traLoi = Encoding.UTF8.GetBytes("Login successfully");
+                            Dictionary<string, object> userInfo = await UserInter.Instance.LoadInfo(username);
+                            traLoi = Encoding.UTF8.GetBytes("success~" + userInfo["username"].ToString() + "~" + userInfo["displayName"].ToString() + "~" + userInfo["email"].ToString() + "~" + userInfo["usertype"].ToString());
                             break;
                         case -1:
                             traLoi = Encoding.UTF8.GetBytes("Password didn't match");

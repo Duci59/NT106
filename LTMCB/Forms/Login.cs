@@ -19,6 +19,7 @@ namespace LTMCB.Forms
     public partial class Login : Form
     {
         private int CheckDK = 0;
+        string username, password, usertype, displayName, email;
         public Login()
         {
             InitializeComponent();
@@ -33,19 +34,22 @@ namespace LTMCB.Forms
             }
             else
             {
-                string username = tb_name.Text.Trim();
-                string password = tb_pass.Text.Trim();
+                username = tb_name.Text.Trim();
+                password = tb_pass.Text.Trim();
                 string yeuCau = "DangNhap~" + username + "~" + password;
                 string ketQua = Result.Instance.Request(yeuCau);
                 if (String.IsNullOrEmpty(ketQua))
                 {
                     MessageBox.Show("Máy chủ không phản hồi");
                 }
-                else if (ketQua == "Login successfully")
+                else if (ketQua.Contains("success"))
                 {
+                    displayName = ketQua.Split('~')[2];
+                    email = ketQua.Split('~')[3];
+                    usertype = ketQua.Split('~')[4];
                     MessageBox.Show("Đăng nhập thành công");
                     this.Hide();
-                    MainMenu menu = new MainMenu(username, password);
+                    MainMenu menu = new MainMenu(username, displayName, usertype);
                     menu.Show();
                 }
                 else if (ketQua == "Password didn't match")

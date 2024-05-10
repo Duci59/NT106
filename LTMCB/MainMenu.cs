@@ -15,15 +15,20 @@ namespace LTMCB
     {
         string sHello;
 
-        readonly string key;
-        readonly string username;
-        private readonly int type;
+        readonly string Key;
+        readonly string Username;
+        readonly string Displayname;
+        private readonly string type;
 
         private Form activeForm;
 
-        public MainMenu(string username, string displayname)
+        public MainMenu(string username, string displayname, string utype)
         {
             InitializeComponent();
+            Username = username;
+            Displayname = displayname;
+            type = utype;
+            lblTitle.Text = "Chào " + displayname;
         }
 
         private void OpenChildForm(Form childForm, object btnSender)
@@ -88,6 +93,7 @@ namespace LTMCB
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             panelDesktop.Controls.Clear();
+            lblTitle.Text = "Chào " + Displayname;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
