@@ -216,6 +216,7 @@
             this.btConfirmChangePass.TabIndex = 16;
             this.btConfirmChangePass.Text = "Xác nhận";
             this.btConfirmChangePass.UseVisualStyleBackColor = true;
+            this.btConfirmChangePass.Click += new System.EventHandler(this.btConfirmChangePass_Click);
             // 
             // tbNewPass2
             // 

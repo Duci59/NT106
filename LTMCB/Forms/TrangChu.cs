@@ -15,12 +15,13 @@ namespace LTMCB.Forms
     public partial class TrangChu : Form
     {
         private int panelresetopen = 0;
-        private string username;
-        public TrangChu(string tusername)
+        private string username, displayname;
+        public TrangChu(string tusername, string Displayname)
         {
             InitializeComponent();
             this.MakeDraggable();
             username = tusername;
+            displayname = Displayname;
         }
 
         private void btDoiPass_Click(object sender, EventArgs e)
@@ -45,6 +46,11 @@ namespace LTMCB.Forms
                 MessageBox.Show("Vui lòng nhập tên cần thay đổi", "Thông báo");
                 return;
             }
+            else if (tbDisplayname.Text == displayname)
+            {
+                MessageBox.Show("Tên thay đổi không được trùng với tên cũ", "Thông báo");
+                return;
+            }
             string yeuCau = "ResetDisplayName~" + username + '~' + tbDisplayname.Text;
             string ketQua = Result.Instance.Request(yeuCau);
             if (String.IsNullOrEmpty(ketQua))
@@ -61,6 +67,11 @@ namespace LTMCB.Forms
             {
                 MessageBox.Show("Error");
             }
+        }
+
+        private void btConfirmChangePass_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
