@@ -133,6 +133,7 @@ namespace Server
                 }
                else if (noidung.StartsWith("RestPass"))
                {
+                    //ResetPass~emai~newpass
                     string email = noidung.Split('~')[1];
                     string passnew = noidung.Split('~')[2];
                     bool check;
@@ -148,6 +149,24 @@ namespace Server
                         skXL.Send(traLoi);
                     }
                }
+                else if (noidung.StartsWith("ResetDisplayName"))
+                {
+                    //ResetDisplayName~username~newdisplayname
+                    string username = noidung.Split('~')[1];
+                    string Displayname = noidung.Split('~')[2];
+                    bool check;
+                    check = await UserInter.Instance.ResetDisplayName(username, Displayname);
+                    if (check)
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("OK");
+                        skXL.Send(traLoi);
+                    }
+                    else
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("Error");
+                        skXL.Send(traLoi);
+                    }
+                }
 
                 skXL.Close();
                 skXL.Dispose();

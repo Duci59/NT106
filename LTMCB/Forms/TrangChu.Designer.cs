@@ -56,13 +56,14 @@
             // 
             this.btEditDisplayname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditDisplayname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEditDisplayname.Location = new System.Drawing.Point(41, 125);
+            this.btEditDisplayname.Location = new System.Drawing.Point(41, 136);
             this.btEditDisplayname.Margin = new System.Windows.Forms.Padding(4);
             this.btEditDisplayname.Name = "btEditDisplayname";
             this.btEditDisplayname.Size = new System.Drawing.Size(121, 49);
             this.btEditDisplayname.TabIndex = 32;
             this.btEditDisplayname.Text = "Sửa";
             this.btEditDisplayname.UseVisualStyleBackColor = true;
+            this.btEditDisplayname.Click += new System.EventHandler(this.btEditDisplayname_Click);
             // 
             // label6
             // 
@@ -158,6 +159,7 @@
             this.btDoiPass.TabIndex = 36;
             this.btDoiPass.Text = "Đổi mật khẩu";
             this.btDoiPass.UseVisualStyleBackColor = true;
+            this.btDoiPass.Click += new System.EventHandler(this.btDoiPass_Click);
             // 
             // pnBgTop
             // 
@@ -200,6 +202,7 @@
             this.panelDoiPass.Name = "panelDoiPass";
             this.panelDoiPass.Size = new System.Drawing.Size(349, 165);
             this.panelDoiPass.TabIndex = 40;
+            this.panelDoiPass.Visible = false;
             // 
             // btConfirmChangePass
             // 

@@ -48,7 +48,7 @@ namespace LTMCB
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.TrangChu(), sender);
+            OpenChildForm(new Forms.TrangChu(Username), sender);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

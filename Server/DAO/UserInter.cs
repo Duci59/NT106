@@ -135,5 +135,24 @@ namespace Server.DAO
 
             return null; // If something unexpected happens
         }
+        public async Task<bool> ResetDisplayName(string username, string newdisplayname)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+            QuerySnapshot snapshot = await usersRef.WhereEqualTo("username", username).GetSnapshotAsync();
+            try
+            {
+                DocumentSnapshot userSnapshot = snapshot.Documents.First();
+                DocumentReference userRef = userSnapshot.Reference;
+                await userRef.UpdateAsync("displayName", newdisplayname);
+                Console.WriteLine("Display name reset successfully for user : " + username);
+                return true;
+            }
+            catch
+            {
+                Console.WriteLine("Falied to reset displayname for user: " + username);
+                return false;
+            }
+        }
     }
 }
