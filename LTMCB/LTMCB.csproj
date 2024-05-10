@@ -119,12 +119,6 @@
     <Compile Include="Forms\GopY.Designer.cs">
       <DependentUpon>GopY.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OTPResetPass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\OTPResetPass.Designer.cs">
-      <DependentUpon>OTPResetPass.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ResetPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,9 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GopY.resx">
       <DependentUpon>GopY.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OTPResetPass.resx">
-      <DependentUpon>OTPResetPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResetPass.resx">
       <DependentUpon>ResetPass.cs</DependentUpon>

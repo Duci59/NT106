@@ -167,6 +167,22 @@ namespace Server
                         skXL.Send(traLoi);
                     }
                 }
+                else if (noidung.StartsWith("GetPasswordWithUserName"))
+                {
+                    //GetPasswordWithUserName~username
+                    string username = noidung.Split('~')[1];
+                    string pass = await UserInter.Instance.GetPasswordByUsername(username);
+                    if (pass == "khongco")
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("Error");
+                        skXL.Send(traLoi);
+                    }
+                    else
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes(pass);
+                        skXL.Send(traLoi);
+                    }
+                }
 
                 skXL.Close();
                 skXL.Dispose();

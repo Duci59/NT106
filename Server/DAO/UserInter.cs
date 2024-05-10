@@ -154,5 +154,37 @@ namespace Server.DAO
                 return false;
             }
         }
+        public async Task<string> GetPasswordByUsername(string username)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+
+            // Query for the user by username
+            QuerySnapshot snapshot = await usersRef.WhereEqualTo("username", username).GetSnapshotAsync();
+
+            if (snapshot.Count == 0)
+            {
+                // User not found
+                Console.WriteLine("User '" + username + "' not found.");
+                return null;
+            }
+
+            // Assuming username is unique, there should be only one document in the snapshot
+            foreach (DocumentSnapshot userDoc in snapshot.Documents)
+            {
+                // Convert user document to a dictionary
+                Dictionary<string, object> userData = userDoc.ToDictionary();
+
+                // Check if the password field exists and return the password
+                if (userData.ContainsKey("password"))
+                {
+                    string password = userData["password"] as string;
+                    return password;
+                }
+            }
+
+            return "khongco"; // If something unexpected happens
+        }
+
     }
 }

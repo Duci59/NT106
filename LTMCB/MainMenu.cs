@@ -18,16 +18,18 @@ namespace LTMCB
         readonly string Key;
         readonly string Username;
         readonly string Displayname;
+        readonly string email;
         private readonly string type;
 
         private Form activeForm;
 
-        public MainMenu(string username, string displayname, string utype)
+        public MainMenu(string username, string displayname, string utype, string mail)
         {
             InitializeComponent();
             Username = username;
             Displayname = displayname;
             type = utype;
+            email = mail;
             lblTitle.Text = "Chào " + displayname;
         }
 
@@ -48,7 +50,7 @@ namespace LTMCB
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.TrangChu(Username, Displayname), sender);
+            OpenChildForm(new Forms.TrangChu(Username, Displayname, email), sender);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

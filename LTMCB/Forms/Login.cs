@@ -49,7 +49,7 @@ namespace LTMCB.Forms
                     usertype = ketQua.Split('~')[4];
                     MessageBox.Show("Đăng nhập thành công");
                     this.Hide();
-                    MainMenu menu = new MainMenu(username, displayName, usertype);
+                    MainMenu menu = new MainMenu(username, displayName, usertype,email);
                     menu.Show();
                 }
                 else if (ketQua == "Password didn't match")

@@ -174,7 +174,6 @@ D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormDangKy.resources
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormQuenMatKhau.resources
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormXacNhanDK.resources
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.GopY.resources
-D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.OTPResetPass.resources
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.ResetPass.resources
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.TrangChu.resources
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.Login.resources

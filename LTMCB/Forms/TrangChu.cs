@@ -15,13 +15,14 @@ namespace LTMCB.Forms
     public partial class TrangChu : Form
     {
         private int panelresetopen = 0;
-        private string username, displayname;
-        public TrangChu(string tusername, string Displayname)
+        private string username, displayname, email;
+        public TrangChu(string tusername, string Displayname, string Email)
         {
             InitializeComponent();
             this.MakeDraggable();
             username = tusername;
             displayname = Displayname;
+            email = Email;
         }
 
         private void btDoiPass_Click(object sender, EventArgs e)
@@ -71,6 +72,41 @@ namespace LTMCB.Forms
 
         private void btConfirmChangePass_Click(object sender, EventArgs e)
         {
+            string yeuCau = "GetPasswordWithUserName~" + username;
+            string ketQua = Result.Instance.Request(yeuCau);
+            if (String.IsNullOrEmpty(ketQua))
+            {
+                MessageBox.Show("Máy chủ không phản hồi");
+            }   
+            else if (ketQua == tbOldPass.Text)
+            {
+                if (tbNewPass.Text != tbNewPass2.Text)
+                {
+                    MessageBox.Show("Mật khẩu không trùng khớp, thử lại");
+                    tbNewPass2.Focus();
+                    return;
+                }
+                yeuCau = "RestPass~" + email + '~' + tbNewPass.Text;
+                ketQua = Result.Instance.Request(yeuCau);
+                if (String.IsNullOrEmpty(ketQua))
+                {
+                    MessageBox.Show("Máy chủ không phản hồi");
+                }
+                else if (ketQua == "OK")
+                {
+                    MessageBox.Show("Đổi mật khẩu thành công");
+                    this.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sai mật khẩu");
+            }
 
         }
     }
