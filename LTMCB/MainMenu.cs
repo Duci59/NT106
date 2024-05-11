@@ -134,5 +134,11 @@ namespace LTMCB
             }
         }
         #endregion
+
+        private void infobtn_Click(object sender, EventArgs e)
+        {
+            Forms.FormInfo finfo = new Forms.FormInfo(Username);
+            finfo.Show();
+        }
     }
 }

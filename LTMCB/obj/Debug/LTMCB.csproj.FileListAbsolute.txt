@@ -185,3 +185,4 @@ D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.csproj.CoreCompileInputs.cache
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.csproj.Up2Date
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.exe
 D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.pdb
+D:\clone\NT106.1\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormInfo.resources

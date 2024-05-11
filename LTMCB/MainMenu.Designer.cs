@@ -47,6 +47,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
+            this.infobtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +78,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.guna2Panel1.Controls.Add(this.infobtn);
             this.guna2Panel1.Controls.Add(this.guna2Button4);
             this.guna2Panel1.Controls.Add(this.quanlybutton);
             this.guna2Panel1.Controls.Add(this.mahoabutton);
@@ -315,6 +317,22 @@
             this.panelDesktop.Size = new System.Drawing.Size(846, 485);
             this.panelDesktop.TabIndex = 5;
             // 
+            // infobtn
+            // 
+            this.infobtn.BackColor = System.Drawing.Color.Transparent;
+            this.infobtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.infobtn.HoverState.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.Image = ((System.Drawing.Image)(resources.GetObject("infobtn.Image")));
+            this.infobtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.infobtn.ImageRotate = 0F;
+            this.infobtn.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.Location = new System.Drawing.Point(102, 514);
+            this.infobtn.Name = "infobtn";
+            this.infobtn.PressedState.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.Size = new System.Drawing.Size(64, 72);
+            this.infobtn.TabIndex = 9;
+            this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -356,6 +374,7 @@
         private System.Windows.Forms.Button btnCloseChildForm;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel panelDesktop;
+        private Guna.UI2.WinForms.Guna2ImageButton infobtn;
     }
 }
 

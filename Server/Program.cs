@@ -133,7 +133,7 @@ namespace Server
                 }
                else if (noidung.StartsWith("RestPass"))
                {
-                    //ResetPass~emai~newpass
+                    //ResetPass~email~newpass
                     string email = noidung.Split('~')[1];
                     string passnew = noidung.Split('~')[2];
                     bool check;
@@ -160,11 +160,13 @@ namespace Server
                     {
                         byte[] traLoi = Encoding.UTF8.GetBytes("OK");
                         skXL.Send(traLoi);
+                        Console.WriteLine("user '" + username + "' reset display name successful");
                     }
                     else
                     {
                         byte[] traLoi = Encoding.UTF8.GetBytes("Error");
                         skXL.Send(traLoi);
+                        Console.WriteLine("user '" + username + "' reset display name fail");
                     }
                 }
                 else if (noidung.StartsWith("GetPasswordWithUserName"))
@@ -176,12 +178,23 @@ namespace Server
                     {
                         byte[] traLoi = Encoding.UTF8.GetBytes("Error");
                         skXL.Send(traLoi);
+                        Console.WriteLine("user '" + username + "' get password successful");
                     }
                     else
                     {
                         byte[] traLoi = Encoding.UTF8.GetBytes(pass);
                         skXL.Send(traLoi);
+                        Console.WriteLine("user '" + username + "' get password fail");
                     }
+                }
+                else if (noidung.StartsWith("GetInfoAccount"))
+                {
+                    //GetInfoAccount~username
+                    string username = noidung.Split('~')[1];
+                    Dictionary<string, object> userInfo = await UserInter.Instance.LoadInfo(username);
+                    byte[] traLoi = Encoding.UTF8.GetBytes("success~" + userInfo["username"].ToString() + "~" + userInfo["displayName"].ToString() + "~" + userInfo["email"].ToString() + "~" + userInfo["usertype"].ToString());
+                    skXL.Send(traLoi);
+                    Console.WriteLine("user '" + username + "' get info successfully");
                 }
 
                 skXL.Close();
