@@ -87,8 +87,8 @@ namespace Server
                     //Đăng ký: [DangKy] ~ username ~ displayname ~ Pass ~ Email 
                     string username = noidung.Split('~')[1];
                     string displayname = noidung.Split('~')[2];
-                    string password = noidung.Split('~')[3];
-                    string email = noidung.Split('~')[4];
+                    string password =  MD5Helper.Instance.GiaiMa(noidung.Split('~')[3]);
+                    string email = MD5Helper.Instance.GiaiMa(noidung.Split('~')[4]) ;
                     string usertype = noidung.Split('~')[5];
                     checkuser = await UserInter.Instance.field_exist("users", "username", username);
                     checkemail = await UserInter.Instance.field_exist("users", "email", email);

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.homebutton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.infobtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.quanlybutton = new Guna.UI2.WinForms.Guna2Button();
             this.mahoabutton = new Guna.UI2.WinForms.Guna2Button();
@@ -47,7 +48,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
-            this.infobtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,22 @@
             this.guna2Panel1.Size = new System.Drawing.Size(286, 589);
             this.guna2Panel1.TabIndex = 2;
             // 
+            // infobtn
+            // 
+            this.infobtn.BackColor = System.Drawing.Color.Transparent;
+            this.infobtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.infobtn.HoverState.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.Image = ((System.Drawing.Image)(resources.GetObject("infobtn.Image")));
+            this.infobtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.infobtn.ImageRotate = 0F;
+            this.infobtn.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.Location = new System.Drawing.Point(102, 514);
+            this.infobtn.Name = "infobtn";
+            this.infobtn.PressedState.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.Size = new System.Drawing.Size(64, 72);
+            this.infobtn.TabIndex = 9;
+            this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
+            // 
             // guna2Button4
             // 
             this.guna2Button4.Animated = true;
@@ -105,7 +121,7 @@
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button4.Location = new System.Drawing.Point(0, 425);
+            this.guna2Button4.Location = new System.Drawing.Point(0, 345);
             this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(286, 84);
@@ -127,13 +143,14 @@
             this.quanlybutton.Image = ((System.Drawing.Image)(resources.GetObject("quanlybutton.Image")));
             this.quanlybutton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.quanlybutton.ImageSize = new System.Drawing.Size(40, 40);
-            this.quanlybutton.Location = new System.Drawing.Point(0, 345);
+            this.quanlybutton.Location = new System.Drawing.Point(0, 425);
             this.quanlybutton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.quanlybutton.Name = "quanlybutton";
             this.quanlybutton.Size = new System.Drawing.Size(286, 84);
             this.quanlybutton.TabIndex = 5;
             this.quanlybutton.Text = "Quản lý";
             this.quanlybutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.quanlybutton.Visible = false;
             this.quanlybutton.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // mahoabutton
@@ -316,22 +333,6 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(846, 485);
             this.panelDesktop.TabIndex = 5;
-            // 
-            // infobtn
-            // 
-            this.infobtn.BackColor = System.Drawing.Color.Transparent;
-            this.infobtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.infobtn.HoverState.ImageSize = new System.Drawing.Size(80, 128);
-            this.infobtn.Image = ((System.Drawing.Image)(resources.GetObject("infobtn.Image")));
-            this.infobtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.infobtn.ImageRotate = 0F;
-            this.infobtn.ImageSize = new System.Drawing.Size(80, 128);
-            this.infobtn.Location = new System.Drawing.Point(102, 514);
-            this.infobtn.Name = "infobtn";
-            this.infobtn.PressedState.ImageSize = new System.Drawing.Size(80, 128);
-            this.infobtn.Size = new System.Drawing.Size(64, 72);
-            this.infobtn.TabIndex = 9;
-            this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
             // 
             // MainMenu
             // 

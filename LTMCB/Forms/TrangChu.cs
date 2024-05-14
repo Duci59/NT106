@@ -60,9 +60,8 @@ namespace LTMCB.Forms
             }
             else if (ketQua == "OK")
             {
-                MessageBox.Show("Đổi tên hiển thị thành công");
+                MessageBox.Show("Đổi tên hiển thị thành công.");
                 this.Close();
-
             }
             else
             {

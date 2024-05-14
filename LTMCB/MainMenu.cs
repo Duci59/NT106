@@ -17,7 +17,7 @@ namespace LTMCB
 
         readonly string Key;
         readonly string Username;
-        readonly string Displayname;
+        public readonly string Displayname;
         readonly string email;
         private readonly string type;
 

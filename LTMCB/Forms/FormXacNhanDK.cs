@@ -1,4 +1,5 @@
 ﻿using LTMCB.env;
+using LTMCB.MaHoa;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -149,7 +150,7 @@ namespace LTMCB.Forms
             switch (which)
             {
                 case 0:
-                    yeuCau = "DangKy~" + Username + "~" + DisplayName + "~" + Password + "~" + Email + "~" + Usertype;
+                    yeuCau = "DangKy~" + Username + "~" + DisplayName + "~" + Password.MaHoa() + "~" + Email.MaHoa() + "~" + Usertype;
                     ketQua = Result.Instance.Request(yeuCau);
 
                     if (String.IsNullOrEmpty(ketQua))

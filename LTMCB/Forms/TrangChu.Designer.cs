@@ -56,7 +56,7 @@
             // 
             this.btEditDisplayname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditDisplayname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEditDisplayname.Location = new System.Drawing.Point(41, 136);
+            this.btEditDisplayname.Location = new System.Drawing.Point(41, 155);
             this.btEditDisplayname.Margin = new System.Windows.Forms.Padding(4);
             this.btEditDisplayname.Name = "btEditDisplayname";
             this.btEditDisplayname.Size = new System.Drawing.Size(121, 49);
@@ -70,7 +70,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 47);
+            this.label6.Location = new System.Drawing.Point(36, 66);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 29);
@@ -82,17 +82,18 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 219);
+            this.label5.Location = new System.Drawing.Point(36, 238);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(207, 29);
             this.label5.TabIndex = 39;
             this.label5.Text = "Mã khóa của bạn";
+            this.label5.Visible = false;
             // 
             // tbDisplayname
             // 
             this.tbDisplayname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDisplayname.Location = new System.Drawing.Point(41, 82);
+            this.tbDisplayname.Location = new System.Drawing.Point(41, 101);
             this.tbDisplayname.Margin = new System.Windows.Forms.Padding(4);
             this.tbDisplayname.MaxLength = 20;
             this.tbDisplayname.Name = "tbDisplayname";
@@ -115,24 +116,26 @@
             // tbKey
             // 
             this.tbKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKey.Location = new System.Drawing.Point(41, 252);
+            this.tbKey.Location = new System.Drawing.Point(41, 271);
             this.tbKey.Margin = new System.Windows.Forms.Padding(4);
             this.tbKey.MaxLength = 100;
             this.tbKey.Name = "tbKey";
             this.tbKey.Size = new System.Drawing.Size(209, 26);
             this.tbKey.TabIndex = 33;
+            this.tbKey.Visible = false;
             // 
             // btSua
             // 
             this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSua.Location = new System.Drawing.Point(41, 289);
+            this.btSua.Location = new System.Drawing.Point(41, 308);
             this.btSua.Margin = new System.Windows.Forms.Padding(4);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(121, 49);
             this.btSua.TabIndex = 34;
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Visible = false;
             // 
             // btBaoVe
             // 

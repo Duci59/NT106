@@ -156,7 +156,7 @@
   <data name="infobtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqgAAAQACAYAAAAtJ6vlAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxIAAAsSAdLdfvwAAFd/SURBVHhe7d3/53Vp2T/+t2Qk
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxAAAAsQAa0jvXUAAFd/SURBVHhe7d3/53Vp2T/+t2Qk
         SUbGSJIkY2QkGbeMJCNJMpKMJBlJkiRJkkifZCTJSMZIxhgZSUaSJEmS5P6L3j/cn+Ponmve1+zrOde8
         9trnWudeez9+eEiH8Vr72us8zuPca51f/s///M//AADA2YhBAACYJQYBAGCWGAQAgFliEAAAZolBAACY
         JQYBAGCWGAQAgFliEAAAZolBAACYJQYBAGCWGAQAgFliEAAAZolBAACYJQYBAGCWGAQAgFliEAAAZolB
@@ -643,9 +643,6 @@
   <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>161, 17</value>
-  </metadata>
   <data name="btnCloseChildForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADkAAAA8CAYAAADc1RI2AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -661,4 +658,7 @@
         oxuMbjB6GYz8A31H7BXV/NNlAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>161, 17</value>
+  </metadata>
 </root>
