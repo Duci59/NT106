@@ -150,7 +150,7 @@ namespace LTMCB.Forms
             switch (which)
             {
                 case 0:
-                    yeuCau = "DangKy~" + Username + "~" + DisplayName + "~" + Password.MaHoa() + "~" + Email.MaHoa() + "~" + Usertype;
+                    yeuCau = "DangKy~" + Username.MaHoa() + "~" + DisplayName.MaHoa() + "~" + Password.MaHoa() + "~" + Email.MaHoa() + "~" + Usertype.MaHoa();
                     ketQua = Result.Instance.Request(yeuCau);
 
                     if (String.IsNullOrEmpty(ketQua))

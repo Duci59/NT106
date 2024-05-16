@@ -1,4 +1,5 @@
 ﻿using LTMCB.env;
+using LTMCB.MaHoa;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace LTMCB.Forms
         {
             InitializeComponent();
             this.MakeDraggable();
-            string yeucau = "GetInfoAccount~" + username;
+            string yeucau = "GetInfoAccount~" + username.MaHoa();
             string ketqua = Result.Instance.Request(yeucau);
             if (String.IsNullOrEmpty(ketqua))
             {

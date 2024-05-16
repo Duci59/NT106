@@ -1,4 +1,5 @@
 ﻿using LTMCB.env;
+using LTMCB.MaHoa;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,7 +53,7 @@ namespace LTMCB.Forms
                 MessageBox.Show("Tên thay đổi không được trùng với tên cũ", "Thông báo");
                 return;
             }
-            string yeuCau = "ResetDisplayName~" + username + '~' + tbDisplayname.Text;
+            string yeuCau = "ResetDisplayName~" + username.MaHoa() + '~' + tbDisplayname.Text;
             string ketQua = Result.Instance.Request(yeuCau);
             if (String.IsNullOrEmpty(ketQua))
             {
@@ -77,7 +78,7 @@ namespace LTMCB.Forms
             {
                 MessageBox.Show("Máy chủ không phản hồi");
             }   
-            else if (ketQua == tbOldPass.Text)
+            else if (ketQua ==(tbOldPass.Text).MaHoaMotChieu())
             {
                 if (tbNewPass.Text != tbNewPass2.Text)
                 {
@@ -85,7 +86,7 @@ namespace LTMCB.Forms
                     tbNewPass2.Focus();
                     return;
                 }
-                yeuCau = "RestPass~" + email + '~' + tbNewPass.Text;
+                yeuCau = "RestPass~" + email + '~' + (tbNewPass.Text).MaHoa();
                 ketQua = Result.Instance.Request(yeuCau);
                 if (String.IsNullOrEmpty(ketQua))
                 {

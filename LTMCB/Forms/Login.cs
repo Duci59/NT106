@@ -12,6 +12,7 @@ using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using LTMCB.env;
+using LTMCB.MaHoa;
 
 
 namespace LTMCB.Forms
@@ -36,7 +37,7 @@ namespace LTMCB.Forms
             {
                 username = tb_name.Text.Trim();
                 password = tb_pass.Text.Trim();
-                string yeuCau = "DangNhap~" + username + "~" + password;
+                string yeuCau = "DangNhap~" + username + "~" + password.MaHoa();
                 string ketQua = Result.Instance.Request(yeuCau);
                 if (String.IsNullOrEmpty(ketQua))
                 {
@@ -44,9 +45,9 @@ namespace LTMCB.Forms
                 }
                 else if (ketQua.Contains("success"))
                 {
-                    displayName = ketQua.Split('~')[2];
-                    email = ketQua.Split('~')[3];
-                    usertype = ketQua.Split('~')[4];
+                    displayName = (ketQua.Split('~')[2]).GiaiMa();
+                    email = (ketQua.Split('~')[3]).GiaiMa();
+                    usertype = (ketQua.Split('~')[4]).GiaiMa();
                     MessageBox.Show("Đăng nhập thành công");
                     this.Hide();
                     MainMenu menu = new MainMenu(username, displayName, usertype,email);

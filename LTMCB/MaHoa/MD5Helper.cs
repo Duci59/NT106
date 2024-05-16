@@ -22,6 +22,22 @@ namespace LTMCB.MaHoa
             byte[] output = bGiaiMa(input);
             return Encoding.UTF8.GetString(output);
         }
+        public static string MaHoaMotChieu(this string duLieuCanMaHoa)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.UTF8.GetBytes(duLieuCanMaHoa);
+                byte[] hash = md5.ComputeHash(inputBytes);
+
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hash.Length; i++)
+                {
+                    sb.Append(hash[i].ToString("X2")); // Chuyển byte thành chuỗi hex
+                }
+
+                return sb.ToString();
+            }
+        }
 
         static byte[] bMaHoa(byte[] duLieuCanMaHoa)
         {
