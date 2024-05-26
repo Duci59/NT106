@@ -112,6 +112,7 @@
             this.tbTDN.Name = "tbTDN";
             this.tbTDN.Size = new System.Drawing.Size(169, 22);
             this.tbTDN.TabIndex = 5;
+            this.tbTDN.TextChanged += new System.EventHandler(this.tbTDN_TextChanged);
             // 
             // tbTHT
             // 

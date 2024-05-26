@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lbStt = new System.Windows.Forms.Label();
             this.flowLayoutNhomChat = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbStt = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbMatKhau = new System.Windows.Forms.TextBox();
             this.lbMatKhau = new System.Windows.Forms.Label();
@@ -39,22 +39,14 @@
             this.lbTennhom = new System.Windows.Forms.Label();
             this.btTaoNhom = new System.Windows.Forms.Button();
             this.btSearch = new System.Windows.Forms.Button();
+            this.toolTipGroup = new System.Windows.Forms.ToolTip(this.components);
+            this.timerLoadGr = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // lbStt
-            // 
-            this.lbStt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbStt.AutoSize = true;
-            this.lbStt.Location = new System.Drawing.Point(485, 113);
-            this.lbStt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbStt.Name = "lbStt";
-            this.lbStt.Size = new System.Drawing.Size(125, 16);
-            this.lbStt.TabIndex = 37;
-            this.lbStt.Text = "(Bạn chưa có nhóm)";
+            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.TargetControl = this.flowLayoutNhomChat;
             // 
             // flowLayoutNhomChat
             // 
@@ -68,6 +60,18 @@
             this.flowLayoutNhomChat.Name = "flowLayoutNhomChat";
             this.flowLayoutNhomChat.Size = new System.Drawing.Size(860, 310);
             this.flowLayoutNhomChat.TabIndex = 36;
+            this.flowLayoutNhomChat.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutNhomChat_Paint);
+            // 
+            // lbStt
+            // 
+            this.lbStt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbStt.AutoSize = true;
+            this.lbStt.Location = new System.Drawing.Point(485, 113);
+            this.lbStt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbStt.Name = "lbStt";
+            this.lbStt.Size = new System.Drawing.Size(125, 16);
+            this.lbStt.TabIndex = 37;
+            this.lbStt.Text = "(Bạn chưa có nhóm)";
             // 
             // label4
             // 
@@ -149,11 +153,20 @@
             this.btSearch.TabIndex = 31;
             this.btSearch.Text = "Tìm nhóm";
             this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
+            // toolTipGroup
+            // 
+            this.toolTipGroup.IsBalloon = true;
+            this.toolTipGroup.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipGroup.ToolTipTitle = "Gợi ý";
+            this.toolTipGroup.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTipGroup_Popup);
             // 
             // FormChat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.lbStt);
             this.Controls.Add(this.flowLayoutNhomChat);
@@ -167,6 +180,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormChat";
             this.Text = "Chat nhóm";
+            this.Load += new System.EventHandler(this.FormChat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +198,7 @@
         private System.Windows.Forms.Label lbTennhom;
         private System.Windows.Forms.Button btTaoNhom;
         private System.Windows.Forms.Button btSearch;
+        private System.Windows.Forms.ToolTip toolTipGroup;
+        private System.Windows.Forms.Timer timerLoadGr;
     }
 }

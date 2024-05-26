@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Server.env;
 using Server.DAO;
+using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 namespace Server
 {
@@ -104,6 +106,9 @@ namespace Server
                         skXL.Send(traLoi);
                     }
                 }
+
+          
+
                 else if (noidung.StartsWith("SendMail"))
                 {
                     //gui mail: SendMail ~ Email
@@ -196,6 +201,50 @@ namespace Server
                     skXL.Send(traLoi);
                     Console.WriteLine("user '" + username + "' get info successfully");
                 }
+
+                else if (noidung.StartsWith("TaoNhom"))
+                {
+                    bool checkgrname;
+
+                    string username = noidung.Split('~')[1];
+                    string grname = noidung.Split('~')[2];
+                    string grpassword = MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[3]));
+
+                    checkgrname = await GroupInter.Instance.FieldExistAsync("groupname", grname);
+                    if (checkgrname)
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("DTT");
+                        skXL.Send(traLoi);
+                    }
+                    else
+                    {
+                        await GroupInter.Instance.RegisterGroupAsync(grname, username, grpassword);
+                        byte[] traLoi = Encoding.UTF8.GetBytes("TC");
+                        skXL.Send(traLoi);
+                    }
+
+                }
+
+                else if (noidung.StartsWith("DelGr"))
+                {
+                    string TenNhom = noidung.Split('~')[1];
+                    await GroupInter.Instance.DeleteGroupAsync(TenNhom);
+                    skXL.Send(Encoding.UTF8.GetBytes("TC"));
+                    Console.WriteLine("Xoa nhom -" + TenNhom);
+                }
+
+
+                else if (noidung.StartsWith("LoadGroup"))
+                {
+                    // Phân tích yêu cầu: [CG] ~ username
+                    string username = noidung.Split('~')[1];
+                    string traloi = await GroupInter.Instance.LoadGroupAsync(username);
+                    skXL.Send(Encoding.UTF8.GetBytes(traloi));
+                }
+
+
+
+
 
                 skXL.Close();
                 skXL.Dispose();

@@ -106,6 +106,11 @@ namespace LTMCB.Forms
                 }
             }
         }
+
+        private void tbTDN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

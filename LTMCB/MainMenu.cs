@@ -31,6 +31,7 @@ namespace LTMCB
             type = utype;
             email = mail;
             lblTitle.Text = "Chào " + displayname;
+             
         }
 
         private void OpenChildForm(Form childForm, object btnSender)
@@ -55,7 +56,7 @@ namespace LTMCB
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormChat(), sender);
+            OpenChildForm(new Forms.FormChat(Username, Key), sender);
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
