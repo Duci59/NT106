@@ -25,6 +25,8 @@ namespace LTMCB.Forms
         {
             InitializeComponent();
             this.MakeDraggable();
+            this.KeyPreview = true; // Cho phép form nhận sự kiện phím trước khi chuyển cho điều khiển có focus
+            this.KeyDown += new KeyEventHandler(bt_login_KeyDown); // Đăng ký sự kiện KeyDown
         }
 
         private void bt_login_Click(object sender, EventArgs e)
@@ -105,6 +107,14 @@ namespace LTMCB.Forms
             if (CheckDK == 0)
             {
                 this.Show();
+            }
+        }
+
+        private void bt_login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                bt_login_Click(sender, e);
             }
         }
 

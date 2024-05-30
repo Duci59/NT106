@@ -84,6 +84,7 @@
             this.btnMinisize.TabIndex = 51;
             this.btnMinisize.Text = "O";
             this.btnMinisize.UseVisualStyleBackColor = true;
+            this.btnMinisize.Click += new System.EventHandler(this.btnMinisize_Click);
             // 
             // btnMaxsize
             // 
@@ -99,6 +100,7 @@
             this.btnMaxsize.TabIndex = 50;
             this.btnMaxsize.Text = "O";
             this.btnMaxsize.UseVisualStyleBackColor = true;
+            this.btnMaxsize.Click += new System.EventHandler(this.btnMaxsize_Click);
             // 
             // btnClose
             // 
@@ -114,6 +116,7 @@
             this.btnClose.TabIndex = 49;
             this.btnClose.Text = "O";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // guna2TextBox1
             // 
@@ -149,6 +152,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(115, 53);
             this.guna2Button1.TabIndex = 53;
             this.guna2Button1.Text = "Gửi";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2ImageButton1
             // 

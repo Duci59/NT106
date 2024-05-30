@@ -37,10 +37,10 @@
             this.lbMatKhau = new System.Windows.Forms.Label();
             this.tbTenNhom = new System.Windows.Forms.TextBox();
             this.lbTennhom = new System.Windows.Forms.Label();
-            this.btTaoNhom = new System.Windows.Forms.Button();
-            this.btSearch = new System.Windows.Forms.Button();
             this.toolTipGroup = new System.Windows.Forms.ToolTip(this.components);
             this.timerLoadGr = new System.Windows.Forms.Timer(this.components);
+            this.btTaoNhomm = new Guna.UI2.WinForms.Guna2Button();
+            this.btTimNhom = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -55,10 +55,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutNhomChat.AutoScroll = true;
             this.flowLayoutNhomChat.BackColor = System.Drawing.Color.White;
-            this.flowLayoutNhomChat.Location = new System.Drawing.Point(-7, 133);
+            this.flowLayoutNhomChat.Location = new System.Drawing.Point(-3, 133);
             this.flowLayoutNhomChat.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutNhomChat.Name = "flowLayoutNhomChat";
-            this.flowLayoutNhomChat.Size = new System.Drawing.Size(860, 310);
+            this.flowLayoutNhomChat.Size = new System.Drawing.Size(849, 310);
             this.flowLayoutNhomChat.TabIndex = 36;
             this.flowLayoutNhomChat.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutNhomChat_Paint);
             // 
@@ -129,32 +129,6 @@
             this.lbTennhom.TabIndex = 33;
             this.lbTennhom.Text = "Tên nhóm";
             // 
-            // btTaoNhom
-            // 
-            this.btTaoNhom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTaoNhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTaoNhom.Location = new System.Drawing.Point(13, 42);
-            this.btTaoNhom.Margin = new System.Windows.Forms.Padding(4);
-            this.btTaoNhom.Name = "btTaoNhom";
-            this.btTaoNhom.Size = new System.Drawing.Size(110, 50);
-            this.btTaoNhom.TabIndex = 32;
-            this.btTaoNhom.Text = "Tạo nhóm";
-            this.btTaoNhom.UseVisualStyleBackColor = true;
-            this.btTaoNhom.Click += new System.EventHandler(this.btTaoNhom_Click);
-            // 
-            // btSearch
-            // 
-            this.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearch.Location = new System.Drawing.Point(131, 42);
-            this.btSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(110, 50);
-            this.btSearch.TabIndex = 31;
-            this.btSearch.Text = "Tìm nhóm";
-            this.btSearch.UseVisualStyleBackColor = true;
-            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
-            // 
             // toolTipGroup
             // 
             this.toolTipGroup.IsBalloon = true;
@@ -162,12 +136,48 @@
             this.toolTipGroup.ToolTipTitle = "Gợi ý";
             this.toolTipGroup.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTipGroup_Popup);
             // 
+            // btTaoNhomm
+            // 
+            this.btTaoNhomm.BorderThickness = 1;
+            this.btTaoNhomm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTaoNhomm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btTaoNhomm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btTaoNhomm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btTaoNhomm.FillColor = System.Drawing.Color.White;
+            this.btTaoNhomm.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btTaoNhomm.ForeColor = System.Drawing.Color.Black;
+            this.btTaoNhomm.Location = new System.Drawing.Point(20, 43);
+            this.btTaoNhomm.Name = "btTaoNhomm";
+            this.btTaoNhomm.Size = new System.Drawing.Size(104, 50);
+            this.btTaoNhomm.TabIndex = 38;
+            this.btTaoNhomm.Text = "Tạo nhóm";
+            this.btTaoNhomm.Click += new System.EventHandler(this.btTaoNhomm_Click);
+            // 
+            // btTimNhom
+            // 
+            this.btTimNhom.BorderThickness = 1;
+            this.btTimNhom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTimNhom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btTimNhom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btTimNhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btTimNhom.FillColor = System.Drawing.Color.White;
+            this.btTimNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btTimNhom.ForeColor = System.Drawing.Color.Black;
+            this.btTimNhom.Location = new System.Drawing.Point(154, 43);
+            this.btTimNhom.Name = "btTimNhom";
+            this.btTimNhom.Size = new System.Drawing.Size(104, 50);
+            this.btTimNhom.TabIndex = 39;
+            this.btTimNhom.Text = "Tìm nhóm";
+            this.btTimNhom.Click += new System.EventHandler(this.btTimNhom_Click);
+            // 
             // FormChat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(846, 485);
+            this.Controls.Add(this.btTimNhom);
+            this.Controls.Add(this.btTaoNhomm);
             this.Controls.Add(this.lbStt);
             this.Controls.Add(this.flowLayoutNhomChat);
             this.Controls.Add(this.label4);
@@ -175,8 +185,6 @@
             this.Controls.Add(this.lbMatKhau);
             this.Controls.Add(this.tbTenNhom);
             this.Controls.Add(this.lbTennhom);
-            this.Controls.Add(this.btTaoNhom);
-            this.Controls.Add(this.btSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormChat";
             this.Text = "Chat nhóm";
@@ -196,9 +204,9 @@
         private System.Windows.Forms.Label lbMatKhau;
         private System.Windows.Forms.TextBox tbTenNhom;
         private System.Windows.Forms.Label lbTennhom;
-        private System.Windows.Forms.Button btTaoNhom;
-        private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.ToolTip toolTipGroup;
         private System.Windows.Forms.Timer timerLoadGr;
+        private Guna.UI2.WinForms.Guna2Button btTaoNhomm;
+        private Guna.UI2.WinForms.Guna2Button btTimNhom;
     }
 }

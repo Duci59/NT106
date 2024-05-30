@@ -48,9 +48,9 @@ namespace LTMCB.Forms
             this.BackColor = Color.LightGray;
             ContextMenuStrip cms = new ContextMenuStrip();
             cms.Items.Add("Tạo nhóm");
-            cms.Items[0].Click += btTaoNhom_Click;
+            cms.Items[0].Click += btTaoNhomm_Click;
             cms.Items.Add("Tìm nhóm");
-            cms.Items[1].Click += btSearch_Click;
+            cms.Items[1].Click += btTimNhom_Click;
             flowLayoutNhomChat.ContextMenuStrip = cms;
         }
 
@@ -99,7 +99,7 @@ namespace LTMCB.Forms
                   
                     if (role == "truongnhom")
                     {
-                        btn.BackColor = Color.BlueViolet;
+                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135))))); ;
                         btn.Text = tennhom + "\n\r(Nhóm của bạn)";
                         cms.Items.Add("Xóa nhóm");
                         cms.Items[0].Click += DelGroup_Click;
@@ -108,9 +108,14 @@ namespace LTMCB.Forms
                     }
                     else
                     {
-                        btn.BackColor = Color.BlueViolet;
+                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135))))); ;
                         btn.Text = tennhom;
                     }
+
+                    btn.Click += (s, e) => {
+                        Forms.Chat chatPage = new Forms.Chat(tennhom, Username);
+                        chatPage.Show();
+                    };
 
                     lsGroup.Add(tennhom);
                 }
@@ -156,7 +161,29 @@ namespace LTMCB.Forms
             }
         }//Mở nhóm
 
-        private void btTaoNhom_Click(object sender, EventArgs e)
+
+
+
+        private void flowLayoutNhomChat_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormChat_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+            LoadingGroup();
+        }
+
+        private int previousGroupCount = 0;
+
+
+        private void toolTipGroup_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void btTaoNhomm_Click(object sender, EventArgs e)
         {
             string groupname = tbTenNhom.Text.Trim();
             string grouppass = tbMatKhau.Text.Trim();
@@ -201,30 +228,7 @@ namespace LTMCB.Forms
             }
         }
 
-
-
-
-        private void flowLayoutNhomChat_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FormChat_Load(object sender, EventArgs e)
-        {
-            LoadTheme();
-            LoadingGroup();
-        }
-
-        private int previousGroupCount = 0;
-
-       
-
-        private void btSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolTipGroup_Popup(object sender, PopupEventArgs e)
+        private void btTimNhom_Click(object sender, EventArgs e)
         {
 
         }
