@@ -167,6 +167,78 @@ namespace Server.DAO
             }
         }
 
+        public async Task<bool> CheckGroupCredentials(string groupName, string groupPassword)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference groupsRef = db.Collection("groups");
+            QuerySnapshot snapshot = await groupsRef.WhereEqualTo("groupname", groupName).GetSnapshotAsync();
+
+            if (snapshot.Count == 0)
+            {
+                Console.WriteLine("Group '" + groupName + "' does not exist.");
+                return false;
+            }
+
+            foreach (DocumentSnapshot groupDoc in snapshot.Documents)
+            {
+                Dictionary<string, object> groupData = groupDoc.ToDictionary();
+
+                if (groupData.ContainsKey("password") && (string)groupData["password"] == groupPassword)
+                {
+                    Console.WriteLine("Group credentials for '" + groupName + "' are valid.");
+                    return true;
+                }
+            }
+
+            Console.WriteLine("Group credentials for '" + groupName + "' are invalid.");
+            return false;
+        }
+
+        public async Task<bool> AddUserToGroup(string username, string groupName)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference groupsRef = db.Collection("groups");
+            QuerySnapshot snapshot = await groupsRef.WhereEqualTo("groupname", groupName).GetSnapshotAsync();
+
+            if (snapshot.Count == 0)
+            {
+                Console.WriteLine("Group '" + groupName + "' does not exist.");
+                return false;
+            }
+
+            DocumentSnapshot groupDoc = snapshot.Documents.First();
+            Dictionary<string, object> groupData = groupDoc.ToDictionary();
+
+            if (groupData.ContainsKey("member"))
+            {
+                List<string> members = ((List<object>)groupData["member"]).Select(x => x.ToString()).ToList();
+
+                if (!members.Contains(username))
+                {
+                    members.Add(username);
+                    groupData["member"] = members;
+                    DocumentReference groupRef = groupDoc.Reference;
+                    await groupRef.UpdateAsync(groupData);
+                    Console.WriteLine("User '" + username + "' added to group '" + groupName + "' successfully.");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("User '" + username + "' is already a member of group '" + groupName + "'.");
+                    return false;
+                }
+            }
+            else
+            {
+                // If the member field does not exist, create it and add the user.
+                List<string> members = new List<string> { username };
+                groupData["member"] = members;
+                DocumentReference groupRef = groupDoc.Reference;
+                await groupRef.UpdateAsync(groupData);
+                Console.WriteLine("User '" + username + "' added to group '" + groupName + "' successfully.");
+                return true;
+            }
+        }
 
 
     }

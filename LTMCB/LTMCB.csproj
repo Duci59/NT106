@@ -84,11 +84,11 @@
     <Compile Include="Forms\Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormAdGroup.cs">
+    <Compile Include="Forms\FormChatClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormAdGroup.Designer.cs">
-      <DependentUpon>FormAdGroup.cs</DependentUpon>
+    <Compile Include="Forms\FormChatClient.Designer.cs">
+      <DependentUpon>FormChatClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormChat.cs">
       <SubType>Form</SubType>
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="Forms\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormAdGroup.resx">
-      <DependentUpon>FormAdGroup.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormChatClient.resx">
+      <DependentUpon>FormChatClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormChat.resx">
       <DependentUpon>FormChat.cs</DependentUpon>

@@ -28,7 +28,6 @@ namespace LTMCB.Forms
             Key = k;
             Username = us;
             InitializeComponent();
-            this.MakeDraggable();
             this.DoubleBuffered = true;
         }
 
@@ -93,7 +92,7 @@ namespace LTMCB.Forms
                     btn.FlatAppearance.BorderSize = 0;
 
                     Guna2Elipse elip = new Guna2Elipse();
-                    elip.BorderRadius = 30;
+                    elip.BorderRadius = 20;
                     elip.SetElipse(btn);
 
                   
@@ -113,7 +112,7 @@ namespace LTMCB.Forms
                     }
 
                     btn.Click += (s, e) => {
-                        Forms.Chat chatPage = new Forms.Chat(tennhom, Username);
+                        Forms.FormChatClient chatPage = new Forms.FormChatClient(tennhom, Username);
                         chatPage.Show();
                     };
 
@@ -230,7 +229,41 @@ namespace LTMCB.Forms
 
         private void btTimNhom_Click(object sender, EventArgs e)
         {
+            string groupname = tbTenNhom.Text.Trim();
+            string password = tbMatKhau.Text.Trim();
+            if (groupname == "" || password == "")
+            {
+                MessageBox.Show("Bạn không được để trống tên và mật khẩu nhóm.");
+                tbTenNhom.Focus();
+            }
+            else if (groupname.Contains("~") || groupname.Contains("^"))
+            {
+                MessageBox.Show("Tên nhóm chứa ký tự cấm sử dụng");
+                tbTenNhom.Focus();
+            }
+            else
+            {
+                string yeucau = "ThamGiaNhom~" + Username + "~" + groupname + "~" + password.MaHoa();
+                string ketqua = Result.Instance.Request(yeucau);
+                if (ketqua == "Joined successfully")
+                {
+                    MessageBox.Show("Gia nhập thành công");
+                    tbTenNhom.Text = "";
+                    tbMatKhau.Text = "";
 
+                    // Sau khi tạo thành công, cập nhật lại danh sách nhóm
+                    LoadingGroup();
+                }
+                else if (ketqua == "Invalid group name or password")
+                {
+                    MessageBox.Show("Nhóm không tồn tại hoặc nhập sai mật khẩu!");
+                }
+                else
+                {
+                    MessageBox.Show("Mất kết nối, vui lòng thử lại");
+                    return;
+                }
+            }
         }
     }
 }

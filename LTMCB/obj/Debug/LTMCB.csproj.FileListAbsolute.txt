@@ -244,7 +244,6 @@ D:\clone\NT106\NT106\LTMCB\bin\Debug\System.Net.Http.Primitives.xml
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.csproj.App.config
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.csproj.AssemblyReference.cache
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.Forms.Chat.resources
-D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormAdGroup.resources
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormChat.resources
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormDangKy.resources
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormInfo.resources
@@ -262,3 +261,4 @@ D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.csproj.CoreCompileInputs.cache
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.csproj.Up2Date
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.exe
 D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.pdb
+D:\clone\NT106\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormChatClient.resources

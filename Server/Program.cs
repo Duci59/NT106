@@ -242,7 +242,43 @@ namespace Server
                     skXL.Send(Encoding.UTF8.GetBytes(traloi));
                 }
 
+                else if (noidung.StartsWith("TimNhom"))
+                {
+                    // Tìm nhóm: TimNhom ~ groupname
+                    string groupName = noidung.Split('~')[1];
+                    bool groupExists = await GroupInter.Instance.FieldExistAsync("groupname", groupName);
 
+                    byte[] traLoi;
+                    if (groupExists)
+                    {
+                        traLoi = Encoding.UTF8.GetBytes("Group found");
+                    }
+                    else
+                    {
+                        traLoi = Encoding.UTF8.GetBytes("Group not found");
+                    }
+                    skXL.Send(traLoi);
+                }
+                else if (noidung.StartsWith("ThamGiaNhom"))
+                {
+                    // Tham gia nhóm: ThamGiaNhom ~ username ~ groupname ~ grouppassword
+                    string username = noidung.Split('~')[1];
+                    string groupName = noidung.Split('~')[2];
+                    string groupPassword = MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[3]));
+
+                    bool validGroup = await GroupInter.Instance.CheckGroupCredentials(groupName, groupPassword);
+                    byte[] traLoi;
+                    if (validGroup)
+                    {
+                        await GroupInter.Instance.AddUserToGroup(username, groupName);
+                        traLoi = Encoding.UTF8.GetBytes("Joined successfully");
+                    }
+                    else
+                    {
+                        traLoi = Encoding.UTF8.GetBytes("Invalid group name or password");
+                    }
+                    skXL.Send(traLoi);
+                }
 
 
 

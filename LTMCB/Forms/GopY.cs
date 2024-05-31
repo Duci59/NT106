@@ -15,7 +15,6 @@ namespace LTMCB.Forms
         public GopY()
         {
             InitializeComponent();
-            this.MakeDraggable();
         }
 
         private void button1_Click(object sender, EventArgs e)
