@@ -86,7 +86,7 @@
             this.btConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btConfirm.FillColor = System.Drawing.Color.White;
+            this.btConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btConfirm.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btConfirm.ForeColor = System.Drawing.Color.Black;
             this.btConfirm.Location = new System.Drawing.Point(114, 296);
@@ -104,7 +104,7 @@
             this.btSendAgain.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btSendAgain.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btSendAgain.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btSendAgain.FillColor = System.Drawing.Color.White;
+            this.btSendAgain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btSendAgain.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btSendAgain.ForeColor = System.Drawing.Color.Black;
             this.btSendAgain.Location = new System.Drawing.Point(266, 296);
@@ -120,9 +120,9 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnClose.Location = new System.Drawing.Point(422, 13);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(40, 37);
             this.btnClose.TabIndex = 33;
@@ -160,7 +160,7 @@
             this.lb_error.BackColor = System.Drawing.Color.Transparent;
             this.lb_error.ForeColor = System.Drawing.Color.Red;
             this.lb_error.Location = new System.Drawing.Point(114, 258);
-            this.lb_error.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_error.Margin = new System.Windows.Forms.Padding(2);
             this.lb_error.Name = "lb_error";
             this.lb_error.Size = new System.Drawing.Size(31, 18);
             this.lb_error.TabIndex = 36;
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(475, 563);
             this.Controls.Add(this.lb_error);
             this.Controls.Add(this.lbDemNguoc);

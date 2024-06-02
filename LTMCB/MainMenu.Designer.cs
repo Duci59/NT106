@@ -60,7 +60,7 @@
             this.homebutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.homebutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.homebutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.homebutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.homebutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.homebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.homebutton.ForeColor = System.Drawing.Color.White;
             this.homebutton.Image = ((System.Drawing.Image)(resources.GetObject("homebutton.Image")));
@@ -77,7 +77,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.guna2Panel1.Controls.Add(this.infobtn);
             this.guna2Panel1.Controls.Add(this.guna2Button4);
             this.guna2Panel1.Controls.Add(this.quanlybutton);
@@ -96,14 +96,15 @@
             // 
             this.infobtn.BackColor = System.Drawing.Color.Transparent;
             this.infobtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.infobtn.HoverState.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.HoverState.ImageSize = new System.Drawing.Size(80, 80);
             this.infobtn.Image = ((System.Drawing.Image)(resources.GetObject("infobtn.Image")));
             this.infobtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.infobtn.ImageRotate = 0F;
-            this.infobtn.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.ImageSize = new System.Drawing.Size(80, 80);
+            this.infobtn.IndicateFocus = true;
             this.infobtn.Location = new System.Drawing.Point(102, 514);
             this.infobtn.Name = "infobtn";
-            this.infobtn.PressedState.ImageSize = new System.Drawing.Size(80, 128);
+            this.infobtn.PressedState.ImageSize = new System.Drawing.Size(80, 80);
             this.infobtn.Size = new System.Drawing.Size(64, 72);
             this.infobtn.TabIndex = 9;
             this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
@@ -115,7 +116,7 @@
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.guna2Button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
@@ -137,7 +138,7 @@
             this.quanlybutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.quanlybutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.quanlybutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.quanlybutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.quanlybutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.quanlybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.quanlybutton.ForeColor = System.Drawing.Color.White;
             this.quanlybutton.Image = ((System.Drawing.Image)(resources.GetObject("quanlybutton.Image")));
@@ -160,7 +161,7 @@
             this.mahoabutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.mahoabutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.mahoabutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.mahoabutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.mahoabutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.mahoabutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.mahoabutton.ForeColor = System.Drawing.Color.White;
             this.mahoabutton.Image = ((System.Drawing.Image)(resources.GetObject("mahoabutton.Image")));
@@ -182,7 +183,7 @@
             this.chatbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.chatbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.chatbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.chatbutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.chatbutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.chatbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.chatbutton.ForeColor = System.Drawing.Color.White;
             this.chatbutton.Image = ((System.Drawing.Image)(resources.GetObject("chatbutton.Image")));
@@ -201,7 +202,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(68, 32);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(129, 47);
@@ -220,7 +221,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.guna2Panel2.Controls.Add(this.btnCloseChildForm);
             this.guna2Panel2.Controls.Add(this.btnLogout);
             this.guna2Panel2.Controls.Add(this.btnMinisize);
@@ -253,16 +254,17 @@
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(83)))), ((int)(((byte)(52)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(722, 50);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(120, 46);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Đăng xuất";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnMinisize
@@ -271,7 +273,7 @@
             this.btnMinisize.FlatAppearance.BorderSize = 0;
             this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinisize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinisize.ForeColor = System.Drawing.Color.White;
+            this.btnMinisize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnMinisize.Location = new System.Drawing.Point(719, 5);
             this.btnMinisize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinisize.Name = "btnMinisize";
@@ -287,7 +289,7 @@
             this.btnMaxsize.FlatAppearance.BorderSize = 0;
             this.btnMaxsize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaxsize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaxsize.ForeColor = System.Drawing.Color.White;
+            this.btnMaxsize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnMaxsize.Location = new System.Drawing.Point(760, 5);
             this.btnMaxsize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaxsize.Name = "btnMaxsize";
@@ -303,7 +305,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnClose.Location = new System.Drawing.Point(802, 5);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
@@ -317,7 +319,7 @@
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
             this.lblTitle.Location = new System.Drawing.Point(310, 32);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(184, 47);
@@ -326,6 +328,7 @@
             // 
             // panelDesktop
             // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.FillColor = System.Drawing.Color.Transparent;
             this.panelDesktop.ForeColor = System.Drawing.Color.Black;

@@ -60,40 +60,40 @@
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(32, 117);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(25, 117);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(108, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(118, 24);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Tên tài khoản:";
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(32, 175);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(25, 175);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(95, 22);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(103, 24);
             this.guna2HtmlLabel3.TabIndex = 2;
             this.guna2HtmlLabel3.Text = "Tên hiển thị:";
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(32, 232);
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(25, 232);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(50, 22);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(52, 24);
             this.guna2HtmlLabel4.TabIndex = 3;
             this.guna2HtmlLabel4.Text = "Email:";
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(32, 288);
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(25, 288);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(57, 22);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(60, 24);
             this.guna2HtmlLabel5.TabIndex = 4;
             this.guna2HtmlLabel5.Text = "Vai trò:";
             // 
@@ -135,7 +135,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnClose.Location = new System.Drawing.Point(361, 13);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(414, 391);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tbtype);

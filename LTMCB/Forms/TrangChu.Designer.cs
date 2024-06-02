@@ -54,6 +54,7 @@
             // 
             // btEditDisplayname
             // 
+            this.btEditDisplayname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btEditDisplayname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditDisplayname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditDisplayname.Location = new System.Drawing.Point(41, 155);
@@ -62,13 +63,13 @@
             this.btEditDisplayname.Size = new System.Drawing.Size(121, 49);
             this.btEditDisplayname.TabIndex = 32;
             this.btEditDisplayname.Text = "Sửa";
-            this.btEditDisplayname.UseVisualStyleBackColor = true;
+            this.btEditDisplayname.UseVisualStyleBackColor = false;
             this.btEditDisplayname.Click += new System.EventHandler(this.btEditDisplayname_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(36, 66);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -80,7 +81,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(36, 238);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -104,7 +105,7 @@
             // 
             this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStatus.AutoSize = true;
-            this.labelStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.labelStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.Location = new System.Drawing.Point(395, 47);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -126,6 +127,7 @@
             // 
             // btSua
             // 
+            this.btSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSua.Location = new System.Drawing.Point(41, 308);
@@ -134,12 +136,13 @@
             this.btSua.Size = new System.Drawing.Size(121, 49);
             this.btSua.TabIndex = 34;
             this.btSua.Text = "Sửa";
-            this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.UseVisualStyleBackColor = false;
             this.btSua.Visible = false;
             // 
             // btBaoVe
             // 
             this.btBaoVe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBaoVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btBaoVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBaoVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBaoVe.Location = new System.Drawing.Point(372, 125);
@@ -148,11 +151,12 @@
             this.btBaoVe.Size = new System.Drawing.Size(136, 49);
             this.btBaoVe.TabIndex = 35;
             this.btBaoVe.Text = "Tắt";
-            this.btBaoVe.UseVisualStyleBackColor = true;
+            this.btBaoVe.UseVisualStyleBackColor = false;
             // 
             // btDoiPass
             // 
             this.btDoiPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDoiPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btDoiPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDoiPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDoiPass.Location = new System.Drawing.Point(545, 125);
@@ -161,7 +165,7 @@
             this.btDoiPass.Size = new System.Drawing.Size(136, 49);
             this.btDoiPass.TabIndex = 36;
             this.btDoiPass.Text = "Đổi mật khẩu";
-            this.btDoiPass.UseVisualStyleBackColor = true;
+            this.btDoiPass.UseVisualStyleBackColor = false;
             this.btDoiPass.Click += new System.EventHandler(this.btDoiPass_Click);
             // 
             // pnBgTop
@@ -170,7 +174,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnBgTop.BackColor = System.Drawing.Color.White;
-            this.pnBgTop.BorderRadius = 30;
             this.pnBgTop.Controls.Add(this.panelDoiPass);
             this.pnBgTop.Controls.Add(this.btDoiPass);
             this.pnBgTop.Controls.Add(this.btBaoVe);
@@ -181,7 +184,7 @@
             this.pnBgTop.Controls.Add(this.btEditDisplayname);
             this.pnBgTop.Controls.Add(this.label6);
             this.pnBgTop.Controls.Add(this.tbDisplayname);
-            this.pnBgTop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.pnBgTop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.pnBgTop.Location = new System.Drawing.Point(13, 1);
             this.pnBgTop.Margin = new System.Windows.Forms.Padding(4);
             this.pnBgTop.Name = "pnBgTop";
@@ -191,7 +194,7 @@
             // panelDoiPass
             // 
             this.panelDoiPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDoiPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.panelDoiPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.panelDoiPass.Controls.Add(this.btConfirmChangePass);
             this.panelDoiPass.Controls.Add(this.tbNewPass2);
             this.panelDoiPass.Controls.Add(this.tbNewPass);
@@ -210,6 +213,7 @@
             // btConfirmChangePass
             // 
             this.btConfirmChangePass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btConfirmChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btConfirmChangePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConfirmChangePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConfirmChangePass.Location = new System.Drawing.Point(125, 113);
@@ -218,7 +222,7 @@
             this.btConfirmChangePass.Size = new System.Drawing.Size(124, 44);
             this.btConfirmChangePass.TabIndex = 16;
             this.btConfirmChangePass.Text = "Xác nhận";
-            this.btConfirmChangePass.UseVisualStyleBackColor = true;
+            this.btConfirmChangePass.UseVisualStyleBackColor = false;
             this.btConfirmChangePass.Click += new System.EventHandler(this.btConfirmChangePass_Click);
             // 
             // tbNewPass2
@@ -298,6 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.pnBgTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

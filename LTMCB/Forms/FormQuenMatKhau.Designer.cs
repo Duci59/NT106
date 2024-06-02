@@ -65,10 +65,10 @@
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(63, 183);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(47, 188);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(340, 24);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(368, 27);
             this.guna2HtmlLabel2.TabIndex = 27;
             this.guna2HtmlLabel2.Text = "Nhập email để tìm kiếm tài khoản của bạn.";
             // 
@@ -83,10 +83,12 @@
             // 
             // ntTimkiem
             // 
+            this.ntTimkiem.BorderRadius = 10;
             this.ntTimkiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ntTimkiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ntTimkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ntTimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ntTimkiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.ntTimkiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ntTimkiem.ForeColor = System.Drawing.Color.White;
             this.ntTimkiem.Location = new System.Drawing.Point(319, 346);
@@ -98,10 +100,12 @@
             // 
             // btHuy
             // 
+            this.btHuy.BorderRadius = 10;
             this.btHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btHuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btHuy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btHuy.ForeColor = System.Drawing.Color.White;
             this.btHuy.Location = new System.Drawing.Point(55, 346);
@@ -117,7 +121,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnClose.Location = new System.Drawing.Point(422, 13);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
@@ -143,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(475, 563);
             this.Controls.Add(this.errorlb);
             this.Controls.Add(this.btnClose);

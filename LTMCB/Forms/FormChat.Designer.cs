@@ -143,7 +143,7 @@
             this.btTaoNhomm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btTaoNhomm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btTaoNhomm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTaoNhomm.FillColor = System.Drawing.Color.White;
+            this.btTaoNhomm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btTaoNhomm.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btTaoNhomm.ForeColor = System.Drawing.Color.Black;
             this.btTaoNhomm.Location = new System.Drawing.Point(20, 43);
@@ -160,7 +160,7 @@
             this.btTimNhom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btTimNhom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btTimNhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTimNhom.FillColor = System.Drawing.Color.White;
+            this.btTimNhom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btTimNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btTimNhom.ForeColor = System.Drawing.Color.Black;
             this.btTimNhom.Location = new System.Drawing.Point(154, 43);
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.btTimNhom);
             this.Controls.Add(this.btTaoNhomm);

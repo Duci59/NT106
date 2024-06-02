@@ -40,6 +40,33 @@ namespace LTMCB.Forms
             control.Focus();
         }
 
+        private void bt_login_Click(object sender, EventArgs e)
+        {
+            if (tbMK.Text != tbNLMK.Text)
+            {
+                HienLoi("Mật khẩu không giống nhau", tbNLMK);
+                tbNLMK.Text = "";
+                return;
+            }
+            yeuCau = "RestPass~" + Email + '~' + (tbMK.Text).MaHoa();
+            ketQua = Result.Instance.Request(yeuCau);
+            if (String.IsNullOrEmpty(ketQua))
+            {
+                MessageBox.Show("Máy chủ không phản hồi");
+            }
+            else if (ketQua == "OK")
+            {
+                lb_errormes.Text = "";
+                MessageBox.Show("Đổi mật khẩu thành công");
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
         private void btXacNhan_Click(object sender, EventArgs e)
         {
             if (tbMK.Text != tbNLMK.Text)

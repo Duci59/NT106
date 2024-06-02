@@ -66,7 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnLichSu.AutoScroll = true;
-            this.pnLichSu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.pnLichSu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(236)))));
             this.pnLichSu.Location = new System.Drawing.Point(13, 122);
             this.pnLichSu.Margin = new System.Windows.Forms.Padding(4);
             this.pnLichSu.Name = "pnLichSu";
@@ -77,7 +77,7 @@
             // 
             this.lbgroupname.BackColor = System.Drawing.Color.Transparent;
             this.lbgroupname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lbgroupname.ForeColor = System.Drawing.Color.White;
+            this.lbgroupname.ForeColor = System.Drawing.Color.Black;
             this.lbgroupname.Location = new System.Drawing.Point(15, 26);
             this.lbgroupname.Name = "lbgroupname";
             this.lbgroupname.Size = new System.Drawing.Size(71, 31);
@@ -88,7 +88,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F);
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(15, 75);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(133, 26);
@@ -122,6 +122,7 @@
             this.invitebutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.invitebutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.invitebutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.invitebutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.invitebutton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.invitebutton.ForeColor = System.Drawing.Color.White;
             this.invitebutton.Location = new System.Drawing.Point(397, 70);
@@ -138,6 +139,7 @@
             this.changepassbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.changepassbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.changepassbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.changepassbutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.changepassbutton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changepassbutton.ForeColor = System.Drawing.Color.White;
             this.changepassbutton.Location = new System.Drawing.Point(520, 70);
@@ -154,7 +156,7 @@
             this.DataGridViewsMember.AllowUserToResizeRows = false;
             this.DataGridViewsMember.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridViewsMember.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.DataGridViewsMember.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(236)))));
             this.DataGridViewsMember.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataGridViewsMember.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DataGridViewsMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -268,6 +270,7 @@
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(541, 585);
@@ -276,6 +279,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(115, 53);
             this.guna2Button1.TabIndex = 56;
             this.guna2Button1.Text = "Gửi";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2TextBox2
             // 
@@ -303,7 +307,7 @@
             this.btnMinisize.FlatAppearance.BorderSize = 0;
             this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinisize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinisize.ForeColor = System.Drawing.Color.White;
+            this.btnMinisize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnMinisize.Location = new System.Drawing.Point(797, 13);
             this.btnMinisize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinisize.Name = "btnMinisize";
@@ -319,7 +323,7 @@
             this.btnMaxsize.FlatAppearance.BorderSize = 0;
             this.btnMaxsize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaxsize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaxsize.ForeColor = System.Drawing.Color.White;
+            this.btnMaxsize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnMaxsize.Location = new System.Drawing.Point(838, 13);
             this.btnMaxsize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaxsize.Name = "btnMaxsize";
@@ -335,7 +339,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnClose.Location = new System.Drawing.Point(880, 13);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
@@ -349,7 +353,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(944, 662);
             this.Controls.Add(this.btnMinisize);
             this.Controls.Add(this.btnMaxsize);

@@ -54,7 +54,7 @@
             this.lb_forgotps.AutoSize = false;
             this.lb_forgotps.BackColor = System.Drawing.Color.Transparent;
             this.lb_forgotps.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lb_forgotps.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lb_forgotps.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_forgotps.Location = new System.Drawing.Point(45, 459);
             this.lb_forgotps.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_forgotps.Name = "lb_forgotps";
@@ -67,7 +67,7 @@
             this.lb_register.AutoSize = false;
             this.lb_register.BackColor = System.Drawing.Color.Transparent;
             this.lb_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lb_register.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lb_register.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_register.Location = new System.Drawing.Point(45, 410);
             this.lb_register.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_register.Name = "lb_register";
@@ -106,9 +106,9 @@
             this.bt_login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bt_login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bt_login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt_login.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.bt_login.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.bt_login.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bt_login.ForeColor = System.Drawing.Color.White;
+            this.bt_login.ForeColor = System.Drawing.Color.Black;
             this.bt_login.Location = new System.Drawing.Point(45, 329);
             this.bt_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_login.Name = "bt_login";
@@ -123,7 +123,7 @@
             this.lb_welcome.AutoSize = false;
             this.lb_welcome.BackColor = System.Drawing.Color.Transparent;
             this.lb_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_welcome.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lb_welcome.ForeColor = System.Drawing.Color.Black;
             this.lb_welcome.Location = new System.Drawing.Point(125, 58);
             this.lb_welcome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lb_welcome.Name = "lb_welcome";
@@ -136,7 +136,7 @@
             this.lb_pass.AutoSize = false;
             this.lb_pass.BackColor = System.Drawing.Color.Transparent;
             this.lb_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lb_pass.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lb_pass.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_pass.Location = new System.Drawing.Point(45, 248);
             this.lb_pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_pass.Name = "lb_pass";
@@ -149,7 +149,7 @@
             this.lb_name.AutoSize = false;
             this.lb_name.BackColor = System.Drawing.Color.Transparent;
             this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lb_name.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lb_name.ForeColor = System.Drawing.Color.Black;
             this.lb_name.Location = new System.Drawing.Point(45, 167);
             this.lb_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lb_name.Name = "lb_name";
@@ -168,9 +168,9 @@
             this.btnMinisize.FlatAppearance.BorderSize = 0;
             this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinisize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinisize.ForeColor = System.Drawing.Color.White;
+            this.btnMinisize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnMinisize.Location = new System.Drawing.Point(339, 13);
-            this.btnMinisize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinisize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinisize.Name = "btnMinisize";
             this.btnMinisize.Size = new System.Drawing.Size(40, 37);
             this.btnMinisize.TabIndex = 28;
@@ -184,9 +184,9 @@
             this.btnMaxsize.FlatAppearance.BorderSize = 0;
             this.btnMaxsize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaxsize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaxsize.ForeColor = System.Drawing.Color.White;
+            this.btnMaxsize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnMaxsize.Location = new System.Drawing.Point(380, 13);
-            this.btnMaxsize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaxsize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaxsize.Name = "btnMaxsize";
             this.btnMaxsize.Size = new System.Drawing.Size(40, 37);
             this.btnMaxsize.TabIndex = 27;
@@ -200,9 +200,9 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnClose.Location = new System.Drawing.Point(422, 13);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(40, 37);
             this.btnClose.TabIndex = 26;
@@ -292,7 +292,7 @@
             this.lb_error.BackColor = System.Drawing.Color.Transparent;
             this.lb_error.ForeColor = System.Drawing.Color.Red;
             this.lb_error.Location = new System.Drawing.Point(45, 294);
-            this.lb_error.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_error.Margin = new System.Windows.Forms.Padding(2);
             this.lb_error.Name = "lb_error";
             this.lb_error.Size = new System.Drawing.Size(64, 18);
             this.lb_error.TabIndex = 36;
@@ -303,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(475, 563);
             this.Controls.Add(this.lb_error);
             this.Controls.Add(this.showpassbtn);

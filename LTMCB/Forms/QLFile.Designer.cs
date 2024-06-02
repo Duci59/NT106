@@ -49,7 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutFileList.AutoScroll = true;
-            this.flowLayoutFileList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.flowLayoutFileList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(207)))));
             this.flowLayoutFileList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
             this.flowLayoutFileList.Location = new System.Drawing.Point(13, 85);
             this.flowLayoutFileList.Margin = new System.Windows.Forms.Padding(4);
@@ -65,7 +65,7 @@
             this.btChonFile.BorderColor = System.Drawing.Color.Transparent;
             this.btChonFile.BorderRadius = 10;
             this.btChonFile.BorderThickness = 2;
-            this.btChonFile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.btChonFile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btChonFile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btChonFile.ForeColor = System.Drawing.Color.White;
             this.btChonFile.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -122,7 +122,7 @@
             this.btTaiLen.BorderColor = System.Drawing.Color.White;
             this.btTaiLen.BorderRadius = 10;
             this.btTaiLen.BorderThickness = 2;
-            this.btTaiLen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.btTaiLen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btTaiLen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btTaiLen.ForeColor = System.Drawing.Color.White;
             this.btTaiLen.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -140,7 +140,7 @@
             this.btGiaiMa.Animated = true;
             this.btGiaiMa.BackColor = System.Drawing.Color.Transparent;
             this.btGiaiMa.BorderRadius = 10;
-            this.btGiaiMa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.btGiaiMa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btGiaiMa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btGiaiMa.ForeColor = System.Drawing.Color.White;
             this.btGiaiMa.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btGiaiMa);

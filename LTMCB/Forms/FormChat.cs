@@ -44,7 +44,6 @@ namespace LTMCB.Forms
                 }
             }
             label4.ForeColor = ThemeColor.SecondaryColor;
-            this.BackColor = Color.LightGray;
             ContextMenuStrip cms = new ContextMenuStrip();
             cms.Items.Add("Tạo nhóm");
             cms.Items[0].Click += btTaoNhomm_Click;
@@ -98,8 +97,9 @@ namespace LTMCB.Forms
                   
                     if (role == "truongnhom")
                     {
-                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135))))); ;
+                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(222)))), ((int)(((byte)(189))))); ;
                         btn.Text = tennhom + "\n\r(Nhóm của bạn)";
+                        btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         cms.Items.Add("Xóa nhóm");
                         cms.Items[0].Click += DelGroup_Click;
                         btn.ContextMenuStrip = cms;
@@ -107,7 +107,8 @@ namespace LTMCB.Forms
                     }
                     else
                     {
-                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(107)))), ((int)(((byte)(135))))); ;
+                        btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(222)))), ((int)(((byte)(189))))); ;
                         btn.Text = tennhom;
                     }
 

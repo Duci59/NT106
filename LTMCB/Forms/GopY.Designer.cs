@@ -135,6 +135,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(104, 349);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -142,7 +143,7 @@
             this.button1.Size = new System.Drawing.Size(121, 49);
             this.button1.TabIndex = 30;
             this.button1.Text = "Gửi";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // guna2Elipse1
@@ -153,6 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.rbKHL);
             this.Controls.Add(this.rbCT);

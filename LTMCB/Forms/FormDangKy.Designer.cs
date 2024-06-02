@@ -55,7 +55,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(53, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 25);
@@ -66,7 +66,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(53, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 25);
@@ -77,7 +77,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(53, 311);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 25);
@@ -88,7 +88,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(53, 373);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 25);
@@ -99,7 +99,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(53, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 35);
@@ -150,7 +150,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
             this.btnClose.Location = new System.Drawing.Point(422, 13);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
@@ -171,7 +171,7 @@
             this.Dangkybtn.Location = new System.Drawing.Point(141, 462);
             this.Dangkybtn.Name = "Dangkybtn";
             this.Dangkybtn.PressedState.ImageSize = new System.Drawing.Size(150, 70);
-            this.Dangkybtn.Size = new System.Drawing.Size(156, 69);
+            this.Dangkybtn.Size = new System.Drawing.Size(161, 65);
             this.Dangkybtn.TabIndex = 38;
             this.Dangkybtn.Click += new System.EventHandler(this.Dangkybtn_Click);
             // 
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(475, 563);
             this.Controls.Add(this.errorlb);
             this.Controls.Add(this.Dangkybtn);
