@@ -3,11 +3,8 @@ using LTMCB.env;
 using LTMCB.MaHoa;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,6 +20,7 @@ namespace LTMCB.Forms
         private int soluongGroup = 0;
         List<string> lsGroup = new List<string>();
         #endregion
+
         public FormChat(string us, string k)
         {
             Key = k;
@@ -52,17 +50,16 @@ namespace LTMCB.Forms
             flowLayoutNhomChat.ContextMenuStrip = cms;
         }
 
-
         private void LoadingGroup()
         {
             flowLayoutNhomChat.Controls.Clear();
-            LoadGroup(Username);
+            _ = LoadGroupAsync(Username); // Bắt đầu phương thức không đồng bộ
         }
 
-        private void LoadGroup(string us)
+        private async Task LoadGroupAsync(string us)
         {
             string yeucau = "LoadGroup~" + us;
-            string ketqua = Result.Instance.Request(yeucau);
+            string ketqua = await Task.Run(() => Result.Instance.Request(yeucau)); // Sử dụng Task.Run để gọi phương thức đồng bộ một cách không đồng bộ
 
             if (!String.IsNullOrEmpty(ketqua) && !ketqua.Equals("[NULL]"))
             {
@@ -94,7 +91,6 @@ namespace LTMCB.Forms
                     elip.BorderRadius = 20;
                     elip.SetElipse(btn);
 
-                  
                     if (role == "truongnhom")
                     {
                         btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(222)))), ((int)(((byte)(189))))); ;
@@ -130,15 +126,14 @@ namespace LTMCB.Forms
             }
         }
 
-
         private void DelGroup_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Nhóm sau khi xóa sẽ không thể phục hồi", "Cảnh báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //Yêu cầu xóa: DelGr ~ tên nhóm
+                // Yêu cầu xóa: DelGr ~ tên nhóm
                 string yeucau = "DelGr~" + sTenNhom;
-                _ = Result.Instance.Request(yeucau);
+                _ = Task.Run(() => Result.Instance.Request(yeucau)); // Thực hiện yêu cầu xóa nhóm không đồng bộ
                 LoadingGroup();
             }
             else
@@ -149,20 +144,17 @@ namespace LTMCB.Forms
 
         private void Btn_MouseClick(object sender, MouseEventArgs e)
         {
-            string namegr = ((sender as Button).Tag as string).Split('~')[0];//Lấy tên nhóm
-           
-            if (e.Button == MouseButtons.Left)//Chuột trái là truy cập vào nhóm
+            string namegr = ((sender as Button).Tag as string).Split('~')[0]; // Lấy tên nhóm
+
+            if (e.Button == MouseButtons.Left) // Chuột trái là truy cập vào nhóm
             {
-                
+
             }
-            else if (e.Button == MouseButtons.Right) //Chuột phải là xóa hoặc rời nhóm
+            else if (e.Button == MouseButtons.Right) // Chuột phải là xóa hoặc rời nhóm
             {
                 sTenNhom = namegr;
             }
-        }//Mở nhóm
-
-
-
+        } // Mở nhóm
 
         private void flowLayoutNhomChat_Paint(object sender, PaintEventArgs e)
         {
@@ -175,15 +167,12 @@ namespace LTMCB.Forms
             LoadingGroup();
         }
 
-        private int previousGroupCount = 0;
-
-
         private void toolTipGroup_Popup(object sender, PopupEventArgs e)
         {
 
         }
 
-        private void btTaoNhomm_Click(object sender, EventArgs e)
+        private async void btTaoNhomm_Click(object sender, EventArgs e)
         {
             string groupname = tbTenNhom.Text.Trim();
             string grouppass = tbMatKhau.Text.Trim();
@@ -202,7 +191,7 @@ namespace LTMCB.Forms
                 string yeucau = "TaoNhom~" + Username +
                     "~" + groupname +
                     "~" + grouppass.MaHoa();
-                string ketqua = Result.Instance.Request(yeucau);
+                string ketqua = await Task.Run(() => Result.Instance.Request(yeucau)); // Thực hiện yêu cầu tạo nhóm không đồng bộ và chờ kết quả
                 if (ketqua == "DTT")
                 {
                     MessageBox.Show("Nhóm đã tồn tại.");
@@ -228,7 +217,7 @@ namespace LTMCB.Forms
             }
         }
 
-        private void btTimNhom_Click(object sender, EventArgs e)
+        private async void btTimNhom_Click(object sender, EventArgs e)
         {
             string groupname = tbTenNhom.Text.Trim();
             string password = tbMatKhau.Text.Trim();
@@ -245,7 +234,7 @@ namespace LTMCB.Forms
             else
             {
                 string yeucau = "ThamGiaNhom~" + Username + "~" + groupname + "~" + password.MaHoa();
-                string ketqua = Result.Instance.Request(yeucau);
+                string ketqua = await Task.Run(() => Result.Instance.Request(yeucau)); // Thực hiện yêu cầu tham gia nhóm không đồng bộ và chờ kết quả
                 if (ketqua == "Joined successfully")
                 {
                     MessageBox.Show("Gia nhập thành công");

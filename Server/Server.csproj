@@ -50,8 +50,8 @@
     <Reference Include="Google.Apis.Auth, Version=1.67.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.Auth.1.67.0\lib\net462\Google.Apis.Auth.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Apis.Core, Version=1.67.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Apis.Core.1.67.0\lib\net462\Google.Apis.Core.dll</HintPath>
+    <Reference Include="Google.Apis.Core, Version=1.68.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.68.0\lib\net462\Google.Apis.Core.dll</HintPath>
     </Reference>
     <Reference Include="Google.Cloud.Firestore, Version=3.6.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Cloud.Firestore.3.6.0\lib\net462\Google.Cloud.Firestore.dll</HintPath>
@@ -65,8 +65,8 @@
     <Reference Include="Google.LongRunning, Version=3.2.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.LongRunning.3.2.0\lib\net462\Google.LongRunning.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf, Version=3.25.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.25.0\lib\net45\Google.Protobuf.dll</HintPath>
+    <Reference Include="Google.Protobuf, Version=3.27.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.27.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Auth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
       <HintPath>..\packages\Grpc.Auth.2.60.0\lib\net462\Grpc.Auth.dll</HintPath>

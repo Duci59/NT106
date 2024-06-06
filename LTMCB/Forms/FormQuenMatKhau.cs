@@ -30,11 +30,11 @@ namespace LTMCB.Forms
             this.Close();
         }
 
-        private void ntTimkiem_Click(object sender, EventArgs e)
+        private async void ntTimkiem_Click(object sender, EventArgs e)
         {
             //CheckTK ~ email
             string yeuCau = "CheckEmail~" + tbFind.Text;
-            string ketQua = Result.Instance.Request(yeuCau);
+            string ketQua = await Task.Run(()=> Result.Instance.Request(yeuCau));
 
             if (string.IsNullOrEmpty(ketQua))
             {

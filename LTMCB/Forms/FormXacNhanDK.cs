@@ -136,7 +136,7 @@ namespace LTMCB.Forms
 
 
 
-        private void btConfirm_Click(object sender, EventArgs e)
+        private async void btConfirm_Click(object sender, EventArgs e)
         {
             string yeuCau="", ketQua="";
             
@@ -151,7 +151,7 @@ namespace LTMCB.Forms
             {
                 case 0:
                     yeuCau = "DangKy~" + Username.MaHoa() + "~" + DisplayName.MaHoa() + "~" + Password.MaHoa() + "~" + Email.MaHoa() + "~" + Usertype.MaHoa();
-                    ketQua = Result.Instance.Request(yeuCau);
+                    ketQua = await Task.Run(()=> Result.Instance.Request(yeuCau));
 
                     if (String.IsNullOrEmpty(ketQua))
                     {

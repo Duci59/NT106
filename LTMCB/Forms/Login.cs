@@ -1,19 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
 using LTMCB.env;
 using LTMCB.MaHoa;
-
 
 namespace LTMCB.Forms
 {
@@ -29,7 +21,7 @@ namespace LTMCB.Forms
             this.KeyDown += new KeyEventHandler(bt_login_KeyDown); // Đăng ký sự kiện KeyDown
         }
 
-        private void bt_login_Click(object sender, EventArgs e)
+        private async void bt_login_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tb_name.Text) || string.IsNullOrEmpty(tb_pass.Text))
             {
@@ -40,7 +32,8 @@ namespace LTMCB.Forms
                 username = tb_name.Text.Trim();
                 password = tb_pass.Text.Trim();
                 string yeuCau = "DangNhap~" + username + "~" + password.MaHoa();
-                string ketQua = Result.Instance.Request(yeuCau);
+                string ketQua = await Task.Run(() => Result.Instance.Request(yeuCau)); // Sử dụng async/await
+
                 if (String.IsNullOrEmpty(ketQua))
                 {
                     MessageBox.Show("Máy chủ không phản hồi");
@@ -52,7 +45,7 @@ namespace LTMCB.Forms
                     usertype = (ketQua.Split('~')[4]).GiaiMa();
                     MessageBox.Show("Đăng nhập thành công");
                     this.Hide();
-                    MainMenu menu = new MainMenu(username, displayName, usertype,email);
+                    MainMenu menu = new MainMenu(username, displayName, usertype, email);
                     menu.Show();
                 }
                 else if (ketQua == "Password didn't match")
@@ -62,7 +55,7 @@ namespace LTMCB.Forms
                 }
                 else if (ketQua == "User doesn't exist")
                 {
-                    lb_error.Text = "Người dùng không tốn tại";
+                    lb_error.Text = "Người dùng không tồn tại";
                     lb_error.Visible = true;
                 }
                 else

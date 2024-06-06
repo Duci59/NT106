@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LTMCB.env;
+using LTMCB.MaHoa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,10 +95,12 @@ namespace LTMCB
         }
 
 
-        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        private async void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             panelDesktop.Controls.Clear();
-            lblTitle.Text = "Chào " + Displayname;
+            string yeucau = "GetInfoAccount~" + Username.MaHoa();
+            string ketqua = await Task.Run(() => Result.Instance.Request(yeucau));
+            lblTitle.Text = "Chào " + ketqua.Split('~')[2];
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -14,12 +14,18 @@ namespace LTMCB.Forms
 {
     public partial class FormInfo : Form
     {
+        string userName;
         public FormInfo(string username)
         {
             InitializeComponent();
             this.MakeDraggable();
-            string yeucau = "GetInfoAccount~" + username.MaHoa();
-            string ketqua = Result.Instance.Request(yeucau);
+            userName = username;
+        }
+
+        private async void FormInfo_Load(object sender, EventArgs e)
+        {
+            string yeucau = "GetInfoAccount~" + userName.MaHoa();
+            string ketqua = await Task.Run(() => Result.Instance.Request(yeucau));
             if (String.IsNullOrEmpty(ketqua))
             {
                 MessageBox.Show("Máy chủ không phản hồi.");
@@ -32,11 +38,6 @@ namespace LTMCB.Forms
                 tbemail.Text = ketqua.Split('~')[3];
                 tbtype.Text = ketqua.Split('~')[4];
             }
-        }
-
-        private void FormInfo_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)

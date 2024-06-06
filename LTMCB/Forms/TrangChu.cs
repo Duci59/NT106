@@ -41,7 +41,7 @@ namespace LTMCB.Forms
             }
         }
 
-        private void btEditDisplayname_Click(object sender, EventArgs e)
+        private async void btEditDisplayname_Click(object sender, EventArgs e)
         {
             if (tbDisplayname.Text.Trim() == "")
             {
@@ -54,7 +54,7 @@ namespace LTMCB.Forms
                 return;
             }
             string yeuCau = "ResetDisplayName~" + username.MaHoa() + '~' + tbDisplayname.Text;
-            string ketQua = Result.Instance.Request(yeuCau);
+            string ketQua = await Task.Run(()=> Result.Instance.Request(yeuCau));
             if (String.IsNullOrEmpty(ketQua))
             {
                 MessageBox.Show("Máy chủ không phản hồi");
@@ -70,10 +70,10 @@ namespace LTMCB.Forms
             }
         }
 
-        private void btConfirmChangePass_Click(object sender, EventArgs e)
+        private async void btConfirmChangePass_Click(object sender, EventArgs e)
         {
             string yeuCau = "GetPasswordWithUserName~" + username;
-            string ketQua = Result.Instance.Request(yeuCau);
+            string ketQua = await Task.Run(() => Result.Instance.Request(yeuCau));
             if (String.IsNullOrEmpty(ketQua))
             {
                 MessageBox.Show("Máy chủ không phản hồi");
@@ -87,7 +87,7 @@ namespace LTMCB.Forms
                     return;
                 }
                 yeuCau = "RestPass~" + email + '~' + (tbNewPass.Text).MaHoa();
-                ketQua = Result.Instance.Request(yeuCau);
+                ketQua = await Task.Run(()=> Result.Instance.Request(yeuCau));
                 if (String.IsNullOrEmpty(ketQua))
                 {
                     MessageBox.Show("Máy chủ không phản hồi");
