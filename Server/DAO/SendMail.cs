@@ -35,7 +35,7 @@ namespace Server.DAO
                 mail.From = new MailAddress(EmailFromAddress);
                 mail.To.Add(emailToAddress);
                 mail.Subject = "OTP BOXBOX APP";
-                mail.Body = "Hello, Thank you for using my app <br /> This is your code: <b>" + code + "<b>.";
+                mail.Body = "Xin chào, Cám ơn vì đã sử dụng ứng dụng của tôi <br /> Đây là mã xác thực của bạn: <b>" + code + "<b>.";
                 mail.IsBodyHtml = true;
 
                 using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
