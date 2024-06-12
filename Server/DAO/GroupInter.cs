@@ -239,6 +239,52 @@ namespace Server.DAO
                 return true;
             }
         }
+        public async Task<bool> LeaveGroupAsync(string username, string groupName)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference groupsRef = db.Collection("groups");
+            QuerySnapshot snapshot = await groupsRef.WhereEqualTo("groupname", groupName).GetSnapshotAsync();
+
+            if (snapshot.Count == 0)
+            {
+                Console.WriteLine("Group '" + groupName + "' does not exist.");
+                return false;
+            }
+
+            DocumentSnapshot groupDoc = snapshot.Documents.First();
+            Dictionary<string, object> groupData = groupDoc.ToDictionary();
+
+            if (groupData.ContainsKey("owner") && (string)groupData["owner"] == username)
+            {
+                Console.WriteLine("You are the owner of group '" + groupName + "'. You cannot leave your own group.");
+                return false;
+            }
+
+            if (groupData.ContainsKey("member"))
+            {
+                List<string> members = ((List<object>)groupData["member"]).Select(x => x.ToString()).ToList();
+
+                if (members.Contains(username))
+                {
+                    members.Remove(username);
+                    groupData["member"] = members;
+                    DocumentReference groupRef = groupDoc.Reference;
+                    await groupRef.UpdateAsync(groupData);
+                    Console.WriteLine("User '" + username + "' left group '" + groupName + "' successfully.");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("User '" + username + "' is not a member of group '" + groupName + "'.");
+                    return false;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Group '" + groupName + "' does not have any members.");
+                return false;
+            }
+        }
 
 
     }

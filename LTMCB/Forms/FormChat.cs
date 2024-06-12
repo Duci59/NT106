@@ -106,6 +106,10 @@ namespace LTMCB.Forms
                         btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(222)))), ((int)(((byte)(189))))); ;
                         btn.Text = tennhom;
+                        cms.Items.Add("Rời nhóm");
+                        cms.Items[0].Click += LeaveGroup_Click;
+                        btn.ContextMenuStrip = cms;
+                        toolTipGroup.SetToolTip(btn, "Nhấn chuột phải để chọn rời nhóm");
                     }
 
                     btn.Click += (s, e) => {
@@ -126,7 +130,7 @@ namespace LTMCB.Forms
             }
         }
 
-        private void DelGroup_Click(object sender, EventArgs e)
+        private async void DelGroup_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Nhóm sau khi xóa sẽ không thể phục hồi", "Cảnh báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -141,6 +145,34 @@ namespace LTMCB.Forms
                 return;
             }
         }
+
+        private async void LeaveGroup_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn rời khỏi nhóm?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string yeucau = "LeaveGroup~" + Username + "~" + sTenNhom;
+                string ketqua = await Task.Run(() => Result.Instance.Request(yeucau)); // Thực hiện yêu cầu rời nhóm không đồng bộ và chờ kết quả
+                if (ketqua == "Left group successfully")
+                {
+                    MessageBox.Show("Rời nhóm thành công");
+                    LoadingGroup(); // Cập nhật lại danh sách nhóm sau khi rời nhóm thành công
+                }
+                else if (ketqua == "Failed to leave group")
+                {
+                    MessageBox.Show("Rời nhóm thất bại");
+                }
+                else
+                {
+                    MessageBox.Show("Mất kết nối, vui lòng thử lại");
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
 
         private void Btn_MouseClick(object sender, MouseEventArgs e)
         {

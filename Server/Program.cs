@@ -280,6 +280,25 @@ namespace Server
                     }
                     skXL.Send(traLoi);
                 }
+                else if (noidung.StartsWith("LeaveGroup"))
+                {
+                    string username = noidung.Split('~')[1];
+                    string groupName = noidung.Split('~')[2];
+
+                    bool leftGroup = await GroupInter.Instance.LeaveGroupAsync(username, groupName);
+
+                    byte[] traLoi;
+                    if (leftGroup)
+                    {
+                        traLoi = Encoding.UTF8.GetBytes("Left group successfully");
+                    }
+                    else
+                    {
+                        traLoi = Encoding.UTF8.GetBytes("Failed to leave group");
+                    }
+                    skXL.Send(traLoi);
+                }
+
 
                 skXL.Close();
                 skXL.Dispose();
