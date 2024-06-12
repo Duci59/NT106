@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -150,7 +152,13 @@ namespace LTMCB.Forms
             switch (which)
             {
                 case 0:
-                    yeuCau = "DangKy~" + Username.MaHoa() + "~" + DisplayName.MaHoa() + "~" + Password.MaHoa() + "~" + Email.MaHoa() + "~" + Usertype.MaHoa();
+                    MemoryStream ms = new MemoryStream();
+                    Image img = Properties.Resources.avtmacdinh;
+                    img.Save(ms, ImageFormat.Jpeg);
+                    byte[] imageBytes = ms.ToArray();
+                    string base64String = Convert.ToBase64String(imageBytes);
+
+                    yeuCau = "DangKy~" + Username.MaHoa() + "~" + DisplayName.MaHoa() + "~" + Password.MaHoa() + "~" + Email.MaHoa() + "~" + Usertype.MaHoa() + "~" + base64String.MaHoa();
                     ketQua = await Task.Run(()=> Result.Instance.Request(yeuCau));
 
                     if (String.IsNullOrEmpty(ketQua))

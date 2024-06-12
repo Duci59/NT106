@@ -203,6 +203,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Forms\QLFile.resx">
       <DependentUpon>QLFile.cs</DependentUpon>
@@ -225,6 +226,7 @@
     <Content Include="Resources\2265.png" />
     <Content Include="Resources\321.png" />
     <Content Include="Resources\avatardefault_92824.png" />
+    <None Include="Resources\avtmacdinh.jpg" />
     <Content Include="Resources\back2.png" />
     <Content Include="Resources\backg.png" />
     <Content Include="Resources\banchuacotaikhoan.png" />

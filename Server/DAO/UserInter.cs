@@ -1,11 +1,8 @@
-﻿
-using Google.Cloud.Firestore;
+﻿using Google.Cloud.Firestore;
 using Server.env;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Server.DAO
@@ -19,9 +16,9 @@ namespace Server.DAO
             private set { instance = value; }
         }
         private UserInter() { }
-        public async Task RegisterUserAsync(string username, string displayName, string email, string password, string usertype)
-        {
 
+        public async Task RegisterUserAsync(string username, string displayName, string email, string password, string usertype, string avatar)
+        {
             var db = FireStoreHelper.db;
             // Reference to the "users" collection
             CollectionReference usersRef = db.Collection("users");
@@ -35,18 +32,19 @@ namespace Server.DAO
             // Create a new document with a unique ID based on the count
             DocumentReference docRef = db.Collection("users").Document(documentCount.ToString());
             Dictionary<string, object> data = new Dictionary<string, object>
-        {
-            { "username", username },
-            { "displayName", displayName },
-            { "email", email },
-            { "password", password }, // Note: Password should be hashed before storing in Firestore
-            { "usertype", usertype}
-        };
+            {
+                { "username", username },
+                { "displayName", displayName },
+                { "email", email },
+                { "password", password }, // Note: Password should be hashed before storing in Firestore
+                { "usertype", usertype },
+                { "avatar", avatar } // Adding avatar field
+            };
             // Set the data to Firestore
             await docRef.SetAsync(data);
             Console.WriteLine("User '" + username + "' registered successfully!");
-
         }
+
         public async Task<bool> field_exist(string collection, string field, string value)
         {
             var db = FireStoreHelper.db;
@@ -103,6 +101,7 @@ namespace Server.DAO
                 return false;
             }
         }
+
         public async Task<Dictionary<string, object>> LoadInfo(string username)
         {
             var db = FireStoreHelper.db;
@@ -135,6 +134,7 @@ namespace Server.DAO
 
             return null; // If something unexpected happens
         }
+
         public async Task<bool> ResetDisplayName(string username, string newdisplayname)
         {
             var db = FireStoreHelper.db;
@@ -154,6 +154,7 @@ namespace Server.DAO
                 return false;
             }
         }
+
         public async Task<string> GetPasswordByUsername(string username)
         {
             var db = FireStoreHelper.db;
@@ -186,5 +187,24 @@ namespace Server.DAO
             return "khongco"; // If something unexpected happens
         }
 
+        public async Task<bool> ResetAvatar(string username, string newAvatar)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+            QuerySnapshot snapshot = await usersRef.WhereEqualTo("username", username).GetSnapshotAsync();
+            try
+            {
+                DocumentSnapshot userSnapshot = snapshot.Documents.First();
+                DocumentReference userRef = userSnapshot.Reference;
+                await userRef.UpdateAsync("avatar", newAvatar);
+                Console.WriteLine("Avatar reset successfully for user: " + username);
+                return true;
+            }
+            catch
+            {
+                Console.WriteLine("Failed to reset avatar for user: " + username);
+                return false;
+            }
+        }
     }
 }

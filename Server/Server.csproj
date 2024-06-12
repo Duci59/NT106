@@ -143,8 +143,6 @@
     <Compile Include="DAO\GroupInter.cs" />
     <Compile Include="DAO\SendMail.cs" />
     <Compile Include="DAO\UserInter.cs" />
-    <Compile Include="DTO\Data_File.cs" />
-    <Compile Include="DTO\User.cs" />
     <Compile Include="env\FireStoreHelper.cs" />
     <Compile Include="env\MD5Helper.cs" />
     <Compile Include="env\Security.cs" />
@@ -211,7 +209,9 @@
     <None Include="protos\google\type\quaternion.proto" />
     <None Include="protos\google\type\timeofday.proto" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Google.Api.CommonProtos.2.15.0\build\Google.Api.CommonProtos.targets" Condition="Exists('..\packages\Google.Api.CommonProtos.2.15.0\build\Google.Api.CommonProtos.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

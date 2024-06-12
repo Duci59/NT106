@@ -16,14 +16,10 @@ namespace Server
     {
         static async Task Main(string[] args)
         {
-
-
             Console.WriteLine("May chu bat dau hoat dong ...");
             String serverIP = "127.0.0.1";
             int port = 8080;
-            //Khởi tạo firestorehelper
             FireStoreHelper.SetEnviromentVariable();
-            //Khởi tạo
             Socket sk = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ep = new IPEndPoint(IPAddress.Parse(serverIP), port);
             sk.Bind(ep);
@@ -32,34 +28,36 @@ namespace Server
             while (true)
             {
                 Socket skXL = sk.Accept();
-
                 Byte[] duLieu = new byte[102400000];
                 int demNhan = skXL.Receive(duLieu);
                 String noidung = Encoding.UTF8.GetString(duLieu, 0, demNhan);
 
-
                 if (noidung.StartsWith("DangNhap"))
                 {
-                    //Đăng nhập
                     int check;
                     string username = noidung.Split('~')[1];
                     string password = MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[2]));
                     check = await UserInter.Instance.login(username, password);
                     byte[] traLoi;
+
                     switch (check)
-                    {   
+                    {
                         case 0:
                             traLoi = Encoding.UTF8.GetBytes("User doesn't exist");
                             break;
                         case 1:
                             Dictionary<string, object> userInfo = await UserInter.Instance.LoadInfo(username);
-                            traLoi = Encoding.UTF8.GetBytes("success~" + userInfo["username"].ToString() + "~" + MD5Helper.Instance.MaHoa(userInfo["displayName"].ToString()) + "~" + MD5Helper.Instance.MaHoa(userInfo["email"].ToString()) + "~" + MD5Helper.Instance.MaHoa(userInfo["usertype"].ToString()));
+                            traLoi = Encoding.UTF8.GetBytes("success~" + userInfo["username"].ToString() + "~" +
+                                                            MD5Helper.Instance.MaHoa(userInfo["displayName"].ToString()) + "~" +
+                                                            MD5Helper.Instance.MaHoa(userInfo["email"].ToString()) + "~" +
+                                                            MD5Helper.Instance.MaHoa(userInfo["usertype"].ToString()) + "~" +
+                                                            MD5Helper.Instance.MaHoa(userInfo["avatar"].ToString())); // Include avatar
                             break;
                         case -1:
                             traLoi = Encoding.UTF8.GetBytes("Password didn't match");
                             break;
                         default:
-                            traLoi = Encoding.UTF8.GetBytes("An error have occurred");
+                            traLoi = Encoding.UTF8.GetBytes("An error has occurred");
                             break;
                     }
                     skXL.Send(traLoi);
@@ -67,7 +65,6 @@ namespace Server
                 else if (noidung.StartsWith("CheckTK"))
                 {
                     bool checkuser, checkemail;
-                    //Đăng ký: [DangKy] ~ username ~ Email 
                     string username = noidung.Split('~')[1];
                     string email = noidung.Split('~')[2];
                     checkuser = await UserInter.Instance.field_exist("users", "username", username);
@@ -86,12 +83,13 @@ namespace Server
                 else if (noidung.StartsWith("DangKy"))
                 {
                     bool checkuser, checkemail;
-                    //Đăng ký: [DangKy] ~ username ~ displayname ~ Pass ~ Email 
                     string username = MD5Helper.Instance.GiaiMa(noidung.Split('~')[1]);
                     string displayname = MD5Helper.Instance.GiaiMa(noidung.Split('~')[2]);
-                    string password =  MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[3]));
-                    string email = MD5Helper.Instance.GiaiMa(noidung.Split('~')[4]) ;
+                    string password = MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[3]));
+                    string email = MD5Helper.Instance.GiaiMa(noidung.Split('~')[4]);
                     string usertype = MD5Helper.Instance.GiaiMa(noidung.Split('~')[5]);
+                    string avatar = MD5Helper.Instance.GiaiMa(noidung.Split('~')[6]); // Avatar field
+
                     checkuser = await UserInter.Instance.field_exist("users", "username", username);
                     checkemail = await UserInter.Instance.field_exist("users", "email", email);
                     if (checkuser || checkemail)
@@ -101,17 +99,13 @@ namespace Server
                     }
                     else
                     {
-                        await UserInter.Instance.RegisterUserAsync(username, displayname, email, password, usertype);
+                        await UserInter.Instance.RegisterUserAsync(username, displayname, email, password, usertype, avatar);
                         byte[] traLoi = Encoding.UTF8.GetBytes("OK");
                         skXL.Send(traLoi);
                     }
                 }
-
-          
-
                 else if (noidung.StartsWith("SendMail"))
                 {
-                    //gui mail: SendMail ~ Email
                     string email = noidung.Split('~')[1];
                     Random rd = new Random();
                     int code = rd.Next(0, 9999);
@@ -121,10 +115,9 @@ namespace Server
                 }
                 else if (noidung.StartsWith("CheckEmail"))
                 {
-                    //CheckEmail ~ Email
                     bool check;
                     string email = noidung.Split('~')[1];
-                    check =  await UserInter.Instance.field_exist("users", "email", email);
+                    check = await UserInter.Instance.field_exist("users", "email", email);
                     if (check)
                     {
                         byte[] traLoi = Encoding.UTF8.GetBytes("Email exist");
@@ -136,9 +129,8 @@ namespace Server
                         skXL.Send(traLoi);
                     }
                 }
-               else if (noidung.StartsWith("RestPass"))
-               {
-                    //ResetPass~email~newpass
+                else if (noidung.StartsWith("RestPass"))
+                {
                     string email = noidung.Split('~')[1];
                     string passnew = MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[2]));
                     bool check;
@@ -153,10 +145,9 @@ namespace Server
                         byte[] traLoi = Encoding.UTF8.GetBytes("Error");
                         skXL.Send(traLoi);
                     }
-               }
+                }
                 else if (noidung.StartsWith("ResetDisplayName"))
                 {
-                    //ResetDisplayName~username~newdisplayname
                     string username = MD5Helper.Instance.GiaiMa(noidung.Split('~')[1]);
                     string Displayname = noidung.Split('~')[2];
                     bool check;
@@ -176,7 +167,6 @@ namespace Server
                 }
                 else if (noidung.StartsWith("GetPasswordWithUserName"))
                 {
-                    //GetPasswordWithUserName~username
                     string username = noidung.Split('~')[1];
                     string pass = await UserInter.Instance.GetPasswordByUsername(username);
                     if (pass == "khongco")
@@ -194,18 +184,38 @@ namespace Server
                 }
                 else if (noidung.StartsWith("GetInfoAccount"))
                 {
-                    //GetInfoAccount~username
                     string username = MD5Helper.Instance.GiaiMa(noidung.Split('~')[1]);
                     Dictionary<string, object> userInfo = await UserInter.Instance.LoadInfo(username);
-                    byte[] traLoi = Encoding.UTF8.GetBytes("success~" + userInfo["username"].ToString() + "~" + userInfo["displayName"].ToString() + "~" + userInfo["email"].ToString() + "~" + userInfo["usertype"].ToString());
+                    byte[] traLoi = Encoding.UTF8.GetBytes("success~" + MD5Helper.Instance.MaHoa(userInfo["username"].ToString()) + "~" +
+                                                            MD5Helper.Instance.MaHoa(userInfo["displayName"].ToString()) + "~" +
+                                                            MD5Helper.Instance.MaHoa(userInfo["email"].ToString()) + "~" +
+                                                            MD5Helper.Instance.MaHoa(userInfo["usertype"].ToString()) + "~" +
+                                                            MD5Helper.Instance.MaHoa(userInfo["avatar"].ToString())); // Include avatar
                     skXL.Send(traLoi);
                     Console.WriteLine("user '" + username + "' get info successfully");
                 }
-
+                else if (noidung.StartsWith("ResetAvatar"))
+                {
+                    string username = MD5Helper.Instance.GiaiMa(noidung.Split('~')[1]);
+                    string newAvatar = MD5Helper.Instance.GiaiMa(noidung.Split('~')[2]);
+                    bool check;
+                    check = await UserInter.Instance.ResetAvatar(username, newAvatar);
+                    if (check)
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("OK");
+                        skXL.Send(traLoi);
+                        Console.WriteLine("user '" + username + "' reset avatar successfully");
+                    }
+                    else
+                    {
+                        byte[] traLoi = Encoding.UTF8.GetBytes("Error");
+                        skXL.Send(traLoi);
+                        Console.WriteLine("user '" + username + "' reset avatar fail");
+                    }
+                }
                 else if (noidung.StartsWith("TaoNhom"))
                 {
                     bool checkgrname;
-
                     string username = noidung.Split('~')[1];
                     string grname = noidung.Split('~')[2];
                     string grpassword = MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[3]));
@@ -222,9 +232,7 @@ namespace Server
                         byte[] traLoi = Encoding.UTF8.GetBytes("TC");
                         skXL.Send(traLoi);
                     }
-
                 }
-
                 else if (noidung.StartsWith("DelGr"))
                 {
                     string TenNhom = noidung.Split('~')[1];
@@ -232,22 +240,16 @@ namespace Server
                     skXL.Send(Encoding.UTF8.GetBytes("TC"));
                     Console.WriteLine("Xoa nhom -" + TenNhom);
                 }
-
-
                 else if (noidung.StartsWith("LoadGroup"))
                 {
-                    // Phân tích yêu cầu: [CG] ~ username
                     string username = noidung.Split('~')[1];
                     string traloi = await GroupInter.Instance.LoadGroupAsync(username);
                     skXL.Send(Encoding.UTF8.GetBytes(traloi));
                 }
-
                 else if (noidung.StartsWith("TimNhom"))
                 {
-                    // Tìm nhóm: TimNhom ~ groupname
                     string groupName = noidung.Split('~')[1];
                     bool groupExists = await GroupInter.Instance.FieldExistAsync("groupname", groupName);
-
                     byte[] traLoi;
                     if (groupExists)
                     {
@@ -261,7 +263,6 @@ namespace Server
                 }
                 else if (noidung.StartsWith("ThamGiaNhom"))
                 {
-                    // Tham gia nhóm: ThamGiaNhom ~ username ~ groupname ~ grouppassword
                     string username = noidung.Split('~')[1];
                     string groupName = noidung.Split('~')[2];
                     string groupPassword = MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[3]));
@@ -280,8 +281,6 @@ namespace Server
                     skXL.Send(traLoi);
                 }
 
-
-
                 skXL.Close();
                 skXL.Dispose();
             }
@@ -291,7 +290,6 @@ namespace Server
                 SendMail sm = new SendMail(sMail, Code);
                 sm.SendEmail();
             }
-
         }
     }
 }

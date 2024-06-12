@@ -91,7 +91,7 @@ namespace LTMCB
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
 
@@ -100,7 +100,7 @@ namespace LTMCB
             panelDesktop.Controls.Clear();
             string yeucau = "GetInfoAccount~" + Username.MaHoa();
             string ketqua = await Task.Run(() => Result.Instance.Request(yeucau));
-            lblTitle.Text = "Chào " + ketqua.Split('~')[2];
+            lblTitle.Text = "Chào " + ketqua.Split('~')[2].GiaiMa();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
