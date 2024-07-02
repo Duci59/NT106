@@ -145,5 +145,10 @@ namespace LTMCB
             Forms.FormInfo finfo = new Forms.FormInfo(Username);
             finfo.Show();
         }
+
+        private void bt_friend_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormFriend(Username), sender);
+        }
     }
 }

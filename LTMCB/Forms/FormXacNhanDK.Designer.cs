@@ -55,9 +55,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(145, 171);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(174, 205);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(176, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(208, 31);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Nhập mã xác thực";
             // 
@@ -76,13 +77,13 @@
             this.tbCode.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.tbCode.ForeColor = System.Drawing.SystemColors.Info;
             this.tbCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCode.Location = new System.Drawing.Point(172, 210);
-            this.tbCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbCode.Location = new System.Drawing.Point(206, 252);
+            this.tbCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbCode.Name = "tbCode";
             this.tbCode.PasswordChar = '\0';
             this.tbCode.PlaceholderText = "";
             this.tbCode.SelectedText = "";
-            this.tbCode.Size = new System.Drawing.Size(128, 42);
+            this.tbCode.Size = new System.Drawing.Size(154, 50);
             this.tbCode.TabIndex = 30;
             // 
             // btConfirm
@@ -96,9 +97,10 @@
             this.btConfirm.FillColor = System.Drawing.Color.SteelBlue;
             this.btConfirm.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btConfirm.Location = new System.Drawing.Point(114, 296);
+            this.btConfirm.Location = new System.Drawing.Point(137, 355);
+            this.btConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btConfirm.Name = "btConfirm";
-            this.btConfirm.Size = new System.Drawing.Size(90, 36);
+            this.btConfirm.Size = new System.Drawing.Size(108, 43);
             this.btConfirm.TabIndex = 31;
             this.btConfirm.Text = "Xác nhận";
             this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
@@ -114,9 +116,10 @@
             this.btSendAgain.FillColor = System.Drawing.Color.SteelBlue;
             this.btSendAgain.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btSendAgain.ForeColor = System.Drawing.Color.Black;
-            this.btSendAgain.Location = new System.Drawing.Point(266, 296);
+            this.btSendAgain.Location = new System.Drawing.Point(319, 355);
+            this.btSendAgain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSendAgain.Name = "btSendAgain";
-            this.btSendAgain.Size = new System.Drawing.Size(90, 36);
+            this.btSendAgain.Size = new System.Drawing.Size(108, 43);
             this.btSendAgain.TabIndex = 32;
             this.btSendAgain.Text = "Gửi lại";
             this.btSendAgain.Click += new System.EventHandler(this.btSendAgain_Click);
@@ -129,10 +132,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.btnClose.Location = new System.Drawing.Point(421, 13);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(505, 16);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.Size = new System.Drawing.Size(36, 36);
             this.btnClose.TabIndex = 33;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -147,9 +150,10 @@
             this.lbDemNguoc.BackColor = System.Drawing.Color.Transparent;
             this.lbDemNguoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDemNguoc.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbDemNguoc.Location = new System.Drawing.Point(114, 390);
+            this.lbDemNguoc.Location = new System.Drawing.Point(137, 468);
+            this.lbDemNguoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbDemNguoc.Name = "lbDemNguoc";
-            this.lbDemNguoc.Size = new System.Drawing.Size(131, 22);
+            this.lbDemNguoc.Size = new System.Drawing.Size(153, 27);
             this.lbDemNguoc.TabIndex = 34;
             this.lbDemNguoc.Text = "Label đếm ngược";
             // 
@@ -158,9 +162,10 @@
             this.lbTimeLate.BackColor = System.Drawing.Color.Transparent;
             this.lbTimeLate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimeLate.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbTimeLate.Location = new System.Drawing.Point(246, 349);
+            this.lbTimeLate.Location = new System.Drawing.Point(295, 419);
+            this.lbTimeLate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbTimeLate.Name = "lbTimeLate";
-            this.lbTimeLate.Size = new System.Drawing.Size(131, 22);
+            this.lbTimeLate.Size = new System.Drawing.Size(153, 27);
             this.lbTimeLate.TabIndex = 35;
             this.lbTimeLate.Text = "Label đếm ngược";
             // 
@@ -168,10 +173,10 @@
             // 
             this.lb_error.BackColor = System.Drawing.Color.Transparent;
             this.lb_error.ForeColor = System.Drawing.Color.Red;
-            this.lb_error.Location = new System.Drawing.Point(114, 265);
+            this.lb_error.Location = new System.Drawing.Point(137, 318);
             this.lb_error.Margin = new System.Windows.Forms.Padding(2);
             this.lb_error.Name = "lb_error";
-            this.lb_error.Size = new System.Drawing.Size(31, 18);
+            this.lb_error.Size = new System.Drawing.Size(36, 22);
             this.lb_error.TabIndex = 36;
             this.lb_error.Text = "error";
             this.lb_error.Visible = false;
@@ -181,26 +186,28 @@
             this.guna2PictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.BackgroundImage")));
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(189, 34);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(227, 41);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(120, 120);
             this.guna2PictureBox1.TabIndex = 38;
             this.guna2PictureBox1.TabStop = false;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(128, 259);
+            this.guna2Panel1.Location = new System.Drawing.Point(154, 311);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(215, 1);
+            this.guna2Panel1.Size = new System.Drawing.Size(258, 1);
             this.guna2Panel1.TabIndex = 39;
             // 
             // FormXacNhanDK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(475, 563);
+            this.ClientSize = new System.Drawing.Size(570, 676);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.lb_error);
@@ -212,6 +219,7 @@
             this.Controls.Add(this.tbCode);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormXacNhanDK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormXacNhanDK";

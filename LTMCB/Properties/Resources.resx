@@ -118,23 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="avtmacdinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\avtmacdinh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="show_password_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\show_password_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hide_password_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hide_password_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lock_icon_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock_icon_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_icon_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_icon_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="show_password_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\show_password_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock_icon_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock_icon_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avtmacdinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avtmacdinh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hide_password_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hide_password_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,7 +133,19 @@
   <data name="user_icon_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_icon_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lock_icon_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock_icon_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hide_password_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hide_password_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_icon_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_icon_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock_icon_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock_icon_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="show_password_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\show_password_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
