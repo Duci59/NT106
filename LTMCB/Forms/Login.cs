@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,70 @@ namespace LTMCB.Forms
             this.KeyDown += new KeyEventHandler(bt_login_KeyDown); // Đăng ký sự kiện KeyDown
         }
 
-        private async void bt_login_Click(object sender, EventArgs e)
+       
+
+        
+
+      
+
+       
+
+        private void l_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Forms.FormDangKy dki = new FormDangKy();
+            dki.ShowDialog();
+            CheckDK = dki.CheckDK;
+            if (CheckDK == 0)
+            {
+                this.Show();
+            }
+        }
+
+        private void bt_login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                bt_login_Click_1(sender, e);
+            }
+        }
+
+        private void l_forgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Forms.FormQuenMatKhau qmk = new FormQuenMatKhau();
+            qmk.ShowDialog();
+            this.Show();
+        }
+
+        private void tb_pass_Click(object sender, EventArgs e)
+        {
+            picpass1.BackgroundImage = Properties.Resources.lock_icon_2;
+            panel2.BackColor = Color.SteelBlue;
+            tb_pass.ForeColor = Color.SteelBlue;
+
+            picuser1.BackgroundImage = Properties.Resources.user_icon_1;
+            panel1.BackColor = Color.White;
+            tb_name.ForeColor = Color.White;
+
+            showpassbtn.Image = Properties.Resources.show_password_2;
+            hidepassbtn.Image = Properties.Resources.hide_password_2;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn đóng ứng dụng?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+        }
+
+        private async void bt_login_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tb_name.Text) || string.IsNullOrEmpty(tb_pass.Text))
             {
@@ -65,61 +129,7 @@ namespace LTMCB.Forms
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Bạn muốn đóng ứng dụng?", "Thông báo", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                return;
-            }
-        }
-
-        private void btnMaxsize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-        }
-
-        private void btnMinisize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void l_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            Forms.FormDangKy dki = new FormDangKy();
-            dki.ShowDialog();
-            CheckDK = dki.CheckDK;
-            if (CheckDK == 0)
-            {
-                this.Show();
-            }
-        }
-
-        private void bt_login_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                bt_login_Click(sender, e);
-            }
-        }
-
-        private void l_forgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            Forms.FormQuenMatKhau qmk = new FormQuenMatKhau();
-            qmk.ShowDialog();
-            this.Show();
-        }
-
-        private void showpassbtn_Click(object sender, EventArgs e)
+        private void showpassbtn_Click_1(object sender, EventArgs e)
         {
             if (tb_pass.PasswordChar == '●')
             {
@@ -128,7 +138,21 @@ namespace LTMCB.Forms
             }
         }
 
-        private void hidepassbtn_Click_1(object sender, EventArgs e)
+        private void tb_name_Click_1(object sender, EventArgs e)
+        {
+            picuser1.BackgroundImage = Properties.Resources.user_icon_2;
+            panel1.BackColor = Color.SteelBlue;
+            tb_name.ForeColor = Color.SteelBlue;
+
+            picpass1.BackgroundImage = Properties.Resources.lock_icon_1;
+            panel2.BackColor = Color.White;
+            tb_pass.ForeColor = Color.White;
+
+            showpassbtn.Image = Properties.Resources.show_password_1;
+            hidepassbtn.Image = Properties.Resources.hide_password_1;
+        }
+
+        private void hidepassbtn_Click(object sender, EventArgs e)
         {
             if (tb_pass.PasswordChar == '\0')
             {
@@ -136,6 +160,11 @@ namespace LTMCB.Forms
                 tb_pass.PasswordChar = '●';
             }
         }
+
+        
+       
+
+       
 
         private void Login_Load(object sender, EventArgs e)
         {

@@ -40,6 +40,11 @@ namespace LTMCB.Forms
             control.Focus();
         }
 
+        private void tbNLMK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private async void bt_login_Click(object sender, EventArgs e)
         {
             if (tbMK.Text != tbNLMK.Text)

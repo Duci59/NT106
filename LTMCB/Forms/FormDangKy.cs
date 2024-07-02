@@ -26,11 +26,7 @@ namespace LTMCB.Forms
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
+       
 
         private void HienLoi (string errormess, Control control)
         {
@@ -52,14 +48,18 @@ namespace LTMCB.Forms
             }
         }
 
+       
+
+       
+
         private async void Dangkybtn_Click(object sender, EventArgs e)
         {
-            string yeuCau = "CheckTK~" +  tbTDN.Text + "~" + tbDK.Text;
-            string ketQua = await Task.Run(()=> Result.Instance.Request(yeuCau));
-            if (tbTDN.Text.Trim()== "" || tbTHT.Text.Trim() == "" || tbMK.Text.Trim() == "")
+            string yeuCau = "CheckTK~" + tbTDN.Text + "~" + tbDK.Text;
+            string ketQua = await Task.Run(() => Result.Instance.Request(yeuCau));
+            if (tbTDN.Text.Trim() == "" || tbTHT.Text.Trim() == "" || tbMK.Text.Trim() == "")
             {
                 if (tbTDN.Text.Trim() == "")
-                    HienLoi("Nhập đủ thông tin!",tbTDN);
+                    HienLoi("Nhập đủ thông tin!", tbTDN);
                 else if (tbTHT.Text.Trim() == "")
                     HienLoi("Nhập đủ thông tin!", tbTHT);
                 else if (tbMK.Text.Trim() == "")
@@ -107,10 +107,12 @@ namespace LTMCB.Forms
             }
         }
 
-        private void tbTDN_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+
+       
     }
     
 }

@@ -237,15 +237,23 @@
     <Content Include="Resources\exit.png" />
     <Content Include="Resources\extttt.png" />
     <Content Include="Resources\gopy.png" />
+    <None Include="Resources\hide_password_2.png" />
+    <None Include="Resources\hide_password_1.png" />
     <Content Include="Resources\home.png" />
     <Content Include="Resources\icex.png" />
     <Content Include="Resources\image124871.png" />
     <Content Include="Resources\image14871.jpg" />
     <Content Include="Resources\image14871.png" />
     <Content Include="Resources\image148711.png" />
+    <None Include="Resources\lock_icon_2.png" />
+    <None Include="Resources\lock_icon_1.png" />
     <Content Include="Resources\mahoa.png" />
     <Content Include="Resources\pngtree-vector-back-icon-png-image_947168.jpg" />
+    <None Include="Resources\show_password_2.png" />
+    <None Include="Resources\show_password_1.png" />
     <Content Include="Resources\tb.png" />
+    <None Include="Resources\user_icon_2.png" />
+    <None Include="Resources\user_icon_1.png" />
     <Content Include="Resources\usic.png" />
     <Content Include="Resources\xuong.png" />
   </ItemGroup>

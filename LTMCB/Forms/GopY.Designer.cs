@@ -45,7 +45,7 @@
             this.rbKHL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbKHL.AutoSize = true;
             this.rbKHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbKHL.Location = new System.Drawing.Point(104, 297);
+            this.rbKHL.Location = new System.Drawing.Point(92, 324);
             this.rbKHL.Margin = new System.Windows.Forms.Padding(4);
             this.rbKHL.Name = "rbKHL";
             this.rbKHL.Size = new System.Drawing.Size(159, 28);
@@ -59,7 +59,7 @@
             this.rbCT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbCT.AutoSize = true;
             this.rbCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCT.Location = new System.Drawing.Point(104, 269);
+            this.rbCT.Location = new System.Drawing.Point(92, 296);
             this.rbCT.Margin = new System.Windows.Forms.Padding(4);
             this.rbCT.Name = "rbCT";
             this.rbCT.Size = new System.Drawing.Size(100, 28);
@@ -73,7 +73,7 @@
             this.rbT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbT.AutoSize = true;
             this.rbT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbT.Location = new System.Drawing.Point(104, 241);
+            this.rbT.Location = new System.Drawing.Point(92, 268);
             this.rbT.Margin = new System.Windows.Forms.Padding(4);
             this.rbT.Name = "rbT";
             this.rbT.Size = new System.Drawing.Size(58, 28);
@@ -87,7 +87,7 @@
             this.rbRT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbRT.AutoSize = true;
             this.rbRT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRT.Location = new System.Drawing.Point(104, 212);
+            this.rbRT.Location = new System.Drawing.Point(92, 239);
             this.rbRT.Margin = new System.Windows.Forms.Padding(4);
             this.rbRT.Name = "rbRT";
             this.rbRT.Size = new System.Drawing.Size(82, 28);
@@ -117,7 +117,7 @@
             this.tbYKien.Margin = new System.Windows.Forms.Padding(4);
             this.tbYKien.Multiline = true;
             this.tbYKien.Name = "tbYKien";
-            this.tbYKien.Size = new System.Drawing.Size(669, 27);
+            this.tbYKien.Size = new System.Drawing.Size(666, 54);
             this.tbYKien.TabIndex = 32;
             // 
             // label1
@@ -125,7 +125,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 178);
+            this.label1.Location = new System.Drawing.Point(88, 205);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(466, 24);
@@ -135,9 +135,9 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(104, 349);
+            this.button1.Location = new System.Drawing.Point(92, 376);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 49);
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.rbKHL);
             this.Controls.Add(this.rbCT);
