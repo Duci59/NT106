@@ -1,8 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
+using System;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using Org.BouncyCastle.Crypto;
+using Org.BouncyCastle.Crypto.Engines;
+using Org.BouncyCastle.Crypto.Modes;
+using Org.BouncyCastle.Crypto.Parameters;
 
 namespace LTMCB.MaHoa
 {
@@ -73,6 +77,91 @@ namespace LTMCB.MaHoa
                         return output;
                     }
                 }
+            }
+        }
+        public static void EncryptWavFile(string inputFile, string outputFile)
+        {
+            // Generate key and IV from password
+            byte[] key = GenerateKeyFromPassword(matkhau);
+            byte[] iv = GenerateIVFromPassword(matkhau);
+
+            // Đọc dữ liệu từ file âm thanh đầu vào
+            byte[] inputBytes = File.ReadAllBytes(inputFile);
+
+            // Mã hóa dữ liệu âm thanh sử dụng AES-GCM
+            byte[] encryptedBytes = EncryptBytes(inputBytes, key, iv);
+
+            // Ghi dữ liệu đã mã hóa vào file đầu ra
+            File.WriteAllBytes(outputFile, encryptedBytes);
+        }
+
+        private static byte[] EncryptBytes(byte[] inputBytes, byte[] key, byte[] iv)
+        {
+            // Sử dụng AES-GCM với BouncyCastle
+            GcmBlockCipher cipher = new GcmBlockCipher(new AesEngine());
+            AeadParameters parameters = new AeadParameters(new KeyParameter(key), 128, iv);
+
+            cipher.Init(true, parameters);
+
+            byte[] output = new byte[cipher.GetOutputSize(inputBytes.Length)];
+            int outputLength = cipher.ProcessBytes(inputBytes, 0, inputBytes.Length, output, 0);
+            cipher.DoFinal(output, outputLength);
+
+            // Return encrypted data
+            return output;
+        }
+
+
+        // con cai nay la giai ma 
+        public static void DecryptWavFile(string inputFile, string outputFile)
+        {
+            string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)?.Parent?.Parent?.FullName;
+            
+
+            // Generate key and IV from password
+            byte[] key = GenerateKeyFromPassword(matkhau);
+            byte[] iv = GenerateIVFromPassword(matkhau);
+
+            // Đọc dữ liệu từ file âm thanh đầu vào
+            byte[] inputBytes = File.ReadAllBytes(inputFile);
+
+            // Giải mã dữ liệu âm thanh sử dụng AES-GCM
+            byte[] decryptedBytes = DecryptBytes(inputBytes, key, iv);
+
+            // Ghi dữ liệu đã giải mã vào file đầu ra
+            File.WriteAllBytes(outputFile, decryptedBytes);
+        }
+
+        private static byte[] DecryptBytes(byte[] inputBytes, byte[] key, byte[] iv)
+        {
+            // Sử dụng AES-GCM với BouncyCastle
+            GcmBlockCipher cipher = new GcmBlockCipher(new AesEngine());
+            AeadParameters parameters = new AeadParameters(new KeyParameter(key), 128, iv);
+
+            cipher.Init(false, parameters);
+
+            byte[] output = new byte[cipher.GetOutputSize(inputBytes.Length)];
+            int outputLength = cipher.ProcessBytes(inputBytes, 0, inputBytes.Length, output, 0);
+            cipher.DoFinal(output, outputLength);
+
+            // Return decrypted data
+            return output;
+        }
+        static byte[] GenerateKeyFromPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                return sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+            }
+        }
+        static byte[] GenerateIVFromPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hash = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                byte[] iv = new byte[16];
+                Array.Copy(hash, iv, iv.Length);
+                return iv;
             }
         }
     }

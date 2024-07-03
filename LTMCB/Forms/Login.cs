@@ -107,7 +107,6 @@ namespace LTMCB.Forms
                     displayName = (ketQua.Split('~')[2]).GiaiMa();
                     email = (ketQua.Split('~')[3]).GiaiMa();
                     usertype = (ketQua.Split('~')[4]).GiaiMa();
-                    MessageBox.Show("Đăng nhập thành công");
                     this.Hide();
                     MainMenu menu = new MainMenu(username, displayName, usertype, email);
                     menu.Show();

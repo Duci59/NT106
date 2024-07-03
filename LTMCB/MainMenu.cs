@@ -38,8 +38,8 @@ namespace LTMCB
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if (activeForm != null)
-                activeForm.Close();
+            //if (activeForm != null)
+                //activeForm.Close();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -63,12 +63,12 @@ namespace LTMCB
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new Forms.InsertForm(Username), sender);
         }
-
+        Forms.FormMusic form1 = new Forms.FormMusic();
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.QLFile(), sender);
+            OpenChildForm(form1, sender);
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -105,6 +105,7 @@ namespace LTMCB
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            form1.Close();
             this.Close();
             Forms.Login login = new Forms.Login();
             login.Show();
@@ -144,11 +145,6 @@ namespace LTMCB
         {
             Forms.FormInfo finfo = new Forms.FormInfo(Username);
             finfo.Show();
-        }
-
-        private void bt_friend_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormFriend(Username), sender);
         }
     }
 }

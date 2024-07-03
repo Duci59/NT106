@@ -189,7 +189,7 @@
             this.tbNLMK.Location = new System.Drawing.Point(102, 343);
             this.tbNLMK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.tbNLMK.Name = "tbNLMK";
-            this.tbNLMK.PasswordChar = '\0';
+            this.tbNLMK.PasswordChar = '●';
             this.tbNLMK.PlaceholderText = "Nhập lại mật khẩu ";
             this.tbNLMK.SelectedText = "";
             this.tbNLMK.Size = new System.Drawing.Size(331, 35);
@@ -212,7 +212,7 @@
             this.tbMK.Location = new System.Drawing.Point(102, 273);
             this.tbMK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.tbMK.Name = "tbMK";
-            this.tbMK.PasswordChar = '\0';
+            this.tbMK.PasswordChar = '●';
             this.tbMK.PlaceholderText = "Mật khẩu ";
             this.tbMK.SelectedText = "";
             this.tbMK.Size = new System.Drawing.Size(331, 35);
