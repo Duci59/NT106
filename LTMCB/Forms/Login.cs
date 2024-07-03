@@ -87,6 +87,7 @@ namespace LTMCB.Forms
 
         private async void bt_login_Click_1(object sender, EventArgs e)
         {
+            bt_login.Enabled = false;
             if (string.IsNullOrEmpty(tb_name.Text) || string.IsNullOrEmpty(tb_pass.Text))
             {
                 MessageBox.Show("Please enter both username and password.");
@@ -126,6 +127,7 @@ namespace LTMCB.Forms
                     MessageBox.Show("Error");
                 }
             }
+            bt_login.Enabled = true;
         }
 
         private void showpassbtn_Click_1(object sender, EventArgs e)

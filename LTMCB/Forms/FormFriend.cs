@@ -57,7 +57,8 @@ namespace LTMCB.Forms
                         lblFriend.AutoSize = true;
                         lblFriend.Margin = new Padding(3);
                         lblFriend.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                        lblFriend.ForeColor = Color.White;
+                        lblFriend.ForeColor = Color.Black;
+                        toolTipGroup.SetToolTip(lblFriend, "Nhấn chuột phải để xem thông tin");
 
                         // Create a button to open chat
                         Button btnChat = new Button();
@@ -79,12 +80,21 @@ namespace LTMCB.Forms
                         btnUnfriend.Size = new Size(50, 50);
                         btnUnfriend.Click += (s, e) => ConfirmUnfriend(username);
 
+                        ContextMenuStrip cms = new ContextMenuStrip();
+                        cms.Items.Add("Xem thông tin");
+                        cms.Items[0].Click += (s, e) =>
+                        {
+                            FormInfo a = new FormInfo(username, 0);
+                            a.Show();
+                        };
+
                         // Add the controls to a panel or other container
                         FlowLayoutPanel panel = new FlowLayoutPanel();
                         panel.AutoSize = true;
                         panel.Controls.Add(lblFriend);
                         panel.Controls.Add(btnChat);
                         panel.Controls.Add(btnUnfriend);
+                        panel.ContextMenuStrip = cms;
 
                         // Add the panel to the form
                         FriendPannel.Controls.Add(panel);
@@ -97,7 +107,7 @@ namespace LTMCB.Forms
                 lblNoFriends.Text = "No friends";
                 lblNoFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 lblNoFriends.AutoSize = true;
-                lblNoFriends.ForeColor = Color.White;
+                lblNoFriends.ForeColor = Color.Black;
                 FriendPannel.Controls.Add(lblNoFriends);
             }
         }
@@ -128,7 +138,8 @@ namespace LTMCB.Forms
                         lblRequest.AutoSize = true;
                         lblRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblRequest.Margin = new Padding(3);
-                        lblRequest.ForeColor = Color.White;
+                        lblRequest.ForeColor = Color.Black;
+                        toolTipGroup.SetToolTip(lblRequest, "Nhấn chuột phải để xem thông tin");
 
                         // Create a button to accept the friend request
                         Button btnAccept = new Button();
@@ -150,12 +161,21 @@ namespace LTMCB.Forms
                         btnDeny.Click += (s, e) => DenyFriendRequest(username);
                         btnDeny.ForeColor = Color.White;
 
+                        ContextMenuStrip cms = new ContextMenuStrip();
+                        cms.Items.Add("Xem thông tin");
+                        cms.Items[0].Click += (s, e) =>
+                        {
+                            FormInfo a = new FormInfo(username, 0);
+                            a.Show();
+                        };
+
                         // Add the controls to a panel or other container
                         FlowLayoutPanel panel = new FlowLayoutPanel();
                         panel.AutoSize = true;
                         panel.Controls.Add(lblRequest);
                         panel.Controls.Add(btnAccept);
                         panel.Controls.Add(btnDeny);
+                        panel.ContextMenuStrip = cms;
 
                         // Add the panel to the form
                         Infriend.Controls.Add(panel);
@@ -168,7 +188,7 @@ namespace LTMCB.Forms
                 lblNoRequests.Text = "No friend requests";
                 lblNoRequests.AutoSize = true;
                 lblNoRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                lblNoRequests.ForeColor = Color.White;
+                lblNoRequests.ForeColor = Color.Black;
                 Infriend.Controls.Add(lblNoRequests);
             }
         }
@@ -200,7 +220,8 @@ namespace LTMCB.Forms
                         lblRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblRequest.AutoSize = true;
                         lblRequest.Margin = new Padding(3);
-                        lblRequest.ForeColor = Color.White;
+                        lblRequest.ForeColor = Color.Black;
+                        toolTipGroup.SetToolTip(lblRequest, "Nhấn chuột phải để xem thông tin");
 
                         // Create a button to unsend the friend request
                         Button btnUnsend = new Button();
@@ -212,11 +233,20 @@ namespace LTMCB.Forms
                         btnUnsend.Click += (s, e) => ConfirmUnsendRequest(username);
                         btnUnsend.ForeColor = Color.White;
 
+                        ContextMenuStrip cms = new ContextMenuStrip();
+                        cms.Items.Add("Xem thông tin");
+                        cms.Items[0].Click += (s, e) =>
+                        {
+                            FormInfo a = new FormInfo(username, 0);
+                            a.Show();
+                        };
+
                         // Add the controls to a panel or other container
                         FlowLayoutPanel panel = new FlowLayoutPanel();
                         panel.AutoSize = true;
                         panel.Controls.Add(lblRequest);
                         panel.Controls.Add(btnUnsend);
+                        panel.ContextMenuStrip = cms;
 
                         // Add the panel to the form
                         Outfriend.Controls.Add(panel);
@@ -229,7 +259,7 @@ namespace LTMCB.Forms
                 lblNoSentRequests.Text = "No sent friend requests";
                 lblNoSentRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 lblNoSentRequests.AutoSize = true;
-                lblNoSentRequests.ForeColor = Color.White;
+                lblNoSentRequests.ForeColor = Color.Black;
                 Outfriend.Controls.Add(lblNoSentRequests);
             }
         }
@@ -331,5 +361,14 @@ namespace LTMCB.Forms
             searchform.Show();
         }
 
+        private void Infriend_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Outfriend_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -47,6 +47,7 @@ namespace LTMCB.Forms
 
         private async void bt_login_Click(object sender, EventArgs e)
         {
+            bt_login.Enabled = false;
             if (tbMK.Text != tbNLMK.Text)
             {
                 HienLoi("Mật khẩu không giống nhau", tbNLMK);
@@ -70,6 +71,7 @@ namespace LTMCB.Forms
             {
                 MessageBox.Show("Error");
             }
+            bt_login.Enabled = true;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

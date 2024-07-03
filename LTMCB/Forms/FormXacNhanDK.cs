@@ -140,6 +140,7 @@ namespace LTMCB.Forms
 
         private async void btConfirm_Click(object sender, EventArgs e)
         {
+            btConfirm.Enabled = false;
             string yeuCau="", ketQua="";
             
             if (sCode != tbCode.Text)
@@ -198,6 +199,7 @@ namespace LTMCB.Forms
                     MessageBox.Show("Error");
                     break;
             }
+            btConfirm.Enabled = true;
         }
 
         private void FormXacNhanDK_Load(object sender, EventArgs e)

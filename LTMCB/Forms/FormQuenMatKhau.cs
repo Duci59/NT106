@@ -32,6 +32,7 @@ namespace LTMCB.Forms
 
         private async void ntTimkiem_Click(object sender, EventArgs e)
         {
+            ntTimkiem.Enabled = false;
             //CheckTK ~ email
             string yeuCau = "CheckEmail~" + tbFind.Text;
             string ketQua = await Task.Run(()=> Result.Instance.Request(yeuCau));
@@ -56,7 +57,7 @@ namespace LTMCB.Forms
             {
                 MessageBox.Show("Error");
             }
-            
+            ntTimkiem.Enabled = true;
         }
     }
 }

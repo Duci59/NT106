@@ -17,11 +17,18 @@ namespace LTMCB.Forms
     public partial class FormInfo : Form
     {
         string userName;
-        public FormInfo(string username)
+
+        public FormInfo(string username, int c = 1)
         {
             InitializeComponent();
             this.MakeDraggable();
             userName = username;
+            if (c == 0 )
+            {
+                btnChangeAvt.Enabled = false;
+                btnChangeAvt.Visible = false;
+            }
+            
         }
 
         private async void FormInfo_Load(object sender, EventArgs e)

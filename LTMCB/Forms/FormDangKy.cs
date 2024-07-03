@@ -54,6 +54,7 @@ namespace LTMCB.Forms
 
         private async void Dangkybtn_Click(object sender, EventArgs e)
         {
+            Dangkybtn.Enabled = false;
             string yeuCau = "CheckTK~" + tbTDN.Text + "~" + tbDK.Text;
             string ketQua = await Task.Run(() => Result.Instance.Request(yeuCau));
             if (tbTDN.Text.Trim() == "" || tbTHT.Text.Trim() == "" || tbMK.Text.Trim() == "")
@@ -105,6 +106,7 @@ namespace LTMCB.Forms
                     this.Show();
                 }
             }
+            Dangkybtn.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

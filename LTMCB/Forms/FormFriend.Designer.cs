@@ -67,33 +67,44 @@
             // 
             // Outfriend
             // 
+            this.Outfriend.AutoScroll = true;
             this.Outfriend.BackColor = System.Drawing.Color.SlateGray;
             this.Outfriend.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Outfriend.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Outfriend.Location = new System.Drawing.Point(501, 232);
-            this.Outfriend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Outfriend.Margin = new System.Windows.Forms.Padding(2);
             this.Outfriend.Name = "Outfriend";
             this.Outfriend.Size = new System.Drawing.Size(345, 202);
             this.Outfriend.TabIndex = 52;
+            this.Outfriend.WrapContents = false;
+            this.Outfriend.Paint += new System.Windows.Forms.PaintEventHandler(this.Outfriend_Paint);
             // 
             // Infriend
             // 
+            this.Infriend.AutoScroll = true;
             this.Infriend.BackColor = System.Drawing.Color.SlateGray;
             this.Infriend.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Infriend.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Infriend.Location = new System.Drawing.Point(501, 22);
-            this.Infriend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Infriend.Margin = new System.Windows.Forms.Padding(2);
             this.Infriend.Name = "Infriend";
             this.Infriend.Size = new System.Drawing.Size(345, 206);
             this.Infriend.TabIndex = 53;
+            this.Infriend.WrapContents = false;
+            this.Infriend.Paint += new System.Windows.Forms.PaintEventHandler(this.Infriend_Paint);
             // 
             // FriendPannel
             // 
+            this.FriendPannel.AutoScroll = true;
             this.FriendPannel.BackColor = System.Drawing.Color.SlateGray;
             this.FriendPannel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FriendPannel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.FriendPannel.Location = new System.Drawing.Point(0, 22);
-            this.FriendPannel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FriendPannel.Margin = new System.Windows.Forms.Padding(2);
             this.FriendPannel.Name = "FriendPannel";
             this.FriendPannel.Size = new System.Drawing.Size(495, 412);
             this.FriendPannel.TabIndex = 51;
+            this.FriendPannel.WrapContents = false;
             // 
             // FormFriend
             // 

@@ -129,7 +129,7 @@
             // 
             this.lb_error.BackColor = System.Drawing.Color.Transparent;
             this.lb_error.ForeColor = System.Drawing.Color.Red;
-            this.lb_error.Location = new System.Drawing.Point(30, 296);
+            this.lb_error.Location = new System.Drawing.Point(75, 297);
             this.lb_error.Margin = new System.Windows.Forms.Padding(2);
             this.lb_error.Name = "lb_error";
             this.lb_error.Size = new System.Drawing.Size(64, 18);

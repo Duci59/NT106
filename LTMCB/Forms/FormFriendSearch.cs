@@ -97,26 +97,39 @@ namespace LTMCB.Forms
                 foreach (var user in users)
                 {
                     TableLayoutPanel userTable = new TableLayoutPanel();
-                    userTable.AutoSize = true;
+                    userTable.Width = 810; // Set the width of the TableLayoutPanel
+                    userTable.Height = 50; // Set a fixed height for the TableLayoutPanel
                     userTable.ColumnCount = 3;
                     userTable.RowCount = 1;
                     userTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F)); // DisplayName
                     userTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F)); // @username
                     userTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F)); // Button/Label
                     userTable.Margin = new Padding(3);
-                    userTable.Padding = new Padding(0);
+                    userTable.Padding = new Padding(3);
+
+                    ContextMenuStrip cms = new ContextMenuStrip();
+                    cms.Items.Add("Xem thông tin");
+                    cms.Items[0].Click += (s, e) =>
+                    {
+                        FormInfo a = new FormInfo(user.UserName, 0);
+                        a.Show();
+                    };
 
                     Label lblDisplayName = new Label();
                     lblDisplayName.Text = user.DisplayName;
                     lblDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     lblDisplayName.AutoSize = true;
                     lblDisplayName.Anchor = AnchorStyles.Left;
+                    lblDisplayName.Width = userTable.Width * 50 / 100; // Ensure it spans its column width
+                    lblDisplayName.Height = userTable.Height; // Ensure it spans its row height
 
                     Label lblUserName = new Label();
                     lblUserName.Text = $"@{user.UserName}";
                     lblUserName.Font = new Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     lblUserName.AutoSize = true;
                     lblUserName.Anchor = AnchorStyles.Left;
+                    lblUserName.Width = userTable.Width * 30 / 100; // Ensure it spans its column width
+                    lblUserName.Height = userTable.Height; // Ensure it spans its row height
 
                     Control statusControl;
                     if (user.CheckFriend)
@@ -126,6 +139,8 @@ namespace LTMCB.Forms
                         lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblStatus.AutoSize = true;
                         lblStatus.Anchor = AnchorStyles.Right;
+                        lblStatus.Width = userTable.Width * 20 / 100; // Set the width for the status label
+                        lblStatus.Height = userTable.Height; // Ensure it spans its row height
                         statusControl = lblStatus;
                     }
                     else if (user.FriendSent)
@@ -135,31 +150,28 @@ namespace LTMCB.Forms
                         lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblStatus.AutoSize = true;
                         lblStatus.Anchor = AnchorStyles.Right;
+                        lblStatus.Width = userTable.Width * 20 / 100; // Set the width for the status label
+                        lblStatus.Height = userTable.Height; // Ensure it spans its row height
                         statusControl = lblStatus;
                     }
                     else
                     {
                         Button btnSendRequest = new Button();
                         btnSendRequest.Text = "Send Friend Request";
-                        btnSendRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        btnSendRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         btnSendRequest.BackColor = Color.SteelBlue;
                         btnSendRequest.Tag = user.UserName;
                         btnSendRequest.Anchor = AnchorStyles.Right;
-                        // Adjust the size of the button
                         btnSendRequest.AutoSize = true; // Automatically adjust size based on text
-                        btnSendRequest.AutoSizeMode = AutoSizeMode.GrowAndShrink; // Ensure the button grows and shrinks as needed
-
-                        // Optionally, set a minimum size if you want a consistent size regardless of text length
-                        btnSendRequest.MinimumSize = new Size(150, 50); // Set the minimum width and height
-
-                        // Alternatively, manually set the size of the button
-                        btnSendRequest.Size = new Size(200, 50); // Set a specific width and height
+                        btnSendRequest.Padding = new Padding(5);
+                        btnSendRequest.Height = 40; // Ensure it spans its row height
                         btnSendRequest.Click += async (s, e) =>
                         {
                             string result = await SendFriendRequest(user.UserName);
                             if (result == "Success")
                             {
                                 btnSendRequest.Enabled = false;
+                                btnSendRequest.BackColor = Color.Gray;
                                 btnSendRequest.Text = "Friend Request Sent";
                             }
                             else
@@ -169,11 +181,11 @@ namespace LTMCB.Forms
                         };
                         statusControl = btnSendRequest;
                     }
-
+                    toolTipGroup.SetToolTip(userTable, "Nhấn chuột phải để xem thông tin");
+                    userTable.ContextMenuStrip = cms;
                     userTable.Controls.Add(lblDisplayName, 0, 0);
                     userTable.Controls.Add(lblUserName, 1, 0);
                     userTable.Controls.Add(statusControl, 2, 0);
-
                     FriendSearch.Controls.Add(userTable);
                 }
             }
@@ -182,6 +194,8 @@ namespace LTMCB.Forms
                 MessageBox.Show("Error displaying search results: " + ex.Message);
             }
         }
+
+
 
 
 

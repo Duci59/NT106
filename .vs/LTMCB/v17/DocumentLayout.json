@@ -3,6 +3,90 @@
   "WorkspaceRootPath": "D:\\clone\\NT106(newui)\\NT106\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formchatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formchatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\insertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\insertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\gopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\gopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\qlfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\qlfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formxacnhandk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formxacnhandk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formxacnhandk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formxacnhandk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formquenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formquenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formquenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formquenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formfriendsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formfriendsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formfriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formfriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formfriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formfriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -11,32 +95,16 @@
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formfriendsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\forminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\forminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\forminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\forminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formfriendsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formfriendsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|d:\\clone\\nt106(newui)\\nt106\\ltmcb\\forms\\formfriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formfriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formchatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formchatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\insertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\insertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\custompanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,16 +135,8 @@
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\env\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\gopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\gopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\insertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\insertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D1BE638-6F7A-40AE-B5C4-87DA77C70218}|Server\\Server.csproj|D:\\clone\\NT106(newui)\\NT106\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,26 +159,6 @@
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\mahoa\\md5helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\forminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\forminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\qlfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\qlfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formquenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formquenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D1BE638-6F7A-40AE-B5C4-87DA77C70218}|Server\\Server.csproj|D:\\clone\\NT106(newui)\\NT106\\server\\dao\\userinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D1BE638-6F7A-40AE-B5C4-87DA77C70218}|Server\\Server.csproj|solutionrelative:server\\dao\\userinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -127,28 +167,8 @@
       "RelativeMoniker": "D:0:0:{3D1BE638-6F7A-40AE-B5C4-87DA77C70218}|Server\\Server.csproj|solutionrelative:server\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formxacnhandk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formxacnhandk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\resetpass.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\resetpass.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\forminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\forminfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\forminfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -159,16 +179,8 @@
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formxacnhandk.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formdangky.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formdangky.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -199,10 +211,6 @@
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\formextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\formquenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\formquenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|D:\\clone\\NT106(newui)\\NT106\\ltmcb\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F05CCFFD-BC1C-4622-AAB4-5957B674E6E6}|LTMCB\\LTMCB.csproj|solutionrelative:ltmcb\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -230,60 +238,320 @@
       "DocumentGroups": [
         {
           "DockedWidth": 314,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "FormChat.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormChat.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\FormChat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T09:00:47.171Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FormChatClient.cs [Design]",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChatClient.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormChatClient.cs",
               "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChatClient.cs [Design]",
               "RelativeToolTip": "LTMCB\\Forms\\FormChatClient.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:44:41.779Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-07-03T09:00:46.414Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormFriendSearch.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriendSearch.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormFriendSearch.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriendSearch.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\FormFriendSearch.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "GopY.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\GopY.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\GopY.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\GopY.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\GopY.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T03:39:25.056Z",
+              "WhenOpened": "2024-07-02T16:00:12.53Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormMusic.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormMusic.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormMusic.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormMusic.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\FormMusic.cs [Design]",
+              "DocumentIndex": 7,
+              "Title": "ResetPass.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\ResetPass.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\ResetPass.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T11:53:27.204Z",
+              "WhenOpened": "2024-05-10T07:37:44.588Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QLFile.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\QLFile.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\QLFile.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\QLFile.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\QLFile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T10:34:28.164Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Chat.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Chat.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\Chat.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Chat.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\Chat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T05:13:41.407Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ResetPass.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\ResetPass.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\ResetPass.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAkwDEAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T08:54:09.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TrangChu.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\TrangChu.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\TrangChu.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\TrangChu.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\TrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T10:39:03.679Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InsertForm.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\InsertForm.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\InsertForm.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\InsertForm.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\InsertForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T13:32:12.081Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormXacNhanDK.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormXacNhanDK.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormXacNhanDK.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormXacNhanDK.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\FormXacNhanDK.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAswMkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T15:51:22.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormDangKy.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormDangKy.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\FormDangKy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:47:36.538Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "FormFriend.cs [Design]",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriend.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormFriend.cs",
               "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriend.cs [Design]",
               "RelativeToolTip": "LTMCB\\Forms\\FormFriend.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T03:39:23.158Z",
+              "WhenOpened": "2024-07-03T08:39:12.887Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 16,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Login.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\Login.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Login.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\Login.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAQwIAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T08:53:26.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormXacNhanDK.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormXacNhanDK.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormXacNhanDK.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormXacNhanDK.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\FormXacNhanDK.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:58:06.195Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormMusic.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormMusic.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormMusic.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormMusic.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\FormMusic.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:56:50.365Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormQuenMatKhau.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormQuenMatKhau.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\FormQuenMatKhau.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T07:32:15.363Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormQuenMatKhau.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormQuenMatKhau.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\FormQuenMatKhau.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T07:45:34.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormFriendSearch.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriendSearch.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormFriendSearch.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriendSearch.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\FormFriendSearch.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAswGMAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T04:21:31.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FormChat.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormChat.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\FormChat.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAkwHUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T08:17:29.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormFriend.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriend.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormFriend.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriend.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\FormFriend.cs",
+              "ViewState": "AQIAAPQAAAAAAAAAAAAwwN8AAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T06:55:59.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormDangKy.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormDangKy.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\FormDangKy.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAswGwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T07:24:36.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormFriendSearch.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriendSearch.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormFriendSearch.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriendSearch.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\FormFriendSearch.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T07:39:52.741Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Login.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\Login.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Login.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:51:20.442Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormInfo.cs",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormInfo.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.cs",
+              "RelativeToolTip": "LTMCB\\Forms\\FormInfo.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwBQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T02:04:41.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FormInfo.cs [Design]",
+              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.cs",
+              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormInfo.cs",
+              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.cs [Design]",
+              "RelativeToolTip": "LTMCB\\Forms\\FormInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T01:51:14.179Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "FormMusic.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormMusic.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormMusic.cs",
@@ -296,69 +564,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormFriendSearch.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriendSearch.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormFriendSearch.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriendSearch.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\FormFriendSearch.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAgwGgAAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T04:21:31.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormFriend.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriend.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormFriend.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormFriend.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\FormFriend.cs",
-              "ViewState": "AQIAAOAAAAAAAAAAAAAowOoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T03:55:56.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InsertForm.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\InsertForm.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\InsertForm.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\InsertForm.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\InsertForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T13:32:12.081Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormDangKy.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormDangKy.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\FormDangKy.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T10:47:36.538Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 27,
               "Title": "MainMenu.cs [Design]",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\MainMenu.cs",
               "RelativeDocumentMoniker": "LTMCB\\MainMenu.cs",
               "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\MainMenu.cs [Design]",
               "RelativeToolTip": "LTMCB\\MainMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T14:04:34.299Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-02T14:04:34.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 26,
               "Title": "CustomPanel.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\CustomPanel.cs",
               "RelativeDocumentMoniker": "LTMCB\\CustomPanel.cs",
@@ -366,12 +583,11 @@
               "RelativeToolTip": "LTMCB\\CustomPanel.cs",
               "ViewState": "AQIAAFQAAAAAAAAAAAAYwHsAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T11:59:31.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T11:59:31.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 28,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\MainMenu.cs",
               "RelativeDocumentMoniker": "LTMCB\\MainMenu.cs",
@@ -379,12 +595,11 @@
               "RelativeToolTip": "LTMCB\\MainMenu.cs",
               "ViewState": "AQIAAFUAAAAAAAAAAAAuwGsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T03:29:08.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T03:29:08.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 29,
               "Title": "packages.config",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\packages.config",
               "RelativeDocumentMoniker": "LTMCB\\packages.config",
@@ -396,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 30,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Program.cs",
               "RelativeDocumentMoniker": "LTMCB\\Program.cs",
@@ -408,7 +623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 31,
               "Title": "serviceaccount.json",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\serviceaccount.json",
               "RelativeDocumentMoniker": "LTMCB\\serviceaccount.json",
@@ -420,7 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 32,
               "Title": "Service.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\env\\Service.cs",
               "RelativeDocumentMoniker": "LTMCB\\env\\Service.cs",
@@ -432,18 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GopY.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\GopY.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\GopY.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\GopY.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\GopY.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T16:00:12.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 33,
               "Title": "InsertForm.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\InsertForm.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\InsertForm.cs",
@@ -456,19 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Login.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\Login.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Login.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\Login.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAQwFkAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T08:53:26.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 34,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
@@ -480,7 +672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 35,
               "Title": "Song.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\env\\Song.cs",
               "RelativeDocumentMoniker": "LTMCB\\env\\Song.cs",
@@ -492,7 +684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 37,
               "Title": "Result.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\env\\Result.cs",
               "RelativeDocumentMoniker": "LTMCB\\env\\Result.cs",
@@ -504,7 +696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 38,
               "Title": "MD5Helper.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\MaHoa\\MD5Helper.cs",
               "RelativeDocumentMoniker": "LTMCB\\MaHoa\\MD5Helper.cs",
@@ -516,7 +708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 36,
               "Title": "ThemeColor.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\env\\ThemeColor.cs",
               "RelativeDocumentMoniker": "LTMCB\\env\\ThemeColor.cs",
@@ -528,62 +720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "QLFile.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\QLFile.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\QLFile.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\QLFile.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\QLFile.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T10:34:28.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ResetPass.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\ResetPass.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\ResetPass.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T07:37:44.588Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FormInfo.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormInfo.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\FormInfo.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T01:51:14.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "FormQuenMatKhau.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormQuenMatKhau.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\FormQuenMatKhau.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T07:32:15.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "TrangChu.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\TrangChu.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\TrangChu.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\TrangChu.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\TrangChu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T10:39:03.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 39,
               "Title": "UserInter.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\DAO\\UserInter.cs",
               "RelativeDocumentMoniker": "Server\\DAO\\UserInter.cs",
@@ -595,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 40,
               "Title": "packages.config",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\packages.config",
               "RelativeDocumentMoniker": "Server\\packages.config",
@@ -607,53 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "FormXacNhanDK.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormXacNhanDK.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormXacNhanDK.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormXacNhanDK.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\FormXacNhanDK.cs",
-              "ViewState": "AQIAALUAAAAAAAAAAAAkwI4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T15:51:22.671Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "FormChat.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormChat.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\FormChat.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T02:07:59.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Chat.cs [Design]",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Chat.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\Chat.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Chat.cs [Design]",
-              "RelativeToolTip": "LTMCB\\Forms\\Chat.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T08:22:40.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ResetPass.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\ResetPass.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\ResetPass.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAhwBkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T08:54:09.775Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 41,
               "Title": "ResetPass.Designer.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\ResetPass.Designer.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\ResetPass.Designer.cs",
@@ -661,23 +752,12 @@
               "RelativeToolTip": "LTMCB\\Forms\\ResetPass.Designer.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAAtwDYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T08:42:05.759Z"
+              "WhenOpened": "2024-07-02T08:42:05.759Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "FormInfo.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormInfo.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\FormInfo.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAApwDsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T02:04:41.716Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "FormInfo.Designer.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormInfo.Designer.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormInfo.Designer.cs",
@@ -685,11 +765,12 @@
               "RelativeToolTip": "LTMCB\\Forms\\FormInfo.Designer.cs",
               "ViewState": "AQIAAGsAAAAAAAAAAAAtwH4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T08:21:08.489Z"
+              "WhenOpened": "2024-07-02T08:21:08.489Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "FormXacNhanDK.Designer.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormXacNhanDK.Designer.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormXacNhanDK.Designer.cs",
@@ -697,11 +778,12 @@
               "RelativeToolTip": "LTMCB\\Forms\\FormXacNhanDK.Designer.cs",
               "ViewState": "AQIAAEIAAAAAAAAAAAAtwFYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T08:16:55.214Z"
+              "WhenOpened": "2024-07-02T08:16:55.214Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "FormDangKy.Designer.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.Designer.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormDangKy.Designer.cs",
@@ -714,32 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "FormDangKy.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormDangKy.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormDangKy.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\FormDangKy.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAlwHIAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T07:24:36.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "FormChat.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormChat.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\FormChat.cs",
-              "ViewState": "AQIAAMoAAAAAAAAAAAAkwP4AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T08:17:29.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "Login.Designer.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\Login.Designer.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\Login.Designer.cs",
@@ -747,11 +804,12 @@
               "RelativeToolTip": "LTMCB\\Forms\\Login.Designer.cs",
               "ViewState": "AQIAAJMAAAAAAAAAAAAAAKMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T08:36:34.825Z"
+              "WhenOpened": "2024-06-05T08:36:34.825Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "GroupInter.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\DAO\\GroupInter.cs",
               "RelativeDocumentMoniker": "Server\\DAO\\GroupInter.cs",
@@ -763,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "MD5Helper.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\env\\MD5Helper.cs",
               "RelativeDocumentMoniker": "Server\\env\\MD5Helper.cs",
@@ -775,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "FireStoreHelper.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\env\\FireStoreHelper.cs",
               "RelativeDocumentMoniker": "Server\\env\\FireStoreHelper.cs",
@@ -787,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "SendMail.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\DAO\\SendMail.cs",
               "RelativeDocumentMoniker": "Server\\DAO\\SendMail.cs",
@@ -799,7 +857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "Security.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\env\\Security.cs",
               "RelativeDocumentMoniker": "Server\\env\\Security.cs",
@@ -811,7 +869,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "FormExtensions.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\FormExtensions.cs",
               "RelativeDocumentMoniker": "LTMCB\\FormExtensions.cs",
@@ -823,19 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "FormQuenMatKhau.cs",
-              "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs",
-              "RelativeDocumentMoniker": "LTMCB\\Forms\\FormQuenMatKhau.cs",
-              "ToolTip": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormQuenMatKhau.cs",
-              "RelativeToolTip": "LTMCB\\Forms\\FormQuenMatKhau.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCQAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T07:45:34.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "TrangChu.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\TrangChu.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\TrangChu.cs",
@@ -843,11 +889,12 @@
               "RelativeToolTip": "LTMCB\\Forms\\TrangChu.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAQwFkAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:49:01.761Z"
+              "WhenOpened": "2024-05-03T10:49:01.761Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "App.config",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\Server\\App.config",
               "RelativeDocumentMoniker": "Server\\App.config",
@@ -859,7 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "GopY.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\GopY.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\GopY.cs",
@@ -867,11 +914,12 @@
               "RelativeToolTip": "LTMCB\\Forms\\GopY.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T02:18:00.385Z"
+              "WhenOpened": "2024-05-11T02:18:00.385Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "FormChat.Designer.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChat.Designer.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormChat.Designer.cs",
@@ -879,11 +927,12 @@
               "RelativeToolTip": "LTMCB\\Forms\\FormChat.Designer.cs",
               "ViewState": "AQIAAEIAAAAAAAAAAAAAwE8AAACmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T11:26:26.45Z"
+              "WhenOpened": "2024-05-25T11:26:26.45Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "FormChatClient.cs",
               "DocumentMoniker": "D:\\clone\\NT106(newui)\\NT106\\LTMCB\\Forms\\FormChatClient.cs",
               "RelativeDocumentMoniker": "LTMCB\\Forms\\FormChatClient.cs",
