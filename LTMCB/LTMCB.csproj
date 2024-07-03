@@ -209,6 +209,18 @@
     <Compile Include="Forms\Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormFriendSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFriendSearch.Designer.cs">
+      <DependentUpon>FormFriendSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFriend.Designer.cs">
+      <DependentUpon>FormFriend.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormChatClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +310,12 @@
     </Compile>
     <EmbeddedResource Include="Forms\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFriendSearch.resx">
+      <DependentUpon>FormFriendSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFriend.resx">
+      <DependentUpon>FormFriend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormChatClient.resx">
       <DependentUpon>FormChatClient.cs</DependentUpon>

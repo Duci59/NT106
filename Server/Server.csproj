@@ -140,10 +140,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\FriendInter.cs" />
     <Compile Include="DAO\GroupInter.cs" />
     <Compile Include="DAO\SendMail.cs" />
     <Compile Include="DAO\UserInter.cs" />
     <Compile Include="env\FireStoreHelper.cs" />
+    <Compile Include="env\FriendlyAssistance.cs" />
     <Compile Include="env\MD5Helper.cs" />
     <Compile Include="env\Security.cs" />
     <Compile Include="Program.cs" />

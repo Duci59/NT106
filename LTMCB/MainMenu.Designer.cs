@@ -47,6 +47,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
+            this.bnt_Friend = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -78,6 +79,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.guna2Panel1.Controls.Add(this.bnt_Friend);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.infobtn);
             this.guna2Panel1.Controls.Add(this.guna2Button4);
@@ -89,7 +91,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(286, 589);
+            this.guna2Panel1.Size = new System.Drawing.Size(286, 661);
             this.guna2Panel1.TabIndex = 2;
             // 
             // guna2PictureBox1
@@ -113,7 +115,7 @@
             this.infobtn.ImageRotate = 0F;
             this.infobtn.ImageSize = new System.Drawing.Size(80, 80);
             this.infobtn.IndicateFocus = true;
-            this.infobtn.Location = new System.Drawing.Point(102, 514);
+            this.infobtn.Location = new System.Drawing.Point(100, 591);
             this.infobtn.Name = "infobtn";
             this.infobtn.PressedState.ImageSize = new System.Drawing.Size(80, 80);
             this.infobtn.Size = new System.Drawing.Size(64, 72);
@@ -133,7 +135,7 @@
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button4.Location = new System.Drawing.Point(0, 425);
+            this.guna2Button4.Location = new System.Drawing.Point(-1, 505);
             this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(286, 84);
@@ -155,7 +157,7 @@
             this.quanlybutton.Image = ((System.Drawing.Image)(resources.GetObject("quanlybutton.Image")));
             this.quanlybutton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.quanlybutton.ImageSize = new System.Drawing.Size(35, 35);
-            this.quanlybutton.Location = new System.Drawing.Point(0, 345);
+            this.quanlybutton.Location = new System.Drawing.Point(-1, 425);
             this.quanlybutton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.quanlybutton.Name = "quanlybutton";
             this.quanlybutton.Size = new System.Drawing.Size(286, 84);
@@ -177,7 +179,7 @@
             this.mahoabutton.Image = ((System.Drawing.Image)(resources.GetObject("mahoabutton.Image")));
             this.mahoabutton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.mahoabutton.ImageSize = new System.Drawing.Size(35, 35);
-            this.mahoabutton.Location = new System.Drawing.Point(0, 265);
+            this.mahoabutton.Location = new System.Drawing.Point(-1, 345);
             this.mahoabutton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mahoabutton.Name = "mahoabutton";
             this.mahoabutton.Size = new System.Drawing.Size(286, 84);
@@ -304,7 +306,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.lblTitle.Location = new System.Drawing.Point(310, 32);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(184, 47);
+            this.lblTitle.Size = new System.Drawing.Size(225, 56);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Hello World!";
             // 
@@ -316,14 +318,36 @@
             this.panelDesktop.ForeColor = System.Drawing.Color.Black;
             this.panelDesktop.Location = new System.Drawing.Point(286, 104);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(846, 485);
+            this.panelDesktop.Size = new System.Drawing.Size(846, 557);
             this.panelDesktop.TabIndex = 5;
+            // 
+            // bnt_Friend
+            // 
+            this.bnt_Friend.Animated = true;
+            this.bnt_Friend.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bnt_Friend.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bnt_Friend.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bnt_Friend.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bnt_Friend.FillColor = System.Drawing.Color.SteelBlue;
+            this.bnt_Friend.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.bnt_Friend.ForeColor = System.Drawing.Color.White;
+            this.bnt_Friend.Image = ((System.Drawing.Image)(resources.GetObject("bnt_Friend.Image")));
+            this.bnt_Friend.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnt_Friend.ImageSize = new System.Drawing.Size(40, 40);
+            this.bnt_Friend.Location = new System.Drawing.Point(-1, 268);
+            this.bnt_Friend.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.bnt_Friend.Name = "bnt_Friend";
+            this.bnt_Friend.Size = new System.Drawing.Size(286, 84);
+            this.bnt_Friend.TabIndex = 69;
+            this.bnt_Friend.Text = "Bạn bè";
+            this.bnt_Friend.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnt_Friend.Click += new System.EventHandler(this.bnt_Friend_Click);
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 589);
+            this.ClientSize = new System.Drawing.Size(1132, 661);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -360,6 +384,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelDesktop;
         private Guna.UI2.WinForms.Guna2ImageButton infobtn;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button bnt_Friend;
     }
 }
 
