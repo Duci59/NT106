@@ -26,7 +26,7 @@ namespace LTMCB.Forms
         private readonly IFirebaseClient client;
         private IWavePlayer waveOut;
         private WaveStream mp3Reader;
-        private WaveOutEvent outputDevice;
+        private WaveOutEvent outputDevice = new WaveOutEvent();
         private MediaFoundationReader mediaReader;
         private float previousVolume = 1.0f;  // Lưu âm thanh trước khi mute
 
@@ -41,6 +41,7 @@ namespace LTMCB.Forms
             playbackTimer = new Timer();
             playbackTimer.Interval = 1000; // Update every second
             playbackTimer.Tick += PlaybackTimer_Tick;
+            outputDevice.Volume = 1.0f;
         }
         private string ConvertGsToHttps(string gsUrl)
         {
@@ -359,7 +360,7 @@ namespace LTMCB.Forms
             }
             else
             {
-                MessageBox.Show("No music is currently loaded.");
+                MessageBox.Show("Vui lòng chọn bài hát.");
             }
         }
 
@@ -386,7 +387,7 @@ namespace LTMCB.Forms
             }
             else
             {
-                MessageBox.Show("No music is currently loaded.");
+                MessageBox.Show("Vui lòng chọn bài hát.");
             }
         }
 
@@ -428,31 +429,34 @@ namespace LTMCB.Forms
 
         private void btnMute_Click(object sender, EventArgs e)
         {
-            if (outputDevice != null)
-            {
+
                 // Store the current volume level
                 previousVolume = outputDevice.Volume;
                 // Set the volume to 0 to mute the audio
                 outputDevice.Volume = 0;
                 btnUnmute.Visible = true;
                 btnMute.Visible = false;
-            }
+            
         }
 
         private void btnUnmute_Click(object sender, EventArgs e)
         {
-            if (outputDevice != null)
-            {
+
                 // Restore the volume to the previous level before muting
                 outputDevice.Volume = previousVolume;
                 btnUnmute.Visible = false;
                 btnMute.Visible = true;
-            }
+            
         }
 
         private void FormMusic_FormClosing(object sender, FormClosingEventArgs e)
         {
             outputDevice.Stop();
+        }
+
+        private async void btnReload_Click(object sender, EventArgs e)
+        {
+            await LoadSongs();
         }
     }
 }

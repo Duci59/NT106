@@ -40,10 +40,12 @@
             this.btnNext = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnUnmute = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnMute = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnReload = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // guna2Elipse1
             // 
+            this.guna2Elipse1.BorderRadius = 0;
             this.guna2Elipse1.TargetControl = this;
             // 
             // lbSong
@@ -51,7 +53,7 @@
             this.lbSong.BackColor = System.Drawing.Color.Transparent;
             this.lbSong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbSong.Location = new System.Drawing.Point(12, 394);
+            this.lbSong.Location = new System.Drawing.Point(12, 452);
             this.lbSong.Name = "lbSong";
             this.lbSong.Size = new System.Drawing.Size(124, 27);
             this.lbSong.TabIndex = 1;
@@ -64,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(846, 378);
+            this.panel1.Size = new System.Drawing.Size(846, 435);
             this.panel1.TabIndex = 2;
             // 
             // lbSinger1
@@ -72,7 +74,7 @@
             this.lbSinger1.BackColor = System.Drawing.Color.Transparent;
             this.lbSinger1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSinger1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbSinger1.Location = new System.Drawing.Point(12, 440);
+            this.lbSinger1.Location = new System.Drawing.Point(12, 498);
             this.lbSinger1.Name = "lbSinger1";
             this.lbSinger1.Size = new System.Drawing.Size(56, 21);
             this.lbSinger1.TabIndex = 3;
@@ -85,7 +87,8 @@
             this.btnPlayMusic.Image = ((System.Drawing.Image)(resources.GetObject("btnPlayMusic.Image")));
             this.btnPlayMusic.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnPlayMusic.ImageRotate = 0F;
-            this.btnPlayMusic.Location = new System.Drawing.Point(401, 394);
+            this.btnPlayMusic.ImageSize = new System.Drawing.Size(60, 60);
+            this.btnPlayMusic.Location = new System.Drawing.Point(401, 452);
             this.btnPlayMusic.Name = "btnPlayMusic";
             this.btnPlayMusic.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnPlayMusic.Size = new System.Drawing.Size(74, 74);
@@ -99,7 +102,8 @@
             this.btnPauseMusic.Image = ((System.Drawing.Image)(resources.GetObject("btnPauseMusic.Image")));
             this.btnPauseMusic.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnPauseMusic.ImageRotate = 0F;
-            this.btnPauseMusic.Location = new System.Drawing.Point(401, 394);
+            this.btnPauseMusic.ImageSize = new System.Drawing.Size(60, 60);
+            this.btnPauseMusic.Location = new System.Drawing.Point(401, 452);
             this.btnPauseMusic.Name = "btnPauseMusic";
             this.btnPauseMusic.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnPauseMusic.Size = new System.Drawing.Size(74, 74);
@@ -110,11 +114,12 @@
             // btnBack
             // 
             this.btnBack.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnBack.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnBack.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnBack.ImageRotate = 0F;
-            this.btnBack.Location = new System.Drawing.Point(356, 401);
+            this.btnBack.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnBack.Location = new System.Drawing.Point(356, 459);
             this.btnBack.Name = "btnBack";
             this.btnBack.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnBack.Size = new System.Drawing.Size(39, 61);
@@ -124,11 +129,12 @@
             // btnNext
             // 
             this.btnNext.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnNext.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnNext.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnNext.ImageRotate = 0F;
-            this.btnNext.Location = new System.Drawing.Point(481, 401);
+            this.btnNext.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnNext.Location = new System.Drawing.Point(481, 459);
             this.btnNext.Name = "btnNext";
             this.btnNext.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnNext.Size = new System.Drawing.Size(39, 61);
@@ -143,7 +149,7 @@
             this.btnUnmute.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnUnmute.ImageRotate = 0F;
             this.btnUnmute.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUnmute.Location = new System.Drawing.Point(560, 414);
+            this.btnUnmute.Location = new System.Drawing.Point(560, 472);
             this.btnUnmute.Name = "btnUnmute";
             this.btnUnmute.PressedState.ImageSize = new System.Drawing.Size(35, 38);
             this.btnUnmute.Size = new System.Drawing.Size(35, 38);
@@ -159,19 +165,35 @@
             this.btnMute.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnMute.ImageRotate = 0F;
             this.btnMute.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMute.Location = new System.Drawing.Point(560, 414);
+            this.btnMute.Location = new System.Drawing.Point(560, 472);
             this.btnMute.Name = "btnMute";
             this.btnMute.PressedState.ImageSize = new System.Drawing.Size(35, 38);
             this.btnMute.Size = new System.Drawing.Size(35, 38);
             this.btnMute.TabIndex = 9;
             this.btnMute.Click += new System.EventHandler(this.btnMute_Click);
             // 
+            // btnReload
+            // 
+            this.btnReload.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnReload.HoverState.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnReload.ImageRotate = 0F;
+            this.btnReload.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnReload.Location = new System.Drawing.Point(718, 459);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnReload.Size = new System.Drawing.Size(57, 67);
+            this.btnReload.TabIndex = 10;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
             // FormMusic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(846, 494);
+            this.ClientSize = new System.Drawing.Size(846, 557);
+            this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnMute);
             this.Controls.Add(this.btnUnmute);
             this.Controls.Add(this.btnNext);
@@ -203,5 +225,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnPauseMusic;
         private Guna.UI2.WinForms.Guna2ImageButton btnUnmute;
         private Guna.UI2.WinForms.Guna2ImageButton btnMute;
+        private Guna.UI2.WinForms.Guna2ImageButton btnReload;
     }
 }

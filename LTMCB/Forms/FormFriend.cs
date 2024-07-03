@@ -56,6 +56,7 @@ namespace LTMCB.Forms
                         lblFriend.Text = $"{displayName} ({username})";
                         lblFriend.AutoSize = true;
                         lblFriend.Margin = new Padding(3);
+                        lblFriend.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblFriend.ForeColor = Color.White;
 
                         // Create a button to open chat
@@ -94,6 +95,7 @@ namespace LTMCB.Forms
             {
                 Label lblNoFriends = new Label();
                 lblNoFriends.Text = "No friends";
+                lblNoFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 lblNoFriends.AutoSize = true;
                 lblNoFriends.ForeColor = Color.White;
                 FriendPannel.Controls.Add(lblNoFriends);
@@ -124,6 +126,7 @@ namespace LTMCB.Forms
                         Label lblRequest = new Label();
                         lblRequest.Text = $"{displayName} ({username})";
                         lblRequest.AutoSize = true;
+                        lblRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblRequest.Margin = new Padding(3);
                         lblRequest.ForeColor = Color.White;
 
@@ -164,6 +167,7 @@ namespace LTMCB.Forms
                 Label lblNoRequests = new Label();
                 lblNoRequests.Text = "No friend requests";
                 lblNoRequests.AutoSize = true;
+                lblNoRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 lblNoRequests.ForeColor = Color.White;
                 Infriend.Controls.Add(lblNoRequests);
             }
@@ -193,6 +197,7 @@ namespace LTMCB.Forms
                         // Create a label for the friend request
                         Label lblRequest = new Label();
                         lblRequest.Text = $"{displayName} ({username})";
+                        lblRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblRequest.AutoSize = true;
                         lblRequest.Margin = new Padding(3);
                         lblRequest.ForeColor = Color.White;
@@ -222,6 +227,7 @@ namespace LTMCB.Forms
             {
                 Label lblNoSentRequests = new Label();
                 lblNoSentRequests.Text = "No sent friend requests";
+                lblNoSentRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 lblNoSentRequests.AutoSize = true;
                 lblNoSentRequests.ForeColor = Color.White;
                 Outfriend.Controls.Add(lblNoSentRequests);

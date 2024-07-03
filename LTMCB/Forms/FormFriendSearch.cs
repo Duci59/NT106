@@ -108,7 +108,7 @@ namespace LTMCB.Forms
 
                     Label lblDisplayName = new Label();
                     lblDisplayName.Text = user.DisplayName;
-                    lblDisplayName.Font = new Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    lblDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     lblDisplayName.AutoSize = true;
                     lblDisplayName.Anchor = AnchorStyles.Left;
 
@@ -123,7 +123,7 @@ namespace LTMCB.Forms
                     {
                         Label lblStatus = new Label();
                         lblStatus.Text = "Already Friend";
-                        lblStatus.Font = new Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblStatus.AutoSize = true;
                         lblStatus.Anchor = AnchorStyles.Right;
                         statusControl = lblStatus;
@@ -132,7 +132,7 @@ namespace LTMCB.Forms
                     {
                         Label lblStatus = new Label();
                         lblStatus.Text = "Friend Request Sent";
-                        lblStatus.Font = new Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblStatus.AutoSize = true;
                         lblStatus.Anchor = AnchorStyles.Right;
                         statusControl = lblStatus;
@@ -141,7 +141,7 @@ namespace LTMCB.Forms
                     {
                         Button btnSendRequest = new Button();
                         btnSendRequest.Text = "Send Friend Request";
-                        btnSendRequest.Font = new Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        btnSendRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         btnSendRequest.BackColor = Color.SteelBlue;
                         btnSendRequest.Tag = user.UserName;
                         btnSendRequest.Anchor = AnchorStyles.Right;

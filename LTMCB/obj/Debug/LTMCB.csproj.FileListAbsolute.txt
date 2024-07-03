@@ -553,3 +553,5 @@ D:\LTMCB\Do_an\Final6\NT106\LTMCB\obj\Debug\LTMCB.csproj.CoreCompileInputs.cache
 D:\LTMCB\Do_an\Final6\NT106\LTMCB\obj\Debug\LTMCB.csproj.CopyComplete
 D:\LTMCB\Do_an\Final6\NT106\LTMCB\obj\Debug\LTMCB.exe
 D:\LTMCB\Do_an\Final6\NT106\LTMCB\obj\Debug\LTMCB.pdb
+D:\clone\NT106(newui)\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormFriendSearch.resources
+D:\clone\NT106(newui)\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormFriend.resources
