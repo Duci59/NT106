@@ -345,5 +345,397 @@ namespace Server.DAO
             }
         }
 
+
+        public async Task<string> SendToUserAsync(string senderUsername, string receiverUsername, string tinNhan)
+        {
+            // Tạo đối tượng Message với thông tin cần thiết
+            ChatFriend message = new ChatFriend
+            {
+                Username = senderUsername,
+                Otheruser = receiverUsername,
+                TinNhan = tinNhan
+            };
+
+            // Tham chiếu đến bộ sưu tập "messages" trong Firestore
+            CollectionReference messagesRef = FireStoreHelper.db.Collection("FriendMessages");
+
+            // Lấy ID của tin nhắn cuối cùng
+            QuerySnapshot lastMessageSnapshot = await messagesRef
+                .OrderByDescending("id")
+                .Limit(1)
+                .GetSnapshotAsync();
+
+            int lastId = 0;
+            if (lastMessageSnapshot.Documents.Count > 0)
+            {
+                lastId = lastMessageSnapshot.Documents[0].GetValue<int>("id");
+            }
+
+            // Tăng lastId lên 1 để sử dụng cho tin nhắn mới
+            lastId++;
+
+            // Tạo dữ liệu tin nhắn dưới dạng từ điển cho người gửi
+            Dictionary<string, object> senderMessageData = new Dictionary<string, object>
+            {
+                { "id", lastId },
+                { "username", senderUsername },
+                { "receiver", receiverUsername },
+                { "noidung", message.TinNhan },
+                { "trangthai", "Đã Gửi" },
+                { "thoigian", DateTime.Now.ToString() },
+                { "nguoigui", message.Username }
+            };
+
+             // Tạo dữ liệu tin nhắn dưới dạng từ điển cho người nhận
+            Dictionary<string, object> receiverMessageData = new Dictionary<string, object>
+            {
+                { "id", lastId },
+                { "username", receiverUsername },
+                { "receiver", senderUsername },
+                { "noidung", message.TinNhan },
+                { "trangthai", "Đã Nhận" },
+                { "thoigian", DateTime.Now.ToString() },
+                { "nguoigui", message.Username }
+            };
+
+            // Thêm tin nhắn của người gửi vào bộ sưu tập "messages" trong Firestore
+            await messagesRef.AddAsync(senderMessageData);
+
+            // Thêm tin nhắn của người nhận vào bộ sưu tập "messages" trong Firestore
+            await messagesRef.AddAsync(receiverMessageData);
+
+            // Trả về chuỗi kết quả, bao gồm id của tin nhắn cuối cùng cách nhau bởi ký hiệu "~"
+            return $"[DONE]~{lastId}";
+        }
+
+        public async Task<string> CheckMessFriend(string us, string ous, string sl)
+        {
+            ChatFriend cf = new ChatFriend
+            {
+                Username = us,
+                Otheruser = ous
+            };
+
+            string traLoi = "";
+
+            // Reference đến collection "messages" trên Firestore
+            CollectionReference messagesRef = FireStoreHelper.db.Collection("FriendMessages");
+
+            // Thực hiện truy vấn dựa trên tham số 'sl'
+            QuerySnapshot querySnapshot;
+            if (sl == "full")
+            {
+                querySnapshot = await messagesRef
+                    .WhereEqualTo("receiver", cf.Otheruser)
+                    .WhereIn("trangthai", new List<string> { "Đã Nhận", "Đã Bị Thu Hồi" })
+                    .WhereEqualTo("username", cf.Username)
+                    .GetSnapshotAsync();
+            }
+            else
+            {
+                // Các trường hợp khác của 'sl' (ví dụ: "recent") có thể được xử lý ở đây
+                return "NULL";
+            }
+
+            // Kiểm tra xem querySnapshot có dữ liệu hay không
+            if (querySnapshot != null)
+            {
+                foreach (DocumentSnapshot docSnapshot in querySnapshot.Documents)
+                {
+                    Dictionary<string, object> messageData = docSnapshot.ToDictionary();
+
+                    // Gọi phương thức DisPlayName bằng cách sử dụng await
+                    string tenhienthi = await DisPlayName(messageData["nguoigui"].ToString());
+                    string noidung = messageData["noidung"].ToString();
+                    string thoigian = messageData["thoigian"].ToString();
+                    string nguoigui = messageData["nguoigui"].ToString();
+                    string id_mess = docSnapshot.Id;
+                    string trangthai = messageData["trangthai"].ToString();
+
+                    // Mã hóa nội dung tin nhắn
+                    MD5Helper md5 = new MD5Helper(await TakeKeyFriendAsync(cf.Otheruser));
+
+
+                    // Xây dựng chuỗi kết quả
+                    traLoi += $"{tenhienthi}~{noidung}~{thoigian}~{nguoigui}~{cf.Username}~{id_mess}~{trangthai}^";
+                }
+
+                // Trả về chuỗi kết quả đã xây dựng
+                return traLoi.TrimEnd('^');
+            }
+            else
+            {
+                // Trả về "NULL" nếu không có tin nhắn nào thỏa mãn điều kiện
+                return "NULL";
+            }
+        }
+
+        public async Task<string> DisPlayName(string us)
+        {
+            var db = FireStoreHelper.db;
+
+            CollectionReference accountsRef = db.Collection("users");
+            QuerySnapshot accountSnapshot = await accountsRef.WhereEqualTo("username", us).GetSnapshotAsync();
+
+            if (accountSnapshot != null && accountSnapshot.Documents.Count > 0)
+            {
+                DocumentSnapshot accountDoc = accountSnapshot.Documents[0];
+                string displayName = accountDoc.GetValue<string>("displayName");
+                return displayName;
+            }
+            else
+            {
+                return "Không xác định";
+            }
+        }
+
+        public async Task<string> TakeKeyFriendAsync(string gn)
+        {
+            CollectionReference groupsRef = FireStoreHelper.db.Collection("groups");
+            QuerySnapshot groupSnapshot = await groupsRef.WhereEqualTo("groupname", gn).GetSnapshotAsync();
+
+            if (groupSnapshot != null && groupSnapshot.Documents.Count > 0)
+            {
+                DocumentSnapshot groupDoc = groupSnapshot.Documents[0];
+                string username = groupDoc.GetValue<string>("owner");
+                string traLoi = await TakeKeyAsync(username);
+                return traLoi;
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public async Task<string> TakeKeyAsync(string us)
+        {
+            CollectionReference accountsRef = FireStoreHelper.db.Collection("users");
+            QuerySnapshot accountSnapshot = await accountsRef.WhereEqualTo("username", us).GetSnapshotAsync();
+
+            if (accountSnapshot != null && accountSnapshot.Documents.Count > 0)
+            {
+                DocumentSnapshot accountDoc = accountSnapshot.Documents[0];
+                string sKey = accountDoc.GetValue<string>("username");
+                return sKey;
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public async Task<string> NewMessFriendAsync(string us, string ous)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference groupsRef = db.Collection("users");
+
+            // Check if the user is still in the group
+            QuerySnapshot otherUserSnapshot = await groupsRef
+                .WhereEqualTo("username", ous)
+                .GetSnapshotAsync();
+
+            if (otherUserSnapshot.Documents.Count == 0)
+            {
+                return "UserNotFound";
+            }
+
+            // User is in the group
+            CollectionReference messagesRef = db.Collection("FriendMessages");
+            QuerySnapshot messageSnapshot = await messagesRef
+                .WhereEqualTo("username", us)
+                .WhereEqualTo("receiver", ous)
+                .WhereIn("trangthai", new List<string> { "Đã Gửi", "Thu Hồi" })
+                .GetSnapshotAsync();
+
+            if (messageSnapshot != null && messageSnapshot.Documents.Count > 0)
+            {
+                StringBuilder traLoi = new StringBuilder();
+                foreach (DocumentSnapshot doc in messageSnapshot.Documents)
+                {
+                    Dictionary<string, object> messageData = doc.ToDictionary();
+                    string nguoigui = await DisPlayName(messageData["nguoigui"].ToString());
+                    traLoi.Append($"{nguoigui}~{messageData["noidung"]}~{messageData["thoigian"]}~{messageData["nguoigui"]}~{us}~{messageData["id"]}~{messageData["trangthai"]}^");
+                }
+
+                //dsTinNhan[i].Split('~')[0] - tên hiển thị
+                // [1] - nội dung
+                //dsTinNhan[i].Split('~')[2] - thời gian
+                //dsTinNhan[i].Split('~')[3] - user gửi
+                //dsTinNhan[i].Split('~')[4] - user nhận
+
+                // Update message statuses
+                foreach (DocumentSnapshot doc in messageSnapshot.Documents)
+                {
+                    string trangthai = (string)doc.GetValue<string>("trangthai") == "Đã Gửi" ? "Đã Nhận" : "Đã Bị Thu Hồi";
+                    await doc.Reference.UpdateAsync("trangthai", trangthai);
+                }
+
+                return traLoi.ToString().TrimEnd('^');
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+
+        public async Task<string> NewMessFriend_DelAsync(string us, string ous)
+        {
+
+            var db = FireStoreHelper.db;
+
+            // Tham chiếu đến bộ sưu tập "groups"
+            CollectionReference usersRef = db.Collection("users");
+
+            // Thực hiện truy vấn để lấy tài liệu nhóm có tên nhóm là gn
+            QuerySnapshot otherUserSnapshot = await usersRef
+                .WhereEqualTo("username", ous)
+                .GetSnapshotAsync();
+
+            if (otherUserSnapshot.Documents.Count == 0)
+            {
+                return "UserNotFound";
+            }
+
+            // Tham chiếu đến bộ sưu tập "messages"
+            CollectionReference messagesRef = db.Collection("FriendMessages");
+            QuerySnapshot messageSnapshot = await messagesRef
+                .WhereEqualTo("username", us)
+                .WhereEqualTo("receiver", ous)
+                .WhereEqualTo("trangthai", "Thu Hồi")
+                .GetSnapshotAsync();
+
+            if (messageSnapshot != null && messageSnapshot.Documents.Count > 0)
+            {
+                StringBuilder traLoi = new StringBuilder();
+                foreach (DocumentSnapshot doc in messageSnapshot.Documents)
+                {
+                    int messageId = doc.GetValue<int>("id");
+                    traLoi.Append($"{messageId}^");
+                }
+
+                // Cập nhật trạng thái tin nhắn
+                foreach (DocumentSnapshot doc in messageSnapshot.Documents)
+                {
+                    await doc.Reference.UpdateAsync("trangthai", "Đã Bị Thu hồi");
+                }
+
+                return traLoi.ToString().TrimEnd('^');
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+        public async Task<string> OldMessFriendAsync(string us, string ous)
+        {
+            var db = FireStoreHelper.db;
+
+            // User is in the group
+            CollectionReference messagesRef = db.Collection("FriendMessages");
+            QuerySnapshot messageSnapshot = await messagesRef
+                .WhereEqualTo("receiver", ous)
+                .WhereIn("trangthai", new List<string> { "Đã Nhận", "Thu Hồi", "Đã gửi" })
+                .WhereEqualTo("username", us)
+                .OrderBy("id") // Sắp xếp theo trường id
+                .GetSnapshotAsync();
+
+            if (messageSnapshot != null && messageSnapshot.Documents.Count > 0)
+            {
+                StringBuilder traLoi = new StringBuilder();
+                foreach (DocumentSnapshot doc in messageSnapshot.Documents)
+                {
+                    Dictionary<string, object> messageData = doc.ToDictionary();
+                    string nguoigui = await DisPlayName(messageData["nguoigui"].ToString());
+                    traLoi.Append($"{nguoigui}~{messageData["noidung"]}~{messageData["thoigian"]}~{messageData["nguoigui"]}~{us}~{messageData["id"]}~{messageData["trangthai"]}^");
+                }
+
+                //dsTinNhan[i].Split('~')[0] - tên hiển thị
+                // [1] - nội dung
+                //dsTinNhan[i].Split('~')[2] - thời gian
+                //dsTinNhan[i].Split('~')[3] - user gửi
+                //dsTinNhan[i].Split('~')[4] - user nhận
+                foreach (DocumentSnapshot doc in messageSnapshot.Documents)
+                {
+                    string trangthai = (string)doc.GetValue<string>("trangthai");
+                    if (trangthai == "Đã Gửi")
+                        trangthai = "Đã Nhận";
+                    await doc.Reference.UpdateAsync("trangthai", trangthai);
+                }
+
+                return traLoi.ToString().TrimEnd('^');
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
+        public async Task DelFriendMessAsync(int id)
+        {
+
+            var db = FireStoreHelper.db;
+            CollectionReference messagesRef = db.Collection("FriendMessages");
+
+            // Thực hiện truy vấn để lấy tất cả tài liệu tin nhắn trong collection "messages" với id là id được cung cấp
+            QuerySnapshot querySnapshot = await messagesRef
+                .WhereEqualTo("id", id)  // Chuyển đổi id từ string sang int để so sánh với trường id trong Firestore
+                .GetSnapshotAsync();
+
+            // Duyệt qua tất cả các tài liệu thỏa mãn điều kiện truy vấn
+            foreach (DocumentSnapshot documentSnapshot in querySnapshot.Documents)
+            {
+                // Lấy tham chiếu đến tài liệu cần cập nhật
+                DocumentReference docRef = documentSnapshot.Reference;
+
+                // Lấy dữ liệu hiện tại của tài liệu
+                var data = documentSnapshot.ToDictionary();
+
+                // Kiểm tra và in ra các giá trị của username và nguoigui để đảm bảo chúng tồn tại
+                if (data.ContainsKey("username") && data.ContainsKey("nguoigui"))
+                {
+                    string username = data["username"].ToString();
+                    string nguoigui = data["nguoigui"].ToString();
+
+                    // Xác định trạng thái mới dựa trên người gửi
+                    string newStatus = (username == nguoigui) ? "Đã Bị Thu Hồi" : "Thu Hồi";
+
+                    // Cập nhật trạng thái tin nhắn
+                    Dictionary<string, object> updates = new Dictionary<string, object>
+                    {
+                        { "trangthai", newStatus }
+                    };
+
+                    // Cập nhật tài liệu trong Firestore
+                    await docRef.UpdateAsync(updates);
+                    Console.WriteLine($"Document {docRef.Id} updated with status {newStatus}");
+                }
+                else
+                {
+                    Console.WriteLine("The document does not contain the required fields.");
+                }
+            }
+
+        }
+
+        public async Task<string> GetDisplayNameByUsernameAsync(string username)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference usersRef = db.Collection("users");
+
+            // Thực hiện truy vấn để lấy tài liệu của người dùng có username là username
+            QuerySnapshot userSnapshot = await usersRef
+                .WhereEqualTo("username", username)
+                .GetSnapshotAsync();
+
+            if (userSnapshot.Documents.Count == 0)
+            {
+                return null; // hoặc bạn có thể trả về một chuỗi thông báo lỗi khác
+            }
+
+            // Lấy tài liệu người dùng đầu tiên (vì username là duy nhất)
+            DocumentSnapshot userDoc = userSnapshot.Documents[0];
+            string displayName = userDoc.GetValue<string>("displayName");
+
+            return displayName;
+        }
     }
 }

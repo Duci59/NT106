@@ -215,6 +215,12 @@
     <Compile Include="Forms\fInvaite.Designer.cs">
       <DependentUpon>fInvaite.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormChatFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChatFriend.Designer.cs">
+      <DependentUpon>FormChatFriend.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormFriendSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fInvaite.resx">
       <DependentUpon>fInvaite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormChatFriend.resx">
+      <DependentUpon>FormChatFriend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormFriendSearch.resx">
       <DependentUpon>FormFriendSearch.cs</DependentUpon>

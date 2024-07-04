@@ -544,9 +544,106 @@ namespace Server
                         skXL.Send(Encoding.UTF8.GetBytes("TB"));
                     }
                 }//Tìm và vào nhóm
+                else if (noidung.StartsWith("SendMTFriend"))
+                {
+                    // Yc Gửi tin nhắn = [SendMTFriend] ~ username ~ otheruser ~ noidung
+                    string[] parts = noidung.Split('~');
+                    if (parts.Length < 4)
+                    {
+                        // Nếu độ dài không đủ 4 phần tử, thông báo lỗi
+                        skXL.Send(Encoding.UTF8.GetBytes("[ERROR]~Invalid message format"));
+                        return;
+                    }
 
+                    string senderUsername = parts[1];
+                    string receiverUsername = parts[2];
+                    string noiDung = parts[3];
 
+                    try
+                    {
+                        // Gọi phương thức SendToGrAsync của GroupInter
+                        string traLoi = await FriendInter.Instance.SendToUserAsync(senderUsername, receiverUsername, noiDung);
 
+                        // Gửi phản hồi về client
+                        skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                    }
+                    catch (Exception ex)
+                    {
+                        // Xử lý ngoại lệ nếu có lỗi xảy ra
+                        skXL.Send(Encoding.UTF8.GetBytes("[ERROR]~" + ex.Message));
+                    }
+                }
+                else if (noidung.StartsWith("CheckMIFriend"))
+                {
+                    // Yc load tin nhắn = [CheckMIGroup] ~ username ~ groupname ~ stt
+                    string[] splitParts = noidung.Split('~');
+                    string username = splitParts[1];
+                    string otheruser = splitParts[2];
+                    string stt = splitParts[3];
+
+                    // Sử dụng await để gọi phương thức CheckMessGr từ GroupInter.Instance
+                    string traLoi = await FriendInter.Instance.CheckMessFriend(username, otheruser, stt);
+
+                    // Gửi kết quả trả về
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+                else if (noidung.StartsWith("NewMessFriend"))
+                {
+
+                    
+                    string username = noidung.Split('~')[1];
+                    string otheruser = noidung.Split('~')[2];
+                    string traLoi = await FriendInter.Instance.NewMessFriendAsync(username, otheruser);
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+                else if (noidung.StartsWith("NewMessFriendDel"))
+                {
+                    string username = noidung.Split('~')[1];
+                    string otheruser = noidung.Split('~')[2];
+                    string traLoi = await FriendInter.Instance.NewMessFriend_DelAsync(username, otheruser);
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+                else if (noidung.StartsWith("OldFriendMess"))
+                {
+                    
+                    string username = noidung.Split('~')[1];
+                    string otheruser = noidung.Split('~')[2];
+                    string traLoi = await FriendInter.Instance.OldMessFriendAsync(username, otheruser);
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+                else if (noidung.StartsWith("DellFriendMess"))
+                {
+
+                    string[] parts = noidung.Split('~');
+                    if (parts.Length >= 2)
+                    {
+                        string messageId = parts[1].Trim();
+                        int messageIdInt = int.Parse(messageId);
+                        try
+                        {
+                            await FriendInter.Instance.DelFriendMessAsync(messageIdInt);
+
+                            // Gửi phản hồi về cho client (VD: "DONE" để thông báo rằng đã xóa thành công)
+                            skXL.Send(Encoding.UTF8.GetBytes("DONE"));
+                        }
+                        catch (Exception ex)
+                        {
+                            // Xử lý nếu có lỗi xảy ra trong quá trình xóa tin nhắn
+                            Console.WriteLine($"Error deleting message with id {messageId}: {ex.Message}");
+                            skXL.Send(Encoding.UTF8.GetBytes($"ERROR: {ex.Message}"));
+                        }
+                    }
+                    else
+                    {
+                        // Xử lý khi định dạng yêu cầu không đúng
+                        skXL.Send(Encoding.UTF8.GetBytes("ERROR: Invalid request format"));
+                    }
+                }
+                else if (noidung.StartsWith("LoadDisplayFriendName")){
+                    string username = noidung.Split('~')[1];
+                    string traloi = await FriendInter.Instance.GetDisplayNameByUsernameAsync(username);
+                    skXL.Send(Encoding.UTF8.GetBytes(traloi));
+                }
                 skXL.Close();
                 skXL.Dispose();
             }

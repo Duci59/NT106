@@ -266,8 +266,9 @@ namespace LTMCB.Forms
 
         private void OpenChatForm(string username)
         {
-            // Implement the logic to open a chat form with the given username
-            MessageBox.Show($"Open chat with {username}");
+            Forms.FormChatFriend friendchat = new Forms.FormChatFriend(Username,username);
+            friendchat.Show();
+
         }
 
         // Method to confirm and unfriend
