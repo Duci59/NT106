@@ -141,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\FriendInter.cs" />
+    <Compile Include="DAO\GroupChat.cs" />
     <Compile Include="DAO\GroupInter.cs" />
     <Compile Include="DAO\SendMail.cs" />
     <Compile Include="DAO\UserInter.cs" />

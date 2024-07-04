@@ -112,10 +112,6 @@ namespace LTMCB.Forms
                         toolTipGroup.SetToolTip(btn, "Nhấn chuột phải để chọn rời nhóm");
                     }
 
-                    btn.Click += (s, e) => {
-                        Forms.FormChatClient chatPage = new Forms.FormChatClient(tennhom, Username);
-                        chatPage.Show();
-                    };
 
                     lsGroup.Add(tennhom);
                 }
@@ -177,10 +173,20 @@ namespace LTMCB.Forms
         private void Btn_MouseClick(object sender, MouseEventArgs e)
         {
             string namegr = ((sender as Button).Tag as string).Split('~')[0]; // Lấy tên nhóm
-
+            string chucvu = ((sender as Button).Tag as string).Split('~')[2];
             if (e.Button == MouseButtons.Left) // Chuột trái là truy cập vào nhóm
             {
-
+                if (chucvu == "truongnhom")
+                {
+                    string passnhom = ((sender as Button).Tag as string).Split('~')[3];
+                    FormChatClient groupAd = new FormChatClient(namegr, Username, passnhom, Key);
+                    groupAd.Show();
+                }
+                else
+                {
+                    Chat groupMem = new Chat(namegr, Username);
+                    groupMem.Show();
+                }
             }
             else if (e.Button == MouseButtons.Right) // Chuột phải là xóa hoặc rời nhóm
             {

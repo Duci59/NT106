@@ -40,19 +40,22 @@
             this.pnLichSu = new System.Windows.Forms.Panel();
             this.lbgroupname = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbMatKhauGr = new Guna.UI2.WinForms.Guna2TextBox();
             this.invitebutton = new Guna.UI2.WinForms.Guna2Button();
-            this.changepassbutton = new Guna.UI2.WinForms.Guna2Button();
+            this.btChangePassGr = new Guna.UI2.WinForms.Guna2Button();
             this.DataGridViewsMember = new System.Windows.Forms.DataGridView();
             this.identifier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dc = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbNoiDung = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnMinisize = new System.Windows.Forms.Button();
             this.btnMaxsize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.timerDellMess = new System.Windows.Forms.Timer(this.components);
+            this.toolTipChangePass = new System.Windows.Forms.ToolTip(this.components);
+            this.lbStt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewsMember)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,25 +98,25 @@
             this.guna2HtmlLabel2.TabIndex = 5;
             this.guna2HtmlLabel2.Text = " Mật khẩu nhóm";
             // 
-            // guna2TextBox1
+            // tbMatKhauGr
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(154, 77);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(226, 24);
-            this.guna2TextBox1.TabIndex = 6;
+            this.tbMatKhauGr.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbMatKhauGr.DefaultText = "";
+            this.tbMatKhauGr.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbMatKhauGr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbMatKhauGr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbMatKhauGr.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbMatKhauGr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbMatKhauGr.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbMatKhauGr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbMatKhauGr.Location = new System.Drawing.Point(154, 77);
+            this.tbMatKhauGr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbMatKhauGr.Name = "tbMatKhauGr";
+            this.tbMatKhauGr.PasswordChar = '\0';
+            this.tbMatKhauGr.PlaceholderText = "";
+            this.tbMatKhauGr.SelectedText = "";
+            this.tbMatKhauGr.Size = new System.Drawing.Size(226, 24);
+            this.tbMatKhauGr.TabIndex = 6;
             // 
             // invitebutton
             // 
@@ -132,21 +135,21 @@
             this.invitebutton.Text = "Mời";
             this.invitebutton.Click += new System.EventHandler(this.invitebutton_Click);
             // 
-            // changepassbutton
+            // btChangePassGr
             // 
-            this.changepassbutton.BorderRadius = 12;
-            this.changepassbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.changepassbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.changepassbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.changepassbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.changepassbutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.changepassbutton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.changepassbutton.ForeColor = System.Drawing.Color.White;
-            this.changepassbutton.Location = new System.Drawing.Point(520, 70);
-            this.changepassbutton.Name = "changepassbutton";
-            this.changepassbutton.Size = new System.Drawing.Size(106, 40);
-            this.changepassbutton.TabIndex = 9;
-            this.changepassbutton.Text = "Đổi pass";
+            this.btChangePassGr.BorderRadius = 12;
+            this.btChangePassGr.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btChangePassGr.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btChangePassGr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btChangePassGr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btChangePassGr.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.btChangePassGr.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btChangePassGr.ForeColor = System.Drawing.Color.White;
+            this.btChangePassGr.Location = new System.Drawing.Point(520, 70);
+            this.btChangePassGr.Name = "btChangePassGr";
+            this.btChangePassGr.Size = new System.Drawing.Size(106, 40);
+            this.btChangePassGr.TabIndex = 9;
+            this.btChangePassGr.Text = "Đổi pass";
             // 
             // DataGridViewsMember
             // 
@@ -209,6 +212,7 @@
             this.DataGridViewsMember.Size = new System.Drawing.Size(265, 580);
             this.DataGridViewsMember.TabIndex = 32;
             this.DataGridViewsMember.TabStop = false;
+            this.DataGridViewsMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewsMember_CellClick);
             // 
             // identifier
             // 
@@ -281,25 +285,25 @@
             this.guna2Button1.Text = "Gửi";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2TextBox2
+            // tbNoiDung
             // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(87, 586);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Nhập tin nhắn ...";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(425, 53);
-            this.guna2TextBox2.TabIndex = 55;
+            this.tbNoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNoiDung.DefaultText = "";
+            this.tbNoiDung.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbNoiDung.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbNoiDung.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNoiDung.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNoiDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNoiDung.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbNoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNoiDung.Location = new System.Drawing.Point(87, 586);
+            this.tbNoiDung.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbNoiDung.Name = "tbNoiDung";
+            this.tbNoiDung.PasswordChar = '\0';
+            this.tbNoiDung.PlaceholderText = "";
+            this.tbNoiDung.SelectedText = "";
+            this.tbNoiDung.Size = new System.Drawing.Size(425, 53);
+            this.tbNoiDung.TabIndex = 55;
             // 
             // btnMinisize
             // 
@@ -349,28 +353,56 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // timerDellMess
+            // 
+            this.timerDellMess.Enabled = true;
+            this.timerDellMess.Interval = 1000;
+            this.timerDellMess.Tick += new System.EventHandler(this.timerDellMess_Tick);
+            // 
+            // toolTipChangePass
+            // 
+            this.toolTipChangePass.AutomaticDelay = 200;
+            this.toolTipChangePass.AutoPopDelay = 9000;
+            this.toolTipChangePass.InitialDelay = 200;
+            this.toolTipChangePass.ReshowDelay = 40;
+            this.toolTipChangePass.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipChangePass.ToolTipTitle = "Hướng dẫn";
+            // 
+            // lbStt
+            // 
+            this.lbStt.AutoSize = true;
+            this.lbStt.BackColor = System.Drawing.Color.White;
+            this.lbStt.Location = new System.Drawing.Point(96, 605);
+            this.lbStt.Name = "lbStt";
+            this.lbStt.Size = new System.Drawing.Size(97, 16);
+            this.lbStt.TabIndex = 61;
+            this.lbStt.Text = "Nhập tin nhắn...";
+            this.lbStt.Click += new System.EventHandler(this.lbStt_Click);
+            // 
             // FormChatClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(944, 662);
+            this.Controls.Add(this.lbStt);
             this.Controls.Add(this.btnMinisize);
             this.Controls.Add(this.btnMaxsize);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.tbNoiDung);
             this.Controls.Add(this.DataGridViewsMember);
-            this.Controls.Add(this.changepassbutton);
+            this.Controls.Add(this.btChangePassGr);
             this.Controls.Add(this.invitebutton);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.tbMatKhauGr);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.lbgroupname);
             this.Controls.Add(this.pnLichSu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormChatClient";
             this.Text = "FormAdGroup";
+            this.Load += new System.EventHandler(this.FormChatClient_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewsMember)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -381,20 +413,23 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel pnLichSu;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox tbMatKhauGr;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbgroupname;
         private Guna.UI2.WinForms.Guna2Button invitebutton;
-        private Guna.UI2.WinForms.Guna2Button changepassbutton;
+        private Guna.UI2.WinForms.Guna2Button btChangePassGr;
         private System.Windows.Forms.DataGridView DataGridViewsMember;
         private System.Windows.Forms.DataGridViewTextBoxColumn identifier;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewButtonColumn dc;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox tbNoiDung;
         private System.Windows.Forms.Button btnMinisize;
         private System.Windows.Forms.Button btnMaxsize;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Timer timerDellMess;
+        private System.Windows.Forms.ToolTip toolTipChangePass;
+        private System.Windows.Forms.Label lbStt;
     }
 }

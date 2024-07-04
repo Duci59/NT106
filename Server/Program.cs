@@ -378,6 +378,174 @@ namespace Server
                     byte[] traloi = Encoding.UTF8.GetBytes((check) ? "Success" : "Failed");
                     skXL.Send(traloi);
                 }
+                else if (noidung.StartsWith("SendMTGroup"))
+                {
+                    // Yc Gửi tin nhắn = [SendMTGroup] ~ username ~ groupname ~ noidung
+                    string[] parts = noidung.Split('~');
+                    if (parts.Length < 4)
+                    {
+                        // Nếu độ dài không đủ 4 phần tử, thông báo lỗi
+                        skXL.Send(Encoding.UTF8.GetBytes("[ERROR]~Invalid message format"));
+                        return;
+                    }
+
+                    string username = parts[1];
+                    string tennhom = parts[2];
+                    string noiDung = parts[3];
+
+                    try
+                    {
+                        // Gọi phương thức SendToGrAsync của GroupInter
+                        string traLoi = await GroupInter.Instance.SendToGrAsync(username, tennhom, noiDung);
+
+                        // Gửi phản hồi về client
+                        skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                    }
+                    catch (Exception ex)
+                    {
+                        // Xử lý ngoại lệ nếu có lỗi xảy ra
+                        skXL.Send(Encoding.UTF8.GetBytes("[ERROR]~" + ex.Message));
+                    }
+                }
+
+                else if (noidung.StartsWith("CheckMIGroup"))
+                {
+                    // Yc load tin nhắn = [CheckMIGroup] ~ username ~ groupname ~ stt
+                    string[] splitParts = noidung.Split('~');
+                    string username = splitParts[1];
+                    string groupname = splitParts[2];
+                    string stt = splitParts[3];
+
+                    // Sử dụng await để gọi phương thức CheckMessGr từ GroupInter.Instance
+                    string traLoi = await GroupInter.Instance.CheckMessGr(username, groupname, stt);
+
+                    // Gửi kết quả trả về
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+                else if (noidung.StartsWith("NewMessGroup"))
+                {
+
+                    GroupChat gc = new GroupChat();
+                    string username = noidung.Split('~')[1];
+                    string tennhom = noidung.Split('~')[2];
+                    string traLoi = await GroupInter.Instance.NewMessGrAsync(username, tennhom);
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+                else if (noidung.StartsWith("NewMessDel"))
+                {
+                    string username = noidung.Split('~')[1];
+                    string tennhom = noidung.Split('~')[2];
+                    string traLoi = await GroupInter.Instance.NewMessGr_DelAsync(username, tennhom);
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+
+                else if (noidung.StartsWith("LoadMemGr"))
+                {
+                    //Yc load thành viên nhóm = [LoadMemGr] ~ username ~ groupname
+                    //noiDung.Split('~')[1] = username
+                    //noiDung.Split('~')[2] = groupname
+                    string username = noidung.Split('~')[1];
+                    string groupname = noidung.Split('~')[2];
+
+                    // Call the async method and await its result
+                    string traLoi = await GroupInter.Instance.LoadMemGrAsync(username, groupname);
+
+                    // Send the response back
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+
+                else if (noidung.StartsWith("OldMess"))
+                {
+                    GroupChat gc = new GroupChat();
+                    string username = noidung.Split('~')[1];
+                    string tennhom = noidung.Split('~')[2];
+                    string traLoi = await GroupInter.Instance.OldMessGrAsync(username, tennhom);
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+
+                else if (noidung.StartsWith("DellMess"))
+                {
+
+                    string[] parts = noidung.Split('~');
+                    if (parts.Length >= 2)
+                    {
+                        string messageId = parts[1].Trim();
+                        int messageIdInt = int.Parse(messageId);
+                        try
+                        {
+                            await GroupInter.Instance.DelMessAsync(messageIdInt);
+
+                            // Gửi phản hồi về cho client (VD: "DONE" để thông báo rằng đã xóa thành công)
+                            skXL.Send(Encoding.UTF8.GetBytes("DONE"));
+                        }
+                        catch (Exception ex)
+                        {
+                            // Xử lý nếu có lỗi xảy ra trong quá trình xóa tin nhắn
+                            Console.WriteLine($"Error deleting message with id {messageId}: {ex.Message}");
+                            skXL.Send(Encoding.UTF8.GetBytes($"ERROR: {ex.Message}"));
+                        }
+                    }
+                    else
+                    {
+                        // Xử lý khi định dạng yêu cầu không đúng
+                        skXL.Send(Encoding.UTF8.GetBytes("ERROR: Invalid request format"));
+                    }
+                }
+
+                else if (noidung.StartsWith("KGR"))
+                {
+                    // Yêu cầu: [KGR] ~ groupname ~ us;
+                    string[] parts = noidung.Split('~');
+                    if (parts.Length >= 3)
+                    {
+                        string groupname = parts[1].Trim();
+                        string us = parts[2].Trim();
+
+                        // Gọi hàm KickMemberFromGroup để kick thành viên us ra khỏi nhóm groupname
+                        await GroupInter.Instance.KickMemberFromGroup(us, groupname);
+
+                        Console.WriteLine("- Kick thành viên ra khỏi nhóm");
+
+                        string traLoi = "DONE";
+                        skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                    }
+                    else
+                    {
+                        // Xử lý khi dữ liệu đầu vào không đủ
+                        Console.WriteLine("Lỗi: Dữ liệu không hợp lệ cho yêu cầu KGR");
+                        string traLoi = "ERROR";
+                        skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                    }
+                }
+
+                else if (noidung.StartsWith("MoiVaoNhom"))
+                {
+                    //Yc = [MoiVaoNhom] ~ username ~ tên nhóm
+                    GroupChat gc = new GroupChat();
+                    gc.Username = noidung.Split('~')[1];
+                    gc.TenNhom = noidung.Split('~')[2];
+                    bool checkuser, check;
+
+                    checkuser = await UserInter.Instance.field_exist("users", "username", gc.Username);
+                    check = await GroupInter.Instance.StatusMember(gc.TenNhom, gc.Username); //Check trạng thái thành viên
+
+                    ;
+                    if (checkuser)
+                    {
+                        if (!check)
+                        {
+                            await GroupInter.Instance.AddUserToGroup(gc.Username, gc.TenNhom);
+                        }
+                        Console.WriteLine(gc.Username + "- Moi vao nhom.");
+                        skXL.Send(Encoding.UTF8.GetBytes("TC"));
+                    }
+                    else
+                    {
+                        skXL.Send(Encoding.UTF8.GetBytes("TB"));
+                    }
+                }//Tìm và vào nhóm
+
+
 
                 skXL.Close();
                 skXL.Dispose();
