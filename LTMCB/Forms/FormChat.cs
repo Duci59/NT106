@@ -41,7 +41,6 @@ namespace LTMCB.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
-            label4.ForeColor = ThemeColor.SecondaryColor;
             ContextMenuStrip cms = new ContextMenuStrip();
             cms.Items.Add("Tạo nhóm");
             cms.Items[0].Click += btTaoNhomm_Click;
@@ -93,7 +92,7 @@ namespace LTMCB.Forms
 
                     if (role == "truongnhom")
                     {
-                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(222)))), ((int)(((byte)(189))))); ;
+                        btn.BackColor = Color.LightSkyBlue;
                         btn.Text = tennhom + "\n\r(Nhóm của bạn)";
                         btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         cms.Items.Add("Xóa nhóm");
@@ -104,7 +103,7 @@ namespace LTMCB.Forms
                     else
                     {
                         btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(222)))), ((int)(((byte)(189))))); ;
+                        btn.BackColor = Color.LightSkyBlue;
                         btn.Text = tennhom;
                         cms.Items.Add("Rời nhóm");
                         cms.Items[0].Click += LeaveGroup_Click;

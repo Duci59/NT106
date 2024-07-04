@@ -36,12 +36,10 @@
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.tbNoiDung = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnMinisize = new System.Windows.Forms.Button();
-            this.btnMaxsize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.timerDellMess = new System.Windows.Forms.Timer(this.components);
             this.toolTipChangePass = new System.Windows.Forms.ToolTip(this.components);
             this.lbStt = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -54,22 +52,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnLichSu.AutoScroll = true;
-            this.pnLichSu.BackColor = System.Drawing.Color.SlateGray;
-            this.pnLichSu.Location = new System.Drawing.Point(16, 146);
-            this.pnLichSu.Margin = new System.Windows.Forms.Padding(5);
+            this.pnLichSu.BackColor = System.Drawing.Color.White;
+            this.pnLichSu.Location = new System.Drawing.Point(13, 122);
+            this.pnLichSu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnLichSu.Name = "pnLichSu";
-            this.pnLichSu.Size = new System.Drawing.Size(1103, 536);
+            this.pnLichSu.Size = new System.Drawing.Size(919, 447);
             this.pnLichSu.TabIndex = 3;
             // 
             // lbfriendname
             // 
             this.lbfriendname.BackColor = System.Drawing.Color.Transparent;
             this.lbfriendname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lbfriendname.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbfriendname.Location = new System.Drawing.Point(369, 58);
-            this.lbfriendname.Margin = new System.Windows.Forms.Padding(4);
+            this.lbfriendname.ForeColor = System.Drawing.Color.White;
+            this.lbfriendname.Location = new System.Drawing.Point(308, 48);
             this.lbfriendname.Name = "lbfriendname";
-            this.lbfriendname.Size = new System.Drawing.Size(222, 38);
+            this.lbfriendname.Size = new System.Drawing.Size(188, 31);
             this.lbfriendname.TabIndex = 4;
             this.lbfriendname.Text = "Đang trò chuyện ";
             // 
@@ -80,15 +77,16 @@
             this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(16, 702);
-            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(13, 585);
+            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(91, 65);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(76, 54);
             this.guna2ImageButton1.TabIndex = 57;
             // 
             // guna2Button1
             // 
+            this.guna2Button1.BorderRadius = 12;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -96,10 +94,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.SteelBlue;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(981, 703);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Button1.Location = new System.Drawing.Point(818, 586);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(138, 64);
+            this.guna2Button1.Size = new System.Drawing.Size(115, 53);
             this.guna2Button1.TabIndex = 56;
             this.guna2Button1.Text = "Gửi";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -115,62 +113,14 @@
             this.tbNoiDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNoiDung.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbNoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNoiDung.Location = new System.Drawing.Point(104, 703);
-            this.tbNoiDung.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbNoiDung.Location = new System.Drawing.Point(87, 586);
+            this.tbNoiDung.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNoiDung.Name = "tbNoiDung";
             this.tbNoiDung.PasswordChar = '\0';
             this.tbNoiDung.PlaceholderText = "";
             this.tbNoiDung.SelectedText = "";
-            this.tbNoiDung.Size = new System.Drawing.Size(867, 64);
+            this.tbNoiDung.Size = new System.Drawing.Size(722, 53);
             this.tbNoiDung.TabIndex = 55;
-            // 
-            // btnMinisize
-            // 
-            this.btnMinisize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinisize.FlatAppearance.BorderSize = 0;
-            this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinisize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinisize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.btnMinisize.Location = new System.Drawing.Point(956, 16);
-            this.btnMinisize.Margin = new System.Windows.Forms.Padding(5);
-            this.btnMinisize.Name = "btnMinisize";
-            this.btnMinisize.Size = new System.Drawing.Size(48, 44);
-            this.btnMinisize.TabIndex = 60;
-            this.btnMinisize.Text = "O";
-            this.btnMinisize.UseVisualStyleBackColor = true;
-            this.btnMinisize.Click += new System.EventHandler(this.btnMinisize_Click);
-            // 
-            // btnMaxsize
-            // 
-            this.btnMaxsize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaxsize.FlatAppearance.BorderSize = 0;
-            this.btnMaxsize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaxsize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaxsize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.btnMaxsize.Location = new System.Drawing.Point(1006, 16);
-            this.btnMaxsize.Margin = new System.Windows.Forms.Padding(5);
-            this.btnMaxsize.Name = "btnMaxsize";
-            this.btnMaxsize.Size = new System.Drawing.Size(48, 44);
-            this.btnMaxsize.TabIndex = 59;
-            this.btnMaxsize.Text = "O";
-            this.btnMaxsize.UseVisualStyleBackColor = true;
-            this.btnMaxsize.Click += new System.EventHandler(this.btnMaxsize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.btnClose.Location = new System.Drawing.Point(1056, 16);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(48, 44);
-            this.btnClose.TabIndex = 58;
-            this.btnClose.Text = "O";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // timerDellMess
             // 
@@ -191,31 +141,43 @@
             // 
             this.lbStt.AutoSize = true;
             this.lbStt.BackColor = System.Drawing.Color.White;
-            this.lbStt.Location = new System.Drawing.Point(115, 726);
-            this.lbStt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbStt.Location = new System.Drawing.Point(96, 605);
             this.lbStt.Name = "lbStt";
-            this.lbStt.Size = new System.Drawing.Size(120, 20);
+            this.lbStt.Size = new System.Drawing.Size(97, 16);
             this.lbStt.TabIndex = 61;
             this.lbStt.Text = "Nhập tin nhắn...";
             this.lbStt.Click += new System.EventHandler(this.lbStt_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(885, 13);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 71;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FormChatFriend
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(1133, 794);
+            this.ClientSize = new System.Drawing.Size(944, 662);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbStt);
-            this.Controls.Add(this.btnMinisize);
-            this.Controls.Add(this.btnMaxsize);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.tbNoiDung);
             this.Controls.Add(this.lbfriendname);
             this.Controls.Add(this.pnLichSu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormChatFriend";
             this.Text = "FormAdGroup";
             this.Load += new System.EventHandler(this.FormChatClient_Load_1);
@@ -228,15 +190,13 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel pnLichSu;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbfriendname;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox tbNoiDung;
-        private System.Windows.Forms.Button btnMinisize;
-        private System.Windows.Forms.Button btnMaxsize;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Timer timerDellMess;
         private System.Windows.Forms.ToolTip toolTipChangePass;
         private System.Windows.Forms.Label lbStt;
+        private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbfriendname;
     }
 }

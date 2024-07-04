@@ -45,7 +45,7 @@
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.BorderRadius = 0;
             this.guna2Elipse1.TargetControl = this.flowLayoutNhomChat;
             // 
             // flowLayoutNhomChat
@@ -66,6 +66,7 @@
             // 
             this.lbStt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbStt.AutoSize = true;
+            this.lbStt.ForeColor = System.Drawing.Color.White;
             this.lbStt.Location = new System.Drawing.Point(485, 113);
             this.lbStt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbStt.Name = "lbStt";
@@ -78,6 +79,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(272, 100);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -101,6 +103,7 @@
             // 
             this.lbMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbMatKhau.AutoSize = true;
+            this.lbMatKhau.ForeColor = System.Drawing.Color.White;
             this.lbMatKhau.Location = new System.Drawing.Point(608, 77);
             this.lbMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMatKhau.Name = "lbMatKhau";
@@ -122,6 +125,7 @@
             // 
             this.lbTennhom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTennhom.AutoSize = true;
+            this.lbTennhom.ForeColor = System.Drawing.Color.White;
             this.lbTennhom.Location = new System.Drawing.Point(604, 42);
             this.lbTennhom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTennhom.Name = "lbTennhom";
@@ -138,12 +142,13 @@
             // 
             // btTaoNhomm
             // 
+            this.btTaoNhomm.BorderRadius = 12;
             this.btTaoNhomm.BorderThickness = 1;
             this.btTaoNhomm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btTaoNhomm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btTaoNhomm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btTaoNhomm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTaoNhomm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.btTaoNhomm.FillColor = System.Drawing.Color.SteelBlue;
             this.btTaoNhomm.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btTaoNhomm.ForeColor = System.Drawing.Color.Black;
             this.btTaoNhomm.Location = new System.Drawing.Point(20, 43);
@@ -155,12 +160,13 @@
             // 
             // btTimNhom
             // 
+            this.btTimNhom.BorderRadius = 12;
             this.btTimNhom.BorderThickness = 1;
             this.btTimNhom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btTimNhom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btTimNhom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btTimNhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTimNhom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.btTimNhom.FillColor = System.Drawing.Color.SteelBlue;
             this.btTimNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btTimNhom.ForeColor = System.Drawing.Color.Black;
             this.btTimNhom.Location = new System.Drawing.Point(154, 43);
@@ -174,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.btTimNhom);
             this.Controls.Add(this.btTaoNhomm);

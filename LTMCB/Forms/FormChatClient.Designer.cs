@@ -50,12 +50,10 @@
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.tbNoiDung = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnMinisize = new System.Windows.Forms.Button();
-            this.btnMaxsize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.timerDellMess = new System.Windows.Forms.Timer(this.components);
             this.toolTipChangePass = new System.Windows.Forms.ToolTip(this.components);
             this.lbStt = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewsMember)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnLichSu.AutoScroll = true;
-            this.pnLichSu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(236)))));
+            this.pnLichSu.BackColor = System.Drawing.Color.White;
             this.pnLichSu.Location = new System.Drawing.Point(13, 122);
             this.pnLichSu.Margin = new System.Windows.Forms.Padding(4);
             this.pnLichSu.Name = "pnLichSu";
@@ -80,7 +78,7 @@
             // 
             this.lbgroupname.BackColor = System.Drawing.Color.Transparent;
             this.lbgroupname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lbgroupname.ForeColor = System.Drawing.Color.Black;
+            this.lbgroupname.ForeColor = System.Drawing.Color.White;
             this.lbgroupname.Location = new System.Drawing.Point(15, 26);
             this.lbgroupname.Name = "lbgroupname";
             this.lbgroupname.Size = new System.Drawing.Size(71, 31);
@@ -91,7 +89,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F);
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(15, 75);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(133, 26);
@@ -125,7 +123,7 @@
             this.invitebutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.invitebutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.invitebutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.invitebutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.invitebutton.FillColor = System.Drawing.Color.SteelBlue;
             this.invitebutton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.invitebutton.ForeColor = System.Drawing.Color.White;
             this.invitebutton.Location = new System.Drawing.Point(397, 70);
@@ -142,7 +140,7 @@
             this.btChangePassGr.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btChangePassGr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btChangePassGr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btChangePassGr.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.btChangePassGr.FillColor = System.Drawing.Color.SteelBlue;
             this.btChangePassGr.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btChangePassGr.ForeColor = System.Drawing.Color.White;
             this.btChangePassGr.Location = new System.Drawing.Point(520, 70);
@@ -159,7 +157,7 @@
             this.DataGridViewsMember.AllowUserToResizeRows = false;
             this.DataGridViewsMember.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridViewsMember.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(236)))));
+            this.DataGridViewsMember.BackgroundColor = System.Drawing.Color.White;
             this.DataGridViewsMember.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataGridViewsMember.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DataGridViewsMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -270,11 +268,12 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.BorderRadius = 12;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.SteelBlue;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(541, 585);
@@ -305,54 +304,6 @@
             this.tbNoiDung.Size = new System.Drawing.Size(425, 53);
             this.tbNoiDung.TabIndex = 55;
             // 
-            // btnMinisize
-            // 
-            this.btnMinisize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinisize.FlatAppearance.BorderSize = 0;
-            this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinisize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinisize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.btnMinisize.Location = new System.Drawing.Point(797, 13);
-            this.btnMinisize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinisize.Name = "btnMinisize";
-            this.btnMinisize.Size = new System.Drawing.Size(40, 37);
-            this.btnMinisize.TabIndex = 60;
-            this.btnMinisize.Text = "O";
-            this.btnMinisize.UseVisualStyleBackColor = true;
-            this.btnMinisize.Click += new System.EventHandler(this.btnMinisize_Click);
-            // 
-            // btnMaxsize
-            // 
-            this.btnMaxsize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaxsize.FlatAppearance.BorderSize = 0;
-            this.btnMaxsize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaxsize.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaxsize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.btnMaxsize.Location = new System.Drawing.Point(838, 13);
-            this.btnMaxsize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMaxsize.Name = "btnMaxsize";
-            this.btnMaxsize.Size = new System.Drawing.Size(40, 37);
-            this.btnMaxsize.TabIndex = 59;
-            this.btnMaxsize.Text = "O";
-            this.btnMaxsize.UseVisualStyleBackColor = true;
-            this.btnMaxsize.Click += new System.EventHandler(this.btnMaxsize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.btnClose.Location = new System.Drawing.Point(880, 13);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 37);
-            this.btnClose.TabIndex = 58;
-            this.btnClose.Text = "O";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // timerDellMess
             // 
             this.timerDellMess.Enabled = true;
@@ -379,16 +330,30 @@
             this.lbStt.Text = "Nhập tin nhắn...";
             this.lbStt.Click += new System.EventHandler(this.lbStt_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(900, 13);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 70;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FormChatClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(944, 662);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbStt);
-            this.Controls.Add(this.btnMinisize);
-            this.Controls.Add(this.btnMaxsize);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.tbNoiDung);
@@ -425,11 +390,9 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox tbNoiDung;
-        private System.Windows.Forms.Button btnMinisize;
-        private System.Windows.Forms.Button btnMaxsize;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Timer timerDellMess;
         private System.Windows.Forms.ToolTip toolTipChangePass;
         private System.Windows.Forms.Label lbStt;
+        private System.Windows.Forms.Button button1;
     }
 }

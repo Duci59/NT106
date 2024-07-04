@@ -143,4 +143,18 @@
   <metadata name="timerDellMess.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
   </metadata>
+  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAd9JREFUSEvtlTFOwzAUhgOiA/QAFaKC2klXlh6AhXIIBIgjsIAQDB2hXAMuwZTG
+        riqGCDHRqQxt7KQjJwjPqYOi4qRxEsTCJ3WonfrlfX36bfzzJ3TcsNamAT6www25VJptN9yy7FnT6IXr
+        cuknuy8+wpQTTGfXmQ/mBc5AlD3AmU/7b35driqATlsDdoUI+8RD/9IIwzW5o09UdNbHhLOWw45WnwU/
+        2LPZBSZsYlJ+1nHdmtzJTQO6Mwl0CkWx45/nbwAeRAN2DD8cm4Tf9kIN7fDioigi/NVy5jk6XeZbO8+v
+        PaE3Kgrf5Y4mUjv85xOTzE+ztDee/TpyeB9eVFNvGlI7HDiGj1q76HRRtKDeNBLaW86S9qiody86Lac3
+        DYX26vWmIbRTmHbKxyJkRDgg6rmIBt3fKxqTDJlIL4RD5XoViHBY6GUeFJ5Yw+CkymxXk5xeyrpCOyLe
+        OyLBjVbIaKGa3qxpr4LM6VVMu9wpSVJvWjiIaV8VMlqIopC9otOV4VAk21UUutqk9uJXKhxQ+GqT2vWv
+        VKm31NWmqz2aXqGXQjiUzd5YO2UfFuEQMnZ6yLRH0x148BHy97BU0RihXYTMkN81R9NNuaoA3lIMVSVF
+        Y6DTRdEKz/wnP4bxBR/Xyt+kjoi7AAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
