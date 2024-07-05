@@ -78,16 +78,17 @@ namespace LTMCB.Forms
         {
             // Thiết lập các thành phần giao diện cơ bản
             InitializeComponents();
-            
-            // Tải dữ liệu mà không làm gián đoạn giao diện người dùng
-            await Task.Run(async () =>
-            {
-                await LoadOldMessAsync();
-            });
 
-            // Hiển thị form sau khi đã tải xong tất cả dữ liệu
+            // Bắt đầu tải dữ liệu không đồng bộ mà không đợi chúng hoàn thành
+            var loadOldMessTask = Task.Run(() => LoadOldMessAsync());
+            var loadMemGrTask = Task.Run(() => LoadMemGrAsync());
+
+            // Hiển thị form ngay lập tức
             this.Show();
-            
+
+            // Chờ các tác vụ hoàn thành nhưng không bắt buộc phải đợi cả hai
+            await loadOldMessTask;
+            await loadMemGrTask;
         }
 
         private void InitializeComponents()
@@ -120,11 +121,10 @@ namespace LTMCB.Forms
             tbNoiDung.Focus();
             tbNoiDung.GotFocus += TbNoiDung_GotFocus;
             tbNoiDung.LostFocus += TbNoiDung_LostFocus;
-            tbMatKhauGr.Text = grouppass;
+
             pnLichSu.ControlAdded += PnLichSu_ControlAdded;
             tbChangePass.KeyUp += TbChangePass_KeyUp;
             toolTipChangePass.SetToolTip(btChangePassGr, "Nhập mật khẩu mới và nhấn\r\nEnter để đổi mật khẩu nhóm");
-            LoadMemGr();
         }
 
 
@@ -160,7 +160,21 @@ namespace LTMCB.Forms
             lbStt.Visible = false;
         }
 
-      
+
+
+        private void btnMaxsize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinisize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void lbStt_Click(object sender, EventArgs e)
         {
             tbNoiDung.Focus();
@@ -185,7 +199,7 @@ namespace LTMCB.Forms
 
             if (!string.IsNullOrEmpty(result_tinnhancu) && result_tinnhancu != "NULL")
             {
-                List<String> dsTinNhanCu = result_tinnhancu.Split('^').ToList();
+                List<string> dsTinNhanCu = result_tinnhancu.Split('^').ToList();
                 List<Guna2Button> buttons = new List<Guna2Button>();
 
                 foreach (var item in dsTinNhanCu)
@@ -193,7 +207,7 @@ namespace LTMCB.Forms
                     buttons.Add(new Guna2Button() { AutoSize = true, Tag = item });
                 }
 
-                // Thêm các button vào panel
+                // Thêm các button vào panel một lần
                 this.Invoke((Action)(() =>
                 {
                     foreach (Guna2Button btn in buttons)
@@ -210,6 +224,7 @@ namespace LTMCB.Forms
                         }
                     }
 
+                    pnLichSu.Controls.AddRange(buttons.ToArray());
                     pnLichSu.VerticalScroll.Value = pnLichSu.VerticalScroll.Maximum;
                     nguoinhancuoi = dsTinNhanCu.Last().Split('~')[3];
                 }));
@@ -218,7 +233,7 @@ namespace LTMCB.Forms
 
 
 
-        private void ListenForMessages()
+        private async void ListenForMessages()
         {
             while (listening)
             {
@@ -262,7 +277,13 @@ namespace LTMCB.Forms
 
                     // Kiểm tra tin nhắn mới
                     result_tinnhanMoi = Result.Instance.Request("NewMessGroup~" + username + "~" + groupname);
-
+                    result_slMem = Result.Instance.Request("?Member~" + groupname);
+                    if (!String.IsNullOrEmpty(result_slMem) && Int32.Parse(result_slMem) != soMember)
+                    {
+                        DataGridViewsMember.DataSource = null;
+                        DataGridViewsMember.Rows.Clear();
+                        await LoadMemGrAsync();
+                    }
                     if (!string.IsNullOrEmpty(result_tinnhanMoi) && result_tinnhanMoi != "NULL"
                         && result_tinnhanMoi != "NotInGr")
                     {
@@ -414,13 +435,13 @@ namespace LTMCB.Forms
         }
 
 
-        public void LoadMemGr()
+        public async Task LoadMemGrAsync()
         {
-            //Yc load thành viên nhóm = [LoadMemGr] ~ username ~ groupname
-            //Kq trả về  = username + displayname
+            // Yc load thành viên nhóm = [LoadMemGr] ~ username ~ groupname
+            // Kq trả về = username + displayname
             string yeucau = "LoadMemGr~" + username + "~" + groupname;
 
-            string ketqua = Result.Instance.Request(yeucau);
+            string ketqua = await Task.Run(() => Result.Instance.Request(yeucau)); // Chạy yêu cầu trong một tác vụ bất đồng bộ
             if (ketqua != "NULL" && !string.IsNullOrEmpty(ketqua))
             {
                 listUsMember.Clear();
@@ -433,13 +454,25 @@ namespace LTMCB.Forms
                     id++;
                     string[] row = new string[] { id.ToString(), mem.Split('~')[1] };
                     listUsMember.Add(mem.Split('~')[0]);
-                    DataGridViewsMember.Rows.Add(row);
+                    // Cần sử dụng Invoke nếu DataGridViewsMember được cập nhật từ một luồng khác
+                    if (DataGridViewsMember.InvokeRequired)
+                    {
+                        DataGridViewsMember.Invoke((Action)(() =>
+                        {
+                            DataGridViewsMember.Rows.Add(row);
+                        }));
+                    }
+                    else
+                    {
+                        DataGridViewsMember.Rows.Add(row);
+                    }
                 }
                 soMember = id;
             }
             else
+            {
                 soMember = 0;
-
+            }
         }
 
         public void LoadMess(string stt)
@@ -541,6 +574,16 @@ namespace LTMCB.Forms
                         btn.ContextMenuStrip.Dispose();
                     }
                 }
+            }
+        }
+
+        private void btChangePassGr_Click(object sender, EventArgs e)
+        {
+            //Yc = [EditPassGr] ~ Username ~ Ten Nhom ~ Mật khẩu mới
+            var kq = Result.Instance.Request("EditPassGr~" + username + "~" + groupname + "~" + tbMatKhauGr.Text.MaHoa());
+            if (!string.IsNullOrEmpty(kq) && kq == "DONE")
+            {
+                MessageBox.Show("Đổi pass nhóm thành công.");
             }
         }
 

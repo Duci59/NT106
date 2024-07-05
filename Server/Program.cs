@@ -544,6 +544,38 @@ namespace Server
                         skXL.Send(Encoding.UTF8.GetBytes("TB"));
                     }
                 }//Tìm và vào nhóm
+
+
+                else if (noidung.StartsWith("?Member"))
+                {
+                    // Yc = [?Member] ~ Group name
+                    string groupName = noidung.Split('~')[1];
+                    int slMem = await GroupInter.Instance.MemLoadingAsync(groupName);
+                    string traLoi;
+                    if (slMem > 0)
+                    {
+                        traLoi = slMem.ToString();
+                    }
+                    else
+                    {
+                        traLoi = "0";
+                    }
+                    skXL.Send(Encoding.UTF8.GetBytes(traLoi));
+                }
+
+                else if (noidung.StartsWith("EditPassGr"))
+                {
+                    //Yc = [EditPassGr] ~ Username ~ Ten Nhom ~ Mật khẩu mới
+
+                    string Username = noidung.Split('~')[1];
+                    string TenNhom = noidung.Split('~')[2];
+                    string MatKhau = MD5Helper.Instance.MaHoaMotChieu(MD5Helper.Instance.GiaiMa(noidung.Split('~')[3]));
+
+
+                    await GroupInter.Instance.EditPassGrAsync(TenNhom, MatKhau);
+                    skXL.Send(Encoding.UTF8.GetBytes("DONE"));
+                }
+
                 else if (noidung.StartsWith("SendMTFriend"))
                 {
                     // Yc Gửi tin nhắn = [SendMTFriend] ~ username ~ otheruser ~ noidung

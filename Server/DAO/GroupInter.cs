@@ -629,6 +629,36 @@ namespace Server.DAO
             }
         }
 
+        public async Task<int> MemLoadingAsync(string gn)
+        {
+            var db = FireStoreHelper.db;
+            CollectionReference groupsRef = db.Collection("groups");
+
+            // Thực hiện truy vấn để lấy tài liệu nhóm có tên nhóm là gn
+            QuerySnapshot groupSnapshot = await groupsRef
+                .WhereEqualTo("groupname", gn)
+                .GetSnapshotAsync();
+
+            if (groupSnapshot.Documents.Count == 0)
+            {
+                // Nếu không tìm thấy nhóm, trả về 0
+                return 0;
+            }
+
+            // Lấy tài liệu nhóm đầu tiên (vì tên nhóm là duy nhất)
+            DocumentSnapshot groupDoc = groupSnapshot.Documents[0];
+            List<string> members = groupDoc.GetValue<List<string>>("member");
+
+            if (members.Count > 0)
+            {
+                // Trừ đi 1 nếu nhóm có admin
+                return members.Count;
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
         public async Task<string> OldMessGrAsync(string us, string gn)
         {
@@ -762,6 +792,29 @@ namespace Server.DAO
                 }
             }
         }
+
+        public async Task EditPassGrAsync(string gn, string new_pass_gr)
+        {
+            var db = FireStoreHelper.db;
+
+            CollectionReference groupsRef = db.Collection("groups");
+            Query query = groupsRef.WhereEqualTo("groupname", gn);
+            QuerySnapshot querySnapshot = await query.GetSnapshotAsync();
+
+            if (querySnapshot.Count > 0)
+            {
+                foreach (DocumentSnapshot documentSnapshot in querySnapshot.Documents)
+                {
+                    DocumentReference documentRef = documentSnapshot.Reference;
+                    Dictionary<string, object> updates = new Dictionary<string, object>
+            {
+                { "password", new_pass_gr }
+            };
+                    await documentRef.UpdateAsync(updates);
+                }
+            }
+        }
+
 
         public async Task<string> DisPlayName(string us)
         {

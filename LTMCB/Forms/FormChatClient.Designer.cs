@@ -148,6 +148,7 @@
             this.btChangePassGr.Size = new System.Drawing.Size(106, 40);
             this.btChangePassGr.TabIndex = 9;
             this.btChangePassGr.Text = "Đổi pass";
+            this.btChangePassGr.Click += new System.EventHandler(this.btChangePassGr_Click);
             // 
             // DataGridViewsMember
             // 
