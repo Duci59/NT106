@@ -670,7 +670,7 @@ namespace Server.DAO
                 .WhereEqualTo("tennhom", gn)
                 .WhereIn("trangthai", new List<string> { "Đã Nhận", "Thu Hồi", "Đã gửi" })
                 .WhereEqualTo("username", us)
-                .OrderBy("id") // Sắp xếp theo trường id
+                .OrderBy("id") 
                 .GetSnapshotAsync();
 
             if (messageSnapshot != null && messageSnapshot.Documents.Count > 0)

@@ -1,20 +1,13 @@
 ﻿using Guna.UI2.WinForms;
 using LTMCB.env;
-using LTMCB.MaHoa;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.Threading;
-using System.Collections.Concurrent;
-using Org.BouncyCastle.Asn1.Cms;
 
 namespace LTMCB.Forms
 {
@@ -43,6 +36,8 @@ namespace LTMCB.Forms
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
+        private bool isClosing = false;
+
         public FormChatFriend(string Username, string Otheruser)
         {
             InitializeComponent();
@@ -59,15 +54,16 @@ namespace LTMCB.Forms
             listenThread.IsBackground = true;
             listenThread.Start();
             this.FormClosing += FormChatClient_FormClosing;
-            LoadFriendDisplay();
+
         }
 
         private void FormChatClient_FormClosing(object sender, FormClosingEventArgs e)
         {
+            isClosing = true; // Đặt cờ để báo hiệu rằng form đang đóng
             listening = false; // Dừng vòng lặp trong ListenForMessages
             if (listenThread != null && listenThread.IsAlive)
             {
-                listenThread.Join(); // Chờ thread hoàn thành
+                listenThread.Abort(); // Dừng thread lắng nghe
             }
         }
 
@@ -75,45 +71,21 @@ namespace LTMCB.Forms
         {
             // Thiết lập các thành phần giao diện cơ bản
             InitializeComponents();
-            
-            // Tải dữ liệu mà không làm gián đoạn giao diện người dùng
-            await Task.Run(async () =>
-            {
-                await LoadOldMessAsync();
-            });
 
-            // Hiển thị form sau khi đã tải xong tất cả dữ liệu
+            // Tải dữ liệu mà không làm gián đoạn giao diện người dùng
+           
+
+            var loadOldMessTask = Task.Run(() => LoadOldMessAsync());
+            var loadMemGrTask = Task.Run(() => LoadFriendDisplayAsync());
             this.Show();
-            
+            await loadOldMessTask;
+            await loadMemGrTask;
         }
+
 
         private void InitializeComponents()
         {
-            // Các cài đặt thành phần giao diện
-            pnChangePass = new Guna2Panel
-            {
-                Height = 0,
-                Width = 140,
-                FillColor = Color.AliceBlue,
-                BackColor = Color.FromArgb(61, 61, 86),
-                BorderRadius = 10,
-                Anchor = (AnchorStyles.Top | AnchorStyles.Right)
-            };
-
-            tbChangePass = new Guna2TextBox
-            {
-                Height = 20,
-                Width = 100,
-                Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))),
-                ForeColor = Color.Black,
-                FillColor = Color.AliceBlue,
-                Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material,
-                BackColor = Color.FromArgb(61, 61, 86),
-                BorderRadius = 10,
-                Anchor = (AnchorStyles.Top | AnchorStyles.Right)
-            };
-
-            // Các cài đặt sự kiện và tooltips
+            
             tbNoiDung.Focus();
             tbNoiDung.GotFocus += TbNoiDung_GotFocus;
             tbNoiDung.LostFocus += TbNoiDung_LostFocus;
@@ -137,7 +109,7 @@ namespace LTMCB.Forms
             lbStt.Visible = false;
         }
 
-      
+
 
         private void lbStt_Click(object sender, EventArgs e)
         {
@@ -155,9 +127,9 @@ namespace LTMCB.Forms
             string yeucau = "OldFriendMess~" + username + "~" + otheruser;
             string result_tinnhancu = await Task.Run(() => Result.Instance.Request(yeucau));
 
-            if (!string.IsNullOrEmpty(result_tinnhancu) && result_tinnhancu != "NULL")
+            if (!string.IsNullOrEmpty(result_tinnhancu) && result_tinnhancu != "NULL" && !isClosing)
             {
-                List<String> dsTinNhanCu = result_tinnhancu.Split('^').ToList();
+                List<string> dsTinNhanCu = result_tinnhancu.Split('^').ToList();
                 List<Guna2Button> buttons = new List<Guna2Button>();
 
                 foreach (var item in dsTinNhanCu)
@@ -165,28 +137,40 @@ namespace LTMCB.Forms
                     buttons.Add(new Guna2Button() { AutoSize = true, Tag = item });
                 }
 
-                // Thêm các button vào panel
-                this.Invoke((Action)(() =>
+                if (this.IsHandleCreated && !isClosing)
                 {
-                    foreach (Guna2Button btn in buttons)
-                    {
-                        string[] tagParts = btn.Tag.ToString().Split('~');
-                        string usgui = tagParts[3];
-                        string usnhan = tagParts[4];
-
-                        AddMess(btn, usgui, usnhan);
-
-                        if (tagParts[6] == "Thu Hồi")
+                        this.Invoke((Action)(() =>
                         {
-                            DelMess(btn);
-                        }
-                    }
+                            if (!isClosing)
+                            {
+                                foreach (Guna2Button btn in buttons)
+                                {
+                                    string[] tagParts = btn.Tag.ToString().Split('~');
+                                    string usgui = tagParts[3];
+                                    string usnhan = tagParts[4];
 
-                    pnLichSu.VerticalScroll.Value = pnLichSu.VerticalScroll.Maximum;
-                    nguoinhancuoi = dsTinNhanCu.Last().Split('~')[3];
-                }));
+                                    AddMess(btn, usgui, usnhan);
+
+                                    if (tagParts[6] == "Thu Hồi")
+                                    {
+                                        DelMess(btn);
+                                    }
+                                }
+
+                                if (!isClosing)
+                                {
+                                    pnLichSu.Controls.AddRange(buttons.ToArray());
+                                    pnLichSu.VerticalScroll.Value = pnLichSu.VerticalScroll.Maximum;
+                                    nguoinhancuoi = dsTinNhanCu.Last().Split('~')[3];
+                                }
+                            }
+                        }));
+                    }
+                    
+                
             }
         }
+
 
 
 
@@ -584,18 +568,20 @@ namespace LTMCB.Forms
             stackMess.Push(btn);
         }
 
-        public void LoadFriendDisplay()
+        public async Task LoadFriendDisplayAsync()
         {
             string yeucau = "LoadDisplayFriendName~" + otheruser;
-            string ketqua = Result.Instance.Request(yeucau);
+            string ketqua = await Task.Run(() => Result.Instance.Request(yeucau));
+
             if (ketqua != "NULL" && !string.IsNullOrEmpty(ketqua))
             {
-                lbfriendname.Text = "Đang trò chuyện với " + ketqua;  
+                lbfriendname.Text = "Đang trò chuyện với " + ketqua;
             }
             else
             {
                 lbfriendname.Text = "Đang trò chuyện với " + otheruser;
             }
         }
+
     }
 }

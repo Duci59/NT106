@@ -35,6 +35,7 @@ namespace LTMCB.Forms
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
+        private bool isClosing = false;
 
         public Chat(string tenNhom, string userName)
         {
@@ -55,10 +56,11 @@ namespace LTMCB.Forms
 
         private void FormChatClient_FormClosing(object sender, FormClosingEventArgs e)
         {
+            isClosing = true; // Đặt cờ để báo hiệu rằng form đang đóng
             listening = false; // Dừng vòng lặp trong ListenForMessages
             if (listenThread != null && listenThread.IsAlive)
             {
-                listenThread.Join(); // Chờ thread hoàn thành
+                listenThread.Abort(); // Dừng thread lắng nghe
             }
         }
 
@@ -359,9 +361,9 @@ namespace LTMCB.Forms
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
 
-        
+
+
 
 
 
@@ -370,9 +372,9 @@ namespace LTMCB.Forms
             string yeucau = "OldMess~" + username + "~" + groupname;
             string result_tinnhancu = await Task.Run(() => Result.Instance.Request(yeucau));
 
-            if (!string.IsNullOrEmpty(result_tinnhancu) && result_tinnhancu != "NULL")
+            if (!string.IsNullOrEmpty(result_tinnhancu) && result_tinnhancu != "NULL" && !isClosing)
             {
-                List<String> dsTinNhanCu = result_tinnhancu.Split('^').ToList();
+                List<string> dsTinNhanCu = result_tinnhancu.Split('^').ToList();
                 List<Guna2Button> buttons = new List<Guna2Button>();
 
                 foreach (var item in dsTinNhanCu)
@@ -380,48 +382,61 @@ namespace LTMCB.Forms
                     buttons.Add(new Guna2Button() { AutoSize = true, Tag = item });
                 }
 
-                // Thêm các button vào panel
-                this.Invoke((Action)(() =>
+                if (this.IsHandleCreated && !isClosing)
                 {
-                    foreach (Guna2Button btn in buttons)
+                    this.Invoke((Action)(() =>
                     {
-                        string[] tagParts = btn.Tag.ToString().Split('~');
-                        string usgui = tagParts[3];
-                        string usnhan = tagParts[4];
-
-                        AddMess(btn, usgui, usnhan);
-
-                        if (tagParts[6] == "Thu Hồi")
+                        if (!isClosing)
                         {
-                            DelMess(btn);
-                        }
-                    }
+                            foreach (Guna2Button btn in buttons)
+                            {
+                                string[] tagParts = btn.Tag.ToString().Split('~');
+                                string usgui = tagParts[3];
+                                string usnhan = tagParts[4];
 
-                    pnLichSu.VerticalScroll.Value = pnLichSu.VerticalScroll.Maximum;
-                    nguoinhancuoi = dsTinNhanCu.Last().Split('~')[3];
-                }));
+                                AddMess(btn, usgui, usnhan);
+
+                                if (tagParts[6] == "Thu Hồi")
+                                {
+                                    DelMess(btn);
+                                }
+                            }
+
+                            if (!isClosing)
+                            {
+                                pnLichSu.Controls.AddRange(buttons.ToArray());
+                                pnLichSu.VerticalScroll.Value = pnLichSu.VerticalScroll.Maximum;
+                                nguoinhancuoi = dsTinNhanCu.Last().Split('~')[3];
+                            }
+                        }
+                    }));
+                }
             }
         }
 
-        
 
-       
 
-        private async void Chat_Load_1(object sender, EventArgs e)
+        private void InitializeComponents()
         {
             lbTenNhom.Text = groupname;
             tbNoiDung.Focus();
             tbNoiDung.GotFocus += TbNoiDung_GotFocus;
             tbNoiDung.LostFocus += TbNoiDung_LostFocus;
             pnLichSu.ControlAdded += PnLichSu_ControlAdded;
-            LoadMess("default");
-            await Task.Run(async () =>
-            {
-                await LoadOldMessAsync();
-            });
+           
+        }
+
+
+        private async void Chat_Load_1(object sender, EventArgs e)
+        {
+            InitializeComponents();
+            
+            var loadOldMessTask = Task.Run(() => LoadOldMessAsync());
 
             // Hiển thị form sau khi đã tải xong tất cả dữ liệu
             this.Show();
+
+            await loadOldMessTask;
         }
 
         private void timerDellMess_Tick(object sender, EventArgs e)
