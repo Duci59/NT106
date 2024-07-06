@@ -63,7 +63,9 @@ namespace LTMCB
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.InsertForm(Username), sender);
+            if (type == "admin")
+                OpenChildForm(new Forms.InsertForm(Username), sender);
+            else MessageBox.Show("Chức năng dành cho admin");
         }
         Forms.FormMusic form1 = new Forms.FormMusic();
         private void guna2Button1_Click_1(object sender, EventArgs e)

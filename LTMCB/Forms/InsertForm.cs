@@ -105,6 +105,7 @@ namespace LTMCB.Forms
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     MessageBox.Show("Đăng thành công!");
+                    this.Close();
                 }
                 else
                 {

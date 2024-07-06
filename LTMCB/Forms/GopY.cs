@@ -19,7 +19,11 @@ namespace LTMCB.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            tbYKien.Text = "";
+            rbT.Checked = false;
+            rbRT.Checked = false;
+            rbKHL.Checked = false;
+            rbCT.Checked = false;
         }
     }
 }

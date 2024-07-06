@@ -600,6 +600,7 @@ namespace LTMCB.Forms
 
         private void btChangePassGr_Click(object sender, EventArgs e)
         {
+            if (tbMatKhauGr.Text.Trim() == "") MessageBox.Show("Nhập mật khẩu mới");
             //Yc = [EditPassGr] ~ Username ~ Ten Nhom ~ Mật khẩu mới
             var kq = Result.Instance.Request("EditPassGr~" + username + "~" + groupname + "~" + tbMatKhauGr.Text.MaHoa());
             if (!string.IsNullOrEmpty(kq) && kq == "DONE")

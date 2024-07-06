@@ -1124,3 +1124,5 @@ C:\nt1ko6\NT106\LTMCB\obj\Debug\LTMCB.csproj.CoreCompileInputs.cache
 C:\nt1ko6\NT106\LTMCB\obj\Debug\LTMCB.csproj.Up2Date
 C:\nt1ko6\NT106\LTMCB\obj\Debug\LTMCB.exe
 C:\nt1ko6\NT106\LTMCB\obj\Debug\LTMCB.pdb
+D:\clone\NT106(newui)\NT106\LTMCB\obj\Debug\LTMCB.Forms.fInvaite.resources
+D:\clone\NT106(newui)\NT106\LTMCB\obj\Debug\LTMCB.Forms.FormChatFriend.resources

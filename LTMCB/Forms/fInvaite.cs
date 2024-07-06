@@ -28,6 +28,7 @@ namespace LTMCB.Forms
 
         private void btOk_Click(object sender, EventArgs e)
         {
+            if (tbUsername.Text.Trim() == "") MessageBox.Show("Vui lòng nhập usernam");
             //Yc = [MoiVaoNhom] ~ username ~ tên nhóm
             string kq = Result.Instance.Request("MoiVaoNhom ~" + tbUsername.Text + "~" + grname);
             if (kq == "TC")

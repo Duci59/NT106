@@ -146,7 +146,7 @@ namespace LTMCB.Forms
                     else if (user.FriendSent)
                     {
                         Label lblStatus = new Label();
-                        lblStatus.Text = "Friend Request Sent";
+                        lblStatus.Text = "Request Sent";
                         lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         lblStatus.AutoSize = true;
                         lblStatus.Anchor = AnchorStyles.Right;
@@ -157,7 +157,7 @@ namespace LTMCB.Forms
                     else
                     {
                         Button btnSendRequest = new Button();
-                        btnSendRequest.Text = "Send Friend Request";
+                        btnSendRequest.Text = "Send Request";
                         btnSendRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         btnSendRequest.BackColor = Color.SteelBlue;
                         btnSendRequest.Tag = user.UserName;
@@ -172,7 +172,7 @@ namespace LTMCB.Forms
                             {
                                 btnSendRequest.Enabled = false;
                                 btnSendRequest.BackColor = Color.Gray;
-                                btnSendRequest.Text = "Friend Request Sent";
+                                btnSendRequest.Text = "Request Sent";
                             }
                             else
                             {
